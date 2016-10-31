@@ -1,0 +1,21 @@
+{
+  "name": "GoHBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "6.3.0"
+  },
+  "dependencies": {
+    "discord.js": "^10.0.1",
+    "moment-timezone": "^0.5.7",
+    "node-schedule": "^1.2.0",
+    "underscore": "~1.8.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
