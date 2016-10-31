@@ -7,7 +7,7 @@ const _ = require('underscore');
 const client = new Discord.Client();
 
 const charLookupRE = /!char\s+([A-Za-z0-9_-]+)/;
-const defaultChannelId = '218823335738343424';
+const defaultChannelId = '173524646690422784';
 
 const activities = ['Cantina battles', 'Light side battles', 'Galactic wars', 'Hard mode battles', 'Challenges', 'Dark-side battles', 'PVP battles'];
 
@@ -49,7 +49,7 @@ function getGuildActivity(message) {
   var then = moment().tz("America/Denver").startOf('day').hour(19).minute(30);
   var day = new Date().getDay();
   var isAfter = then.isAfter(now);
-  day = day - (isAfter) ? 0 : 1;
+  day = day - (isAfter) ? 1 : 0;
   message.reply(activities[(day % 7)] + ' are the guild activity as of now.');
 }
 
@@ -70,7 +70,7 @@ client.on('ready', () => {
 
   var rule = new schedule.RecurrenceRule();
   rule.dayOfWeek = new schedule.Range(0, 6);
-  rule.hour = 17;
+  rule.hour = 22;
   rule.minute = 30;
 
   var j = schedule.scheduleJob(rule, postReminders);
