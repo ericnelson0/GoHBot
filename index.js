@@ -77,7 +77,7 @@ client.on('ready', () => {
 
   var rule = new schedule.RecurrenceRule();
   rule.dayOfWeek = new schedule.Range(0, 6);
-  rule.hour = 22;
+  rule.hour = 1;
   rule.minute = 30;
 
   var j = schedule.scheduleJob(rule, postReminders);
