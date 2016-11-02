@@ -46,7 +46,7 @@ function getTimeToReset(message) {
 
 function getServerTime(message) {
   var d = new Date();
-  message.reply(var now = moment().tz("America/Denver").toString());
+  message.reply(moment().tz("America/Denver").toString());
 }
 
 function getGuildActivity(message) {
