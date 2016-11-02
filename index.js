@@ -6,8 +6,11 @@ const _ = require('underscore');
 
 const client = new Discord.Client();
 
+const swChannelId = '218823335738343424';
+const testChannelId = '173524646690422784';
+
 const charLookupRE = /!char\s+([A-Za-z0-9_-]+)/;
-const defaultChannelId = '173524646690422784';
+const defaultChannelId = swChannelId;
 
 const activities = ['Cantina battles', 'Light side battles', 'Galactic wars', 'Hard mode battles', 'Challenges', 'Dark-side battles', 'PVP battles'];
 
