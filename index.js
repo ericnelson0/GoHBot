@@ -52,7 +52,7 @@ function getServerTime(message) {
 function getGuildActivity(message) {
   var now = moment().tz("America/Denver");
   var then = moment().tz("America/Denver").startOf('day').hour(19).minute(30);
-  var day = now.getDay();
+  var day = now.day();
   var isAfter = now.isAfter(then);
 
   day = day - (isAfter) ? 0 : 1;
