@@ -74,6 +74,7 @@ var commandMap = {
 
 client.on('ready', () => {
   console.log('I am ready!');
+  console.log(client.channels);
 
   var rule = new schedule.RecurrenceRule();
   rule.dayOfWeek = new schedule.Range(0, 6);
