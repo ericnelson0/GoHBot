@@ -28,7 +28,7 @@ function postReminders() {
       channel.sendMessage("REMINDER: Save your galactic wars tomorrow to maximize guild currency!");
       break;
     case 1:
-      channel.sendMessage("REMINDER: Save your galactic wars tomorrow to maximize guild currency!");
+      channel.sendMessage("REMINDER: Save your galactic wars today and tomorrow to maximize guild currency!");
       break;
     case 5:
       channel.sendMessage("REMINDER: Wait on your PVP battles until guild reset tomorrow to maximize guild currency!");
@@ -41,7 +41,12 @@ function postReminders() {
 function getTimeToReset(message) {
   var now = moment().tz("America/Denver");
   var then = moment().tz("America/Denver").startOf('day').hour(19).minute(30);
-  message.reply(moment.utc(moment(then,"DD/MM/YYYY HH:mm:ss").diff(moment(now,"DD/MM/YYYY HH:mm:ss"))).format("HH:mm:ss"));
+  message.reply(moment.utc(moment(then.diff(now))).format("HH:mm:ss"));
+}
+
+function getServerTime(message) {
+  var d = new Date();
+  message.reply(d.toString());
 }
 
 function getGuildActivity(message) {
@@ -62,6 +67,7 @@ var commandMap = {
   '!char' : linkChar,
   '!reset' : getTimeToReset,
   '!activity' : getGuildActivity,
+  '!servertime' : getServerTime,
   '!help' : printHelp
 };
 
