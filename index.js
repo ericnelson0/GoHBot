@@ -22,7 +22,7 @@ function linkMeta(message) {
 
 function postReminders() {
   var channel = client.channels.get(defaultChannelId);
-  var day = new Date().getDay();
+  var day = moment().tz("America/Denver").day();
   switch (day) {
     case 0: // Sunday
       channel.sendMessage("REMINDER: Save your galactic wars tomorrow to maximize guild currency!");
@@ -46,7 +46,7 @@ function getTimeToReset(message) {
 
 function getServerTime(message) {
   var d = new Date();
-  message.reply(moment().tz("America/Denver").toString());
+  message.reply(d.toString());
 }
 
 function getGuildActivity(message) {
