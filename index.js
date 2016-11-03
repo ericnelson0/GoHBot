@@ -14,6 +14,8 @@ const defaultChannelId = swChannelId;
 
 const activities = ['Cantina battles', 'Light side battles', 'Galactic wars', 'Hard mode battles', 'Challenges', 'Dark-side battles', 'PVP battles'];
 
+var reminderJob = null;
+
 function linkChar(message) {
   var charMatch = message.content.match(charLookupRE);
   message.reply('https://swgoh.gg/characters/' + charMatch[1] + '/');
@@ -78,12 +80,16 @@ var commandMap = {
 client.on('ready', () => {
   console.log('I am ready!');
 
+  if (reminderJob) {
+    reminderJob.cancel();
+  }
+
   var rule = new schedule.RecurrenceRule();
   rule.dayOfWeek = new schedule.Range(0, 6);
   rule.hour = 1;
   rule.minute = 30;
 
-  var j = schedule.scheduleJob(rule, postReminders);
+  reminderJob = schedule.scheduleJob(rule, postReminders);
 });
 
 client.on('message', message => {
