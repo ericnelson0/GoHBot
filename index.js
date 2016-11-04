@@ -40,7 +40,7 @@ function postReminders() {
       break;
     default: break;
   }
-  channel.sendMessage(activities[(day + 1) % 7] + ' are the guild activity for tomorrow.');
+  channel.sendMessage(activities[(day) % 7] + ' are the guild activity for today.');
 }
 
 function getTimeToReset(message) {
