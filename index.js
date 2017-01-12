@@ -72,6 +72,16 @@ function printHelp(message) {
 
 function printRancorDMG(message) {
   var dmgMsg =  'Rancor raid damage values per phase:\n\n' +
+                'Heroic:\n' +
+                'Phase I: 1,800,000\n' +
+                'Phase II: 3,000,000\n' +
+                'Phase III: 3,300,000\n' +
+                'Phase IV: 2,100,000';
+  message.reply(dmgMsg);
+}
+
+function printTankDMG(message) {
+  var dmgMsg =  'Tank raid damage values per phase:\n\n' +
                 'Normal:\n' +
                 'Phase I: 15,600,000\n' +
                 'Phase II: 22,700,000\n' +
@@ -82,16 +92,6 @@ function printRancorDMG(message) {
                 'Phase II: 19,200,000\n' +
                 'Phase III: 12,000,000\n' +
                 'Phase IV: 12,000,000';
-  message.reply(dmgMsg);
-}
-
-function printTankDMG(message) {
-  var dmgMsg =  'Rancor raid damage values per phase:\n\n' +
-                'Heroic:\n' +
-                'Phase I: 1,800,000\n' +
-                'Phase II: 3,000,000\n' +
-                'Phase III: 3,300,000\n' +
-                'Phase IV: 2,100,000';
   message.reply(dmgMsg);
 }
 
