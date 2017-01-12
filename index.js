@@ -9,6 +9,8 @@ const client = new Discord.Client();
 const swChannelId = '218823335738343424';
 const testChannelId = '173524646690422784';
 
+const currentRancorCap = '500,000';
+
 const charLookupRE = /!char\s+([A-Za-z0-9_-]+)/;
 const defaultChannelId = swChannelId;
 
