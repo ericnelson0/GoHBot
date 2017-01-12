@@ -65,7 +65,36 @@ function getGuildActivity(message) {
 }
 
 function printHelp(message) {
-  message.reply('Commands:\n !meta - show the current meta characters\n !char <char-name> - lookup a character\n !reset - print time to reset\n !activity - print the activity as of now\n !help - print this message');
+  message.reply('Commands:\n !meta - show the current meta characters\n !char <char-name> - lookup a character\n !reset - print time to reset\n !activity - print the activity as of now\n !help - print this message\n !rancor - print rancor damage per phase\n !tank - print tank damage per phase\n !rules - print our raid rules');
+}
+
+function printRancorDMG(message) {
+  var dmgMsg =  'Rancor raid damage values per phase:\n\n' +
+                'Normal:\n' +
+                'Phase I: 15,600,000\n' +
+                'Phase II: 22,700,000\n' +
+                'Phase III: 12,250,000\n' +
+                'Phase IV: 13,550,000\n\n' +
+                'Heroic:\n' +
+                'Phase I: 4,300,000\n' +
+                'Phase II: 19,200,000\n' +
+                'Phase III: 12,000,000\n' +
+                'Phase IV: 12,000,000';
+  message.reply(dmgMsg);
+}
+
+function printTankDMG(message) {
+  var dmgMsg =  'Rancor raid damage values per phase:\n\n' +
+                'Heroic:\n' +
+                'Phase I: 1,800,000\n' +
+                'Phase II: 3,000,000\n' +
+                'Phase III: 3,300,000\n' +
+                'Phase IV: 2,100,000';
+  message.reply(dmgMsg);
+}
+
+function printRules(message) {
+  message.reply('The tank raid is a free-for-all.\nFor the rancor raid each player should do no more than the current cap of ' + currentRancorCap + '. After a 24 hour period it becomes a free-for-all.');
 }
 
 var commandMap = {
@@ -74,7 +103,10 @@ var commandMap = {
   '!reset' : getTimeToReset,
   '!activity' : getGuildActivity,
   '!servertime' : getServerTime,
-  '!help' : printHelp
+  '!help' : printHelp,
+  '!rancor' : printRancorDMG,
+  '!tank' : printTankDMG,
+  '!rules' : printRules
 };
 
 client.on('ready', () => {
