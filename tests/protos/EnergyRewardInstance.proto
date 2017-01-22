@@ -1,0 +1,11 @@
+package Protos;
+
+message EnergyRewardInstance {
+   optional EnergyRewardInstanceType type = 1 [default = HOUROFDAY];
+   optional int32 start = 2 [default = 0];
+   optional int32 duration = 3 [default = 0];
+   optional int32 amount = 4 [default = 0];
+}
+enum EnergyRewardInstanceType {
+   HOUR_OF_DAY = 1;
+}

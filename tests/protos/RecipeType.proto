@@ -1,0 +1,11 @@
+package Protos;
+
+enum RecipeType {
+   RECIPE_INVALID = 1;
+   RECIPE_PROMOTION = 2;
+   RECIPE_SHIP = 3;
+   RECIPE_CONSUMABLE = 4;
+   RECIPE_CHARACTER = 5;
+   RECIPE_SKILL = 6;
+   RECIPE_EQUIPMENT = 7;
+}

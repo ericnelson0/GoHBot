@@ -1,0 +1,6 @@
+package Protos;
+
+enum StatModUpdaterType {
+   UPDATE_TYPE_STAT_TABLE = 1;
+   UPDATE_TYPE_STAT_ROLL = 2;
+}

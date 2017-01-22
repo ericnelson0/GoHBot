@@ -1,0 +1,8 @@
+package Protos;
+
+enum AuthService {
+   UNKNOWN_AUTH = 0;
+   GUEST_AUTH = 1;
+   GOOGLE_PLAY_AUTH = 2;
+   GAME_CENTER_AUTH = 3;
+}

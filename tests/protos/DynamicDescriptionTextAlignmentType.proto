@@ -1,0 +1,7 @@
+package Protos;
+
+enum DynamicDescriptionTextAlignmentType {
+   TEXT_ALIGNMENT_LEFT = 1;
+   TEXT_ALIGNMENT_RIGHT = 2;
+   TEXT_ALIGNMENT_CENTER = 3;
+}

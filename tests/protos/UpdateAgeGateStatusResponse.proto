@@ -1,0 +1,30 @@
+package Protos;
+
+message AgeGateStatus {
+   optional YearMonth age = 1;
+   optional bool passes_coppa = 2 [default = false];
+   optional bool can_invite = 3 [default = false];
+   optional bool can_request_user_email = 4 [default = false];
+   optional bool confirm_invite_email = 5 [default = false];
+   optional AuthService last_auth_service = 6 [default = UNKNOWNAUTH];
+}
+enum AgeGateStatusEnum {
+   UNSET = 0;
+   PASSED = 1;
+   FAILED = 2;
+}
+enum AuthService {
+   UNKNOWN_AUTH = 0;
+   GUEST_AUTH = 1;
+   GOOGLE_PLAY_AUTH = 2;
+   GAME_CENTER_AUTH = 3;
+}
+message UpdateAgeGateStatusResponse {
+   optional AgeGateStatusEnum age_gate_status_enum = 1 [default = UNSET];
+   optional AgeGateStatus age_gate_status = 2;
+   optional bool allow_platform_login_override = 3 [default = false];
+}
+message YearMonth {
+   optional uint32 year = 1 [default = 0];
+   optional uint32 month = 2 [default = 0];
+}

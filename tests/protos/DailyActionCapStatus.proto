@@ -1,0 +1,8 @@
+package Protos;
+
+message DailyActionCapStatus {
+   optional string id = 1 [default = ""];
+   optional int32 actions_used = 2 [default = 0];
+   optional int32 purchase_count = 3 [default = 0];
+   optional int64 status_expire_time = 4 [default = 0];
+}

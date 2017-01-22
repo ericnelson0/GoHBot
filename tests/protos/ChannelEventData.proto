@@ -1,0 +1,6 @@
+package Protos;
+
+message ChannelEventData {
+   optional string type = 5 [default = ""];
+   optional bytes payload = 6;
+}

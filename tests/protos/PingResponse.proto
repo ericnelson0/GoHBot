@@ -1,0 +1,5 @@
+package Protos;
+
+message PingResponse {
+   optional int64 system_time = 1 [default = 0];
+}

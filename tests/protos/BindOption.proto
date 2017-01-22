@@ -1,0 +1,7 @@
+package Protos;
+
+enum BindOption {
+   BIND = 0;
+   DONTBIND = 1;
+   BIND_OPTION_NULL = 2;
+}

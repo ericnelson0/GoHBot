@@ -1,0 +1,8 @@
+package Protos;
+
+message LeaderboardGuild {
+   optional string id = 1 [default = ""];
+   optional string name = 2 [default = ""];
+   optional string banner_color_id = 3 [default = ""];
+   optional string banner_logo_id = 4 [default = ""];
+}

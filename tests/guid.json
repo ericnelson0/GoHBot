@@ -1,0 +1,3533 @@
+{
+	"Guild": {
+		"Profile": {
+			"Id": "YcBgqmxeRpi5HnkRTKxCFA",
+			"Name": "LordsOfTheDarkside",
+			"ExternalMessageKey": "Looking for daily active players. We use discord for chat. Tier 6 raids soon to be tier 7. ",
+			"MessageCriteriaKey": [],
+			"Logo": "",
+			"LogoBackground": "",
+			"EnrollmentStatus": 2,
+			"Trophy": 0,
+			"MemberCount": 47,
+			"MemberMax": 50,
+			"Level": 1,
+			"Rank": 0,
+			"LevelRequirement": 80,
+			"RaidWin": 0,
+			"LeaderboardScore": 0,
+			"BannerColorId": "white_red",
+			"BannerLogoId": "guild_icon_firstorder"
+		},
+		"Member": [{
+			"PlayerId": "sXFHrht7RpiwdAVAzysU4g",
+			"PlayerName": "Ru Baruba Maral",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479350842000,
+			"SquadPower": 39917,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 456,
+				"LifetimeValue": 101178
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 78309
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 166
+			}]
+		},
+		{
+			"PlayerId": "q_RQX_EcTzimQ29sao-PMA",
+			"PlayerName": "Mo Eliza",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479337541000,
+			"SquadPower": 39815,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 134,
+				"LifetimeValue": 104700
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 79064
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 1,
+				"LifetimeValue": 238
+			}]
+		},
+		{
+			"PlayerId": "0O-yZOocRWCeamdKg6Ffsg",
+			"PlayerName": "Rhil Margos",
+			"PlayerLevel": 81,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479344475000,
+			"SquadPower": 35826,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 62636
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 68762
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 87
+			}]
+		},
+		{
+			"PlayerId": "ON0pEDYCSCqUdCR7qaZUkg",
+			"PlayerName": "Masta Batah",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479350124000,
+			"SquadPower": 31508,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 83194
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 64572
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 150
+			}]
+		},
+		{
+			"PlayerId": "E8lB2D7aRLyBqIPft238fg",
+			"PlayerName": "curtis1212",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479344133000,
+			"SquadPower": 38008,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 92382
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 75154
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 138
+			}]
+		},
+		{
+			"PlayerId": "lfweQLJxSwSuQZ1AKdjUoA",
+			"PlayerName": "Talmage",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479346396000,
+			"SquadPower": 36299,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 460,
+				"LifetimeValue": 70030
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 178,
+				"LifetimeValue": 70380
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 91
+			}]
+		},
+		{
+			"PlayerId": "7ReBKspRTdWlohJWUm6o1w",
+			"PlayerName": "DarthTeclis",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479323834000,
+			"SquadPower": 40018,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 93180
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 71866
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 184
+			}]
+		},
+		{
+			"PlayerId": "NjdPNjt9T8-Od0vCYZ8qrg",
+			"PlayerName": "Super P",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479344784000,
+			"SquadPower": 32897,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 65724
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 64938
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 96
+			}]
+		},
+		{
+			"PlayerId": "aO--kL4bREW-29cr--TYGg",
+			"PlayerName": "Chris",
+			"PlayerLevel": 83,
+			"MemberLevel": 4,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479350169000,
+			"SquadPower": 35260,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 118088
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 88938
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 562
+			}]
+		},
+		{
+			"PlayerId": "4zUhtZAORvWmq4QAtI50sg",
+			"PlayerName": "Darkadi",
+			"PlayerLevel": 81,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479355076000,
+			"SquadPower": 37225,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 69638
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 47709
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 98
+			}]
+		},
+		{
+			"PlayerId": "Vxb1fruCTaCszg_ti84x0Q",
+			"PlayerName": "DoctorPain",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479340178000,
+			"SquadPower": 40411,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 82694
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 67304
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 504
+			}]
+		},
+		{
+			"PlayerId": "U54NNBMOQZOPh4Mc6uGgTQ",
+			"PlayerName": "maximfpwr",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479342418000,
+			"SquadPower": 38319,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 352,
+				"LifetimeValue": 90092
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 178,
+				"LifetimeValue": 68243
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 101
+			}]
+		},
+		{
+			"PlayerId": "AlaK01OqQx27LeJSqGuSZg",
+			"PlayerName": "Zhil Axfow",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479347705000,
+			"SquadPower": 37674,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 600,
+				"LifetimeValue": 84930
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 68469
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 102
+			}]
+		},
+		{
+			"PlayerId": "6cloas1LRfKyPWflZOM6Jw",
+			"PlayerName": "Paul76",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479355414000,
+			"SquadPower": 38690,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 70480
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 65465
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 51
+			}]
+		},
+		{
+			"PlayerId": "YGW5p2YDS_KvjOUn3r4gXA",
+			"PlayerName": "Icereaperx",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479342971000,
+			"SquadPower": 36618,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 196,
+				"LifetimeValue": 85646
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 71588
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 39
+			}]
+		},
+		{
+			"PlayerId": "LcPtlKWBT_OTuRuCJnOfNQ",
+			"PlayerName": "LVader",
+			"PlayerLevel": 83,
+			"MemberLevel": 3,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479353278000,
+			"SquadPower": 38784,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 91288
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 81424
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 67
+			}]
+		},
+		{
+			"PlayerId": "PXoNMLL6RGq0-U9RIT2Dqg",
+			"PlayerName": "Andywiz",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479353047000,
+			"SquadPower": 36206,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 66,
+				"LifetimeValue": 86368
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 178,
+				"LifetimeValue": 63473
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 320
+			}]
+		},
+		{
+			"PlayerId": "-mwmwcMhRLuInMKv-oIMGQ",
+			"PlayerName": "TubbyMofo",
+			"PlayerLevel": 83,
+			"MemberLevel": 3,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479337469000,
+			"SquadPower": 42436,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 94170
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 72955
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 292
+			}]
+		},
+		{
+			"PlayerId": "FDIbZUHMQGim0uIQNGPabQ",
+			"PlayerName": "Morri  Crow",
+			"PlayerLevel": 83,
+			"MemberLevel": 3,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479354642000,
+			"SquadPower": 40854,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 3,
+				"CurrentValue": 2,
+				"LifetimeValue": 277
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 47580
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 64,
+				"LifetimeValue": 61110
+			}]
+		},
+		{
+			"PlayerId": "PQkhqxL2Th6J5Xr8AXFWhQ",
+			"PlayerName": "Tim",
+			"PlayerLevel": 83,
+			"MemberLevel": 3,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479348495000,
+			"SquadPower": 42556,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 48428
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 222
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 45691
+			}]
+		},
+		{
+			"PlayerId": "ZRDORWZTRGy-mgZGjOlbww",
+			"PlayerName": "EJ Nellie",
+			"PlayerLevel": 83,
+			"MemberLevel": 3,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479342970000,
+			"SquadPower": 36047,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 53718
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 145
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 284,
+				"LifetimeValue": 37827
+			}]
+		},
+		{
+			"PlayerId": "ORZFZ-54QuWwI-cfIejgyw",
+			"PlayerName": "Jutah",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479354047000,
+			"SquadPower": 36132,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 36164
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 149
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 86,
+				"LifetimeValue": 51314
+			}]
+		},
+		{
+			"PlayerId": "oPXYf7SRQs-Tov-9saSC5w",
+			"PlayerName": "bstylz29",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479345477000,
+			"SquadPower": 40624,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 34070
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 62
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 42402
+			}]
+		},
+		{
+			"PlayerId": "8Nw4E5I5QMefwbjIlfgkrw",
+			"PlayerName": "MG-71",
+			"PlayerLevel": 85,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479350290000,
+			"SquadPower": 50876,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 689
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 40915
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 78,
+				"LifetimeValue": 40394
+			}]
+		},
+		{
+			"PlayerId": "Ck6bQBekQLakLx4NLppSsA",
+			"PlayerName": "Bung Holio",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479354459000,
+			"SquadPower": 26980,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 134,
+				"LifetimeValue": 28998
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 24960
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 132
+			}]
+		},
+		{
+			"PlayerId": "7V5ozCd9Sj6JHfprcoCvHw",
+			"PlayerName": "Dromand Cult",
+			"PlayerLevel": 80,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479328988000,
+			"SquadPower": 31409,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 23336
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 170
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 19418
+			}]
+		},
+		{
+			"PlayerId": "ld853Y0KRIaZFCTWOx6qxQ",
+			"PlayerName": "Dom Nada",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479344469000,
+			"SquadPower": 43412,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 74
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 26731
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 31142
+			}]
+		},
+		{
+			"PlayerId": "jJl27pjZQHWyddIOvt4piA",
+			"PlayerName": "DigDoug",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479353258000,
+			"SquadPower": 38796,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 139
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 31762
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 29566
+			}]
+		},
+		{
+			"PlayerId": "fTDW_yM1Qqipvu96jHba1g",
+			"PlayerName": "Wund",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479354862000,
+			"SquadPower": 39042,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 1,
+				"CurrentValue": 248,
+				"LifetimeValue": 24502
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 1,
+				"LifetimeValue": 105
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 140,
+				"LifetimeValue": 30590
+			}]
+		},
+		{
+			"PlayerId": "jiHMDOWxTCuhfrAUqftGRQ",
+			"PlayerName": "Reckoner",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479313975000,
+			"SquadPower": 41114,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 27246
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 61
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 30320
+			}]
+		},
+		{
+			"PlayerId": "ADuf1D-9QHS6OCe-Tly5MQ",
+			"PlayerName": "BigTuna",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479336066000,
+			"SquadPower": 40267,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 26336
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 31634
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 152
+			}]
+		},
+		{
+			"PlayerId": "sq7oL0LLQl-wOnjOlNBrcA",
+			"PlayerName": "Peeweeeherman",
+			"PlayerLevel": 79,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479353464000,
+			"SquadPower": 37098,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 600,
+				"LifetimeValue": 27190
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 22661
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 191
+			}]
+		},
+		{
+			"PlayerId": "ZxAgXzYAQQ2h8_6pVumXIg",
+			"PlayerName": "Josh",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479354676000,
+			"SquadPower": 34413,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 19
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 9991
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 500,
+				"LifetimeValue": 12218
+			}]
+		},
+		{
+			"PlayerId": "0knXlZ-dRK2jSwxyRdKyBA",
+			"PlayerName": "Popp",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479354948000,
+			"SquadPower": 35500,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 272,
+				"LifetimeValue": 17258
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 195,
+				"LifetimeValue": 18629
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 39
+			}]
+		},
+		{
+			"PlayerId": "koKHfzp1QL2GVVDiXWUhBg",
+			"PlayerName": "Dan garber",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479336496000,
+			"SquadPower": 31673,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 32
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 11657
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 13914
+			}]
+		},
+		{
+			"PlayerId": "IHh1p36VSHmHKu5q1fgCLg",
+			"PlayerName": "PUCKFAC3",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479190697000,
+			"SquadPower": 35558,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 18894
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 131
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 14606
+			}]
+		},
+		{
+			"PlayerId": "ohW2K5y0SG2saFcjORHG3g",
+			"PlayerName": "BUDawg01",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479347948000,
+			"SquadPower": 34204,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 1,
+				"CurrentValue": 178,
+				"LifetimeValue": 11307
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 84,
+				"LifetimeValue": 12774
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 14
+			}]
+		},
+		{
+			"PlayerId": "K8FD0BbARA-fFXYsTs9P9g",
+			"PlayerName": "Greywalker",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479348125000,
+			"SquadPower": 43455,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 600,
+				"LifetimeValue": 12572
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 1,
+				"LifetimeValue": 40
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 13736
+			}]
+		},
+		{
+			"PlayerId": "3VgMwZrzSba-vuvFlzTJCw",
+			"PlayerName": "Edgewalker",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479331483000,
+			"SquadPower": 29460,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 3,
+				"CurrentValue": 3,
+				"LifetimeValue": 236
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 254,
+				"LifetimeValue": 7939
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 332,
+				"LifetimeValue": 10036
+			}]
+		},
+		{
+			"PlayerId": "zrKf56gdT1u5nBiRggmWOw",
+			"PlayerName": "artimus",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479347869000,
+			"SquadPower": 34623,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 10565
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 3,
+				"LifetimeValue": 48
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 248,
+				"LifetimeValue": 10608
+			}]
+		},
+		{
+			"PlayerId": "xX0mvImRSJChIzzh9P6Fig",
+			"PlayerName": "FACE",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479339968000,
+			"SquadPower": 34468,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 9352
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 6426
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 8
+			}]
+		},
+		{
+			"PlayerId": "CyTc5CQdS0mCsRI5ELdPUA",
+			"PlayerName": "Daniel",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479344511000,
+			"SquadPower": 36874,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 0
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 116,
+				"LifetimeValue": 5690
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 5720
+			}]
+		},
+		{
+			"PlayerId": "yHmV3y8KRxqyJWokd3zAEg",
+			"PlayerName": "Gavon Carabas",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479345068000,
+			"SquadPower": 35882,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 10094
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 50
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 9086
+			}]
+		},
+		{
+			"PlayerId": "FPhk5o0fTZOO4LgY13p_0Q",
+			"PlayerName": "Xandr",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479339082000,
+			"SquadPower": 42101,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 3985
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 0
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 5348
+			}]
+		},
+		{
+			"PlayerId": "X9z-keqjT1WP4k4m0Xrv3g",
+			"PlayerName": "Lakits",
+			"PlayerLevel": 82,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479344232000,
+			"SquadPower": 35356,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 0
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 1047
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 2972
+			}]
+		},
+		{
+			"PlayerId": "bjEGNgOQR4e53cfLPB8FrQ",
+			"PlayerName": "Never Pulling Out",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479334994000,
+			"SquadPower": 41659,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 2,
+				"CurrentValue": 0,
+				"LifetimeValue": 3600
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 2136
+			},
+			{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 10
+			}]
+		},
+		{
+			"PlayerId": "ANTlh1ViQ8qDv26HuaudSw",
+			"PlayerName": "Le pooldead",
+			"PlayerLevel": 83,
+			"MemberLevel": 2,
+			"LeaderUnit": null,
+			"Contribution": 0,
+			"GuildXp": 0,
+			"LastActivityTime": 1479355559000,
+			"SquadPower": 41132,
+			"LifetimeContribution": 0,
+			"MemberContribution": [{
+				"Type": 3,
+				"CurrentValue": 0,
+				"LifetimeValue": 9
+			},
+			{
+				"Type": 2,
+				"CurrentValue": 160,
+				"LifetimeValue": 3442
+			},
+			{
+				"Type": 1,
+				"CurrentValue": 0,
+				"LifetimeValue": 2147
+			}]
+		}],
+		"InviteStatus": [],
+		"RaidStatus": [{
+			"RaidId": "rancor",
+			"ExpireTime": 1479517218000,
+			"RaidProgress": 0.125574365,
+			"RaidMember": [{
+				"PlayerId": "sXFHrht7RpiwdAVAzysU4g",
+				"MemberProgress": 248882,
+				"MemberRank": 14
+			},
+			{
+				"PlayerId": "ORZFZ-54QuWwI-cfIejgyw",
+				"MemberProgress": 201871,
+				"MemberRank": 23
+			},
+			{
+				"PlayerId": "fTDW_yM1Qqipvu96jHba1g",
+				"MemberProgress": 228561,
+				"MemberRank": 18
+			},
+			{
+				"PlayerId": "q_RQX_EcTzimQ29sao-PMA",
+				"MemberProgress": 220883,
+				"MemberRank": 19
+			},
+			{
+				"PlayerId": "0O-yZOocRWCeamdKg6Ffsg",
+				"MemberProgress": 112387,
+				"MemberRank": 28
+			},
+			{
+				"PlayerId": "8Nw4E5I5QMefwbjIlfgkrw",
+				"MemberProgress": 2880442,
+				"MemberRank": 1
+			},
+			{
+				"PlayerId": "-mwmwcMhRLuInMKv-oIMGQ",
+				"MemberProgress": 1059519,
+				"MemberRank": 3
+			},
+			{
+				"PlayerId": "CyTc5CQdS0mCsRI5ELdPUA",
+				"MemberProgress": 74896,
+				"MemberRank": 32
+			},
+			{
+				"PlayerId": "ohW2K5y0SG2saFcjORHG3g",
+				"MemberProgress": 78823,
+				"MemberRank": 31
+			},
+			{
+				"PlayerId": "oPXYf7SRQs-Tov-9saSC5w",
+				"MemberProgress": 185286,
+				"MemberRank": 24
+			},
+			{
+				"PlayerId": "U54NNBMOQZOPh4Mc6uGgTQ",
+				"MemberProgress": 178535,
+				"MemberRank": 25
+			},
+			{
+				"PlayerId": "sq7oL0LLQl-wOnjOlNBrcA",
+				"MemberProgress": 618402,
+				"MemberRank": 5
+			},
+			{
+				"PlayerId": "ZRDORWZTRGy-mgZGjOlbww",
+				"MemberProgress": 241723,
+				"MemberRank": 16
+			},
+			{
+				"PlayerId": "3VgMwZrzSba-vuvFlzTJCw",
+				"MemberProgress": 72734,
+				"MemberRank": 34
+			},
+			{
+				"PlayerId": "AlaK01OqQx27LeJSqGuSZg",
+				"MemberProgress": 232547,
+				"MemberRank": 17
+			},
+			{
+				"PlayerId": "zrKf56gdT1u5nBiRggmWOw",
+				"MemberProgress": 219761,
+				"MemberRank": 20
+			},
+			{
+				"PlayerId": "ld853Y0KRIaZFCTWOx6qxQ",
+				"MemberProgress": 345132,
+				"MemberRank": 11
+			},
+			{
+				"PlayerId": "ZxAgXzYAQQ2h8_6pVumXIg",
+				"MemberProgress": 88052,
+				"MemberRank": 30
+			},
+			{
+				"PlayerId": "FDIbZUHMQGim0uIQNGPabQ",
+				"MemberProgress": 468937,
+				"MemberRank": 7
+			},
+			{
+				"PlayerId": "PQkhqxL2Th6J5Xr8AXFWhQ",
+				"MemberProgress": 544023,
+				"MemberRank": 6
+			},
+			{
+				"PlayerId": "YGW5p2YDS_KvjOUn3r4gXA",
+				"MemberProgress": 216943,
+				"MemberRank": 21
+			},
+			{
+				"PlayerId": "0knXlZ-dRK2jSwxyRdKyBA",
+				"MemberProgress": 89320,
+				"MemberRank": 29
+			},
+			{
+				"PlayerId": "LcPtlKWBT_OTuRuCJnOfNQ",
+				"MemberProgress": 370447,
+				"MemberRank": 10
+			},
+			{
+				"PlayerId": "E8lB2D7aRLyBqIPft238fg",
+				"MemberProgress": 115365,
+				"MemberRank": 27
+			},
+			{
+				"PlayerId": "Ck6bQBekQLakLx4NLppSsA",
+				"MemberProgress": 20066,
+				"MemberRank": 35
+			},
+			{
+				"PlayerId": "yHmV3y8KRxqyJWokd3zAEg",
+				"MemberProgress": 278667,
+				"MemberRank": 13
+			},
+			{
+				"PlayerId": "lfweQLJxSwSuQZ1AKdjUoA",
+				"MemberProgress": 208063,
+				"MemberRank": 22
+			},
+			{
+				"PlayerId": "X9z-keqjT1WP4k4m0Xrv3g",
+				"MemberProgress": 74890,
+				"MemberRank": 33
+			},
+			{
+				"PlayerId": "PXoNMLL6RGq0-U9RIT2Dqg",
+				"MemberProgress": 247429,
+				"MemberRank": 15
+			},
+			{
+				"PlayerId": "K8FD0BbARA-fFXYsTs9P9g",
+				"MemberProgress": 328605,
+				"MemberRank": 12
+			},
+			{
+				"PlayerId": "bjEGNgOQR4e53cfLPB8FrQ",
+				"MemberProgress": 637872,
+				"MemberRank": 4
+			},
+			{
+				"PlayerId": "NjdPNjt9T8-Od0vCYZ8qrg",
+				"MemberProgress": 125167,
+				"MemberRank": 26
+			},
+			{
+				"PlayerId": "aO--kL4bREW-29cr--TYGg",
+				"MemberProgress": 414439,
+				"MemberRank": 9
+			},
+			{
+				"PlayerId": "ANTlh1ViQ8qDv26HuaudSw",
+				"MemberProgress": 1102807,
+				"MemberRank": 2
+			},
+			{
+				"PlayerId": "jJl27pjZQHWyddIOvt4piA",
+				"MemberProgress": 458290,
+				"MemberRank": 8
+			}],
+			"EncounterIndex": 3,
+			"OpponentUnitState": [{
+				"UnitId": "3:rancor-boss",
+				"HealthPercent": "50.22974623074814",
+				"AbilityState": [],
+				"ProgressItem": true,
+				"CurrentHealth": 1058832,
+				"ShieldPercent": "100",
+				"TurnPercent": "0",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			}],
+			"PlayerUnitState": [{
+				"UnitId": "lO3mUSWKSYGj5L987GHzkg",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_royalguard01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_royalguard",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_heroic80_escape",
+					"Cooldown": 3
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "66.42857142857143",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "tAo2TKqBQ56vuUCtyCpvwA",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_phasma02",
+					"Cooldown": 1
+				},
+				{
+					"AbilityId": "specialability_phasma01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_heroic80_escape",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "88.756322972182",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "2Lay8cx5Q2CDHUv5Zwexdg",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_rey01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_rey02",
+					"Cooldown": 3
+				},
+				{
+					"AbilityId": "specialability_rey01",
+					"Cooldown": 2
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_heroic80_escape",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "54.09090909090909",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "7G66uufcT0y34_BZkSoiOw",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_luminaraunduli01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_luminaraunduli02",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_heroic80_escape",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "42.46933683057031",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "qF2teyoBQPeUIax5-rSJLw",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_obiwan",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_oldbenkenobi01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_heroic80_escape",
+					"Cooldown": 2
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "80.33766233766234",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			}],
+			"Identifier": {
+				"CampaignId": "GUILD",
+				"CampaignMapId": "RAIDS",
+				"CampaignNodeId": "RANCOR",
+				"CampaignNodeDifficulty": 4,
+				"CampaignMissionId": "HEROIC80"
+			},
+			"InstanceId": "agOHyHnZS9uzo3cKJlOjWw",
+			"RosterRefreshTime": 0,
+			"HasPlayerParticipated": true,
+			"LastEncounterIndexPlayerParticipated": 2,
+			"RaidState": 1,
+			"TallyEndTime": 0,
+			"EligibleForRewards": true
+		},
+		{
+			"RaidId": "aat",
+			"ExpireTime": 0,
+			"RaidProgress": 0.206122518,
+			"RaidMember": [{
+				"PlayerId": "sXFHrht7RpiwdAVAzysU4g",
+				"MemberProgress": 4773360,
+				"MemberRank": 13
+			},
+			{
+				"PlayerId": "q_RQX_EcTzimQ29sao-PMA",
+				"MemberProgress": 4961431,
+				"MemberRank": 12
+			},
+			{
+				"PlayerId": "0O-yZOocRWCeamdKg6Ffsg",
+				"MemberProgress": 272614,
+				"MemberRank": 50
+			},
+			{
+				"PlayerId": "8Nw4E5I5QMefwbjIlfgkrw",
+				"MemberProgress": 23938575,
+				"MemberRank": 1
+			},
+			{
+				"PlayerId": "-mwmwcMhRLuInMKv-oIMGQ",
+				"MemberProgress": 9697815,
+				"MemberRank": 4
+			},
+			{
+				"PlayerId": "a7mOzcfrQ7-0RGbeEZtl4w",
+				"MemberProgress": 135362,
+				"MemberRank": 54
+			},
+			{
+				"PlayerId": "CyTc5CQdS0mCsRI5ELdPUA",
+				"MemberProgress": 1453364,
+				"MemberRank": 30
+			},
+			{
+				"PlayerId": "VfojWvl3RtyLdoCmYuwX3A",
+				"MemberProgress": 478817,
+				"MemberRank": 44
+			},
+			{
+				"PlayerId": "Jus5SlCnTyKSb8CqPYs7dA",
+				"MemberProgress": 38420,
+				"MemberRank": 57
+			},
+			{
+				"PlayerId": "o_1PwoZTTiO0ORjfNs54aw",
+				"MemberProgress": 22579,
+				"MemberRank": 58
+			},
+			{
+				"PlayerId": "oPXYf7SRQs-Tov-9saSC5w",
+				"MemberProgress": 3057013,
+				"MemberRank": 18
+			},
+			{
+				"PlayerId": "sq7oL0LLQl-wOnjOlNBrcA",
+				"MemberProgress": 1749761,
+				"MemberRank": 25
+			},
+			{
+				"PlayerId": "ZRDORWZTRGy-mgZGjOlbww",
+				"MemberProgress": 3030879,
+				"MemberRank": 19
+			},
+			{
+				"PlayerId": "3VgMwZrzSba-vuvFlzTJCw",
+				"MemberProgress": 1524266,
+				"MemberRank": 29
+			},
+			{
+				"PlayerId": "ld853Y0KRIaZFCTWOx6qxQ",
+				"MemberProgress": 7322687,
+				"MemberRank": 6
+			},
+			{
+				"PlayerId": "lHEkcPsDSSiAnB6fIjB5Aw",
+				"MemberProgress": 906894,
+				"MemberRank": 36
+			},
+			{
+				"PlayerId": "PQkhqxL2Th6J5Xr8AXFWhQ",
+				"MemberProgress": 7853103,
+				"MemberRank": 5
+			},
+			{
+				"PlayerId": "ON0pEDYCSCqUdCR7qaZUkg",
+				"MemberProgress": 1827387,
+				"MemberRank": 24
+			},
+			{
+				"PlayerId": "koKHfzp1QL2GVVDiXWUhBg",
+				"MemberProgress": 701880,
+				"MemberRank": 41
+			},
+			{
+				"PlayerId": "E8lB2D7aRLyBqIPft238fg",
+				"MemberProgress": 3379583,
+				"MemberRank": 16
+			},
+			{
+				"PlayerId": "yHmV3y8KRxqyJWokd3zAEg",
+				"MemberProgress": 1453249,
+				"MemberRank": 31
+			},
+			{
+				"PlayerId": "lfweQLJxSwSuQZ1AKdjUoA",
+				"MemberProgress": 905282,
+				"MemberRank": 37
+			},
+			{
+				"PlayerId": "i7qkm0_NSHKYCxUHUwcBaw",
+				"MemberProgress": 286231,
+				"MemberRank": 49
+			},
+			{
+				"PlayerId": "K8FD0BbARA-fFXYsTs9P9g",
+				"MemberProgress": 6614060,
+				"MemberRank": 7
+			},
+			{
+				"PlayerId": "bjEGNgOQR4e53cfLPB8FrQ",
+				"MemberProgress": 850353,
+				"MemberRank": 38
+			},
+			{
+				"PlayerId": "yhZrF3MYQN2bd4LkpB552w",
+				"MemberProgress": 71659,
+				"MemberRank": 56
+			},
+			{
+				"PlayerId": "7ReBKspRTdWlohJWUm6o1w",
+				"MemberProgress": 3276962,
+				"MemberRank": 17
+			},
+			{
+				"PlayerId": "aO--kL4bREW-29cr--TYGg",
+				"MemberProgress": 5577061,
+				"MemberRank": 11
+			},
+			{
+				"PlayerId": "NjdPNjt9T8-Od0vCYZ8qrg",
+				"MemberProgress": 2187603,
+				"MemberRank": 22
+			},
+			{
+				"PlayerId": "O6za3_6zTpW-E6ut__2x9A",
+				"MemberProgress": 0,
+				"MemberRank": 60
+			},
+			{
+				"PlayerId": "EhTmxY9NQVyocgSQaer0kA",
+				"MemberProgress": 3631,
+				"MemberRank": 59
+			},
+			{
+				"PlayerId": "jJl27pjZQHWyddIOvt4piA",
+				"MemberProgress": 5774247,
+				"MemberRank": 10
+			},
+			{
+				"PlayerId": "IHh1p36VSHmHKu5q1fgCLg",
+				"MemberProgress": 1624996,
+				"MemberRank": 27
+			},
+			{
+				"PlayerId": "g84VIWPgREuVG2v5nqMP7g",
+				"MemberProgress": 217437,
+				"MemberRank": 52
+			},
+			{
+				"PlayerId": "ORZFZ-54QuWwI-cfIejgyw",
+				"MemberProgress": 829780,
+				"MemberRank": 39
+			},
+			{
+				"PlayerId": "fTDW_yM1Qqipvu96jHba1g",
+				"MemberProgress": 4211744,
+				"MemberRank": 15
+			},
+			{
+				"PlayerId": "4zUhtZAORvWmq4QAtI50sg",
+				"MemberProgress": 946863,
+				"MemberRank": 35
+			},
+			{
+				"PlayerId": "Vxb1fruCTaCszg_ti84x0Q",
+				"MemberProgress": 1701588,
+				"MemberRank": 26
+			},
+			{
+				"PlayerId": "ohW2K5y0SG2saFcjORHG3g",
+				"MemberProgress": 335769,
+				"MemberRank": 47
+			},
+			{
+				"PlayerId": "U54NNBMOQZOPh4Mc6uGgTQ",
+				"MemberProgress": 82167,
+				"MemberRank": 55
+			},
+			{
+				"PlayerId": "AlaK01OqQx27LeJSqGuSZg",
+				"MemberProgress": 1576784,
+				"MemberRank": 28
+			},
+			{
+				"PlayerId": "zrKf56gdT1u5nBiRggmWOw",
+				"MemberProgress": 2113484,
+				"MemberRank": 23
+			},
+			{
+				"PlayerId": "jiHMDOWxTCuhfrAUqftGRQ",
+				"MemberProgress": 12973305,
+				"MemberRank": 2
+			},
+			{
+				"PlayerId": "ZxAgXzYAQQ2h8_6pVumXIg",
+				"MemberProgress": 999743,
+				"MemberRank": 34
+			},
+			{
+				"PlayerId": "FDIbZUHMQGim0uIQNGPabQ",
+				"MemberProgress": 6263462,
+				"MemberRank": 8
+			},
+			{
+				"PlayerId": "6cloas1LRfKyPWflZOM6Jw",
+				"MemberProgress": 4254241,
+				"MemberRank": 14
+			},
+			{
+				"PlayerId": "YGW5p2YDS_KvjOUn3r4gXA",
+				"MemberProgress": 2553911,
+				"MemberRank": 20
+			},
+			{
+				"PlayerId": "0knXlZ-dRK2jSwxyRdKyBA",
+				"MemberProgress": 447703,
+				"MemberRank": 45
+			},
+			{
+				"PlayerId": "WtmAiR0CTlWZEunbsS78GA",
+				"MemberProgress": 270328,
+				"MemberRank": 51
+			},
+			{
+				"PlayerId": "LcPtlKWBT_OTuRuCJnOfNQ",
+				"MemberProgress": 9777064,
+				"MemberRank": 3
+			},
+			{
+				"PlayerId": "xX0mvImRSJChIzzh9P6Fig",
+				"MemberProgress": 524346,
+				"MemberRank": 43
+			},
+			{
+				"PlayerId": "Ck6bQBekQLakLx4NLppSsA",
+				"MemberProgress": 750409,
+				"MemberRank": 40
+			},
+			{
+				"PlayerId": "PXoNMLL6RGq0-U9RIT2Dqg",
+				"MemberProgress": 1216021,
+				"MemberRank": 33
+			},
+			{
+				"PlayerId": "0-dk6qzARkeDS-m-bG449A",
+				"MemberProgress": 322090,
+				"MemberRank": 48
+			},
+			{
+				"PlayerId": "FPhk5o0fTZOO4LgY13p_0Q",
+				"MemberProgress": 2526414,
+				"MemberRank": 21
+			},
+			{
+				"PlayerId": "ANTlh1ViQ8qDv26HuaudSw",
+				"MemberProgress": 601572,
+				"MemberRank": 42
+			},
+			{
+				"PlayerId": "VSjIpixcQViin4-7Pq4uLg",
+				"MemberProgress": 1268865,
+				"MemberRank": 32
+			},
+			{
+				"PlayerId": "ADuf1D-9QHS6OCe-Tly5MQ",
+				"MemberProgress": 6030266,
+				"MemberRank": 9
+			},
+			{
+				"PlayerId": "KNFMOOP6SDaR7JYnDoukvA",
+				"MemberProgress": 154717,
+				"MemberRank": 53
+			},
+			{
+				"PlayerId": "7V5ozCd9Sj6JHfprcoCvHw",
+				"MemberProgress": 440479,
+				"MemberRank": 46
+			}],
+			"EncounterIndex": 3,
+			"OpponentUnitState": [{
+				"UnitId": "3:PVE_AAT_TURRET_DESTROYED",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_aat_turret_destroyed01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_reviveresets",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "100",
+				"TurnPercent": "0",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "3:PVE_B2SUPERBATTLEDROID-2",
+				"HealthPercent": "43.55782876064333",
+				"AbilityState": [{
+					"AbilityId": "specialability_b2superbattledroid01_aatraid",
+					"Cooldown": 2
+				},
+				{
+					"AbilityId": "uniqueability_b2superbattledroid01_aatraid",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_reviveresets",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 14733,
+				"ShieldPercent": "100",
+				"TurnPercent": "47.238715444040096",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "3:PVE_AAT_CANNON_RIGHT",
+				"HealthPercent": "62.888347959771956",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_aat_cannon_right01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_reviveresets",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 19635,
+				"ShieldPercent": "100",
+				"TurnPercent": "0",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "3:aat-boss",
+				"HealthPercent": "82.44900491899453",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_startescapeoncooldown",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_aat02",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_raidboss02",
+					"Cooldown": 12
+				},
+				{
+					"AbilityId": "moraleability_aat02",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_aat01",
+					"Cooldown": 1
+				},
+				{
+					"AbilityId": "uniqueability_startoncooldown",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_aat02",
+					"Cooldown": 3
+				},
+				{
+					"AbilityId": "raidability_aatraid_faction_buff",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_aat00",
+					"Cooldown": 0
+				}],
+				"ProgressItem": true,
+				"CurrentHealth": 39170612,
+				"ShieldPercent": "100",
+				"TurnPercent": "3.905670670301205",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "3:PVE_B2SUPERBATTLEDROID",
+				"HealthPercent": "76.43389309366131",
+				"AbilityState": [{
+					"AbilityId": "specialability_b2superbattledroid01_aatraid",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_b2superbattledroid01_aatraid",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_reviveresets",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 25853,
+				"ShieldPercent": "100",
+				"TurnPercent": "4.7331413080311755",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "3:dummy-airstrike",
+				"HealthPercent": "100",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_dummy_airstrike01",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 1000000000,
+				"ShieldPercent": "100",
+				"TurnPercent": "0",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "3:PVE_AAT_TURRET",
+				"HealthPercent": "59.91288194222023",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_aat_turret01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_reviveresets",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 18706,
+				"ShieldPercent": "100",
+				"TurnPercent": "57.04570764014815",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "3:PVE_AAT_CANNON_LEFT",
+				"HealthPercent": "62.61610402921017",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_aat_cannon_left01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_reviveresets",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 19550,
+				"ShieldPercent": "100",
+				"TurnPercent": "53.28876573253737",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "3:PVE_AAT_CANNON_LEFT_DESTROYED",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_aat_cannon_left_destroyed01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_reviveresets",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "100",
+				"TurnPercent": "0",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "3:PVE_AAT_CANNON_RIGHT_DESTROYED",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_aat_cannon_right_destroyed01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_reviveresets",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "100",
+				"TurnPercent": "0",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			}],
+			"PlayerUnitState": [{
+				"UnitId": "gGysZZDeTdKz88G_g0_x5Q",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_darthsidious01",
+					"Cooldown": 3
+				},
+				{
+					"AbilityId": "uniqueability_darthsidious01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 7
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "35.226835855458255",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "XvSsGrc0T2ehrpDegKXvvQ",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_clonewarschewbacca02",
+					"Cooldown": 2
+				},
+				{
+					"AbilityId": "specialability_clonewarschewbacca01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 7
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "41.490987224268885",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "EzvCXO4PQpmhPudnO78Tog",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_grandmasteryoda03",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 8
+				},
+				{
+					"AbilityId": "specialability_grandmasteryoda01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_grandmasteryoda02",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "68.71422453207965",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "iS3M4p_xQUKAmnxQYNB5RA",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_quigonjinn02",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_quigonjinn01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 6
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "72.33576642335767",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "fwr6sep-R5G8n8RA9T4I6A",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_cadbane01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_cadbane01",
+					"Cooldown": 2
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 7
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "78.20724088653485",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "UB5Ila8MS9-PODDibEMeNQ",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_geonosiansoldier01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_geonosiansoldier01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 6
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "78.47682119205298",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "IrJitbwdS0qmNa1at9ZPbg",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_administratorlando01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_administratorlando01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 7
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "80.82781456953643",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "45DTePDuS6aRVrJzt7ElcQ",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_jediknightconsular01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_jediknightconsular02",
+					"Cooldown": 2
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 7
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "28.845162693237558",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "2Lay8cx5Q2CDHUv5Zwexdg",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_rey01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_rey02",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_rey01",
+					"Cooldown": 3
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "96.90265486725664",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "qF2teyoBQPeUIax5-rSJLw",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_obiwan",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_oldbenkenobi01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 4
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "82.16262424104993",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "lO3mUSWKSYGj5L987GHzkg",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_royalguard01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 4
+				},
+				{
+					"AbilityId": "uniqueability_royalguard",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "9.196636206995255",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "R-LpFYHtQ2Ga3PNz3ObwOw",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_admiralackbar01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_admiralackbar02",
+					"Cooldown": 2
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 6
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "0.7123919397675246",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "hqAYQ4EPQH6D71cMD0mnIA",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_princessleia01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_princessleia01",
+					"Cooldown": 2
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 6
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "10.31184305790943",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "tAo2TKqBQ56vuUCtyCpvwA",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_phasma02",
+					"Cooldown": 2
+				},
+				{
+					"AbilityId": "specialability_phasma01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 2
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "4.193053441771974",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "nDIzMbTQQQiKSjltglbN-Q",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_teebo01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_teebo02",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 6
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "0",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "Hhd0SETQSsSEkm__1sZA-A",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_stormtrooperhan01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 8
+				},
+				{
+					"AbilityId": "specialability_stormtrooperhan01",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "52.72740663772185",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "drQfF7tHQxq22HVvtguj_w",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_macewindu01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "uniqueability_macewindu01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 8
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "79.77711771530649",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "V13DWmzTSp6gKrkN1TYDbg",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_ahsokatano01",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_ahsokatano01",
+					"Cooldown": 2
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 6
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "16.76126736699424",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "7G66uufcT0y34_BZkSoiOw",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "specialability_luminaraunduli01",
+					"Cooldown": 1
+				},
+				{
+					"AbilityId": "specialability_luminaraunduli02",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 3
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "3.9852252199458325",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			},
+			{
+				"UnitId": "T0Q5cQ7cSHyAB6102Bttow",
+				"HealthPercent": "0",
+				"AbilityState": [{
+					"AbilityId": "uniqueability_bobafett",
+					"Cooldown": 0
+				},
+				{
+					"AbilityId": "specialability_guildraid_rancor_diff06_escape",
+					"Cooldown": 7
+				},
+				{
+					"AbilityId": "specialability_bobafett01",
+					"Cooldown": 0
+				}],
+				"ProgressItem": false,
+				"CurrentHealth": 0,
+				"ShieldPercent": "0",
+				"TurnPercent": "10.526315789473685",
+				"MaxHealth": 0,
+				"HasFled": false,
+				"MaxShield": 0
+			}],
+			"Identifier": {
+				"CampaignId": "GUILD",
+				"CampaignMapId": "RAIDS",
+				"CampaignNodeId": "AAT",
+				"CampaignNodeDifficulty": 4,
+				"CampaignMissionId": "DIFF06"
+			},
+			"InstanceId": "2QDS1m1JSzGgNgbV4UJKQg",
+			"RosterRefreshTime": 1479366000000,
+			"HasPlayerParticipated": true,
+			"LastEncounterIndexPlayerParticipated": 3,
+			"RaidState": 1,
+			"TallyEndTime": 0,
+			"EligibleForRewards": true
+		}],
+		"Inventory": {
+			"CurrencyItem": [{
+				"Currency": 21,
+				"Quantity": 150000
+			},
+			{
+				"Currency": 20,
+				"Quantity": 150000
+			},
+			{
+				"Currency": 18,
+				"Quantity": 150000
+			}],
+			"CurrentDailyLimit": []
+		},
+		"RaidResult": [{
+			"RaidId": "rancor",
+			"RaidMember": [{
+				"PlayerId": "sXFHrht7RpiwdAVAzysU4g",
+				"MemberProgress": 1051936,
+				"MemberRank": 12
+			},
+			{
+				"PlayerId": "ORZFZ-54QuWwI-cfIejgyw",
+				"MemberProgress": 294254,
+				"MemberRank": 29
+			},
+			{
+				"PlayerId": "q_RQX_EcTzimQ29sao-PMA",
+				"MemberProgress": 321983,
+				"MemberRank": 27
+			},
+			{
+				"PlayerId": "4zUhtZAORvWmq4QAtI50sg",
+				"MemberProgress": 296371,
+				"MemberRank": 28
+			},
+			{
+				"PlayerId": "Vxb1fruCTaCszg_ti84x0Q",
+				"MemberProgress": 831990,
+				"MemberRank": 15
+			},
+			{
+				"PlayerId": "0O-yZOocRWCeamdKg6Ffsg",
+				"MemberProgress": 243518,
+				"MemberRank": 31
+			},
+			{
+				"PlayerId": "8Nw4E5I5QMefwbjIlfgkrw",
+				"MemberProgress": 5598824,
+				"MemberRank": 1
+			},
+			{
+				"PlayerId": "-mwmwcMhRLuInMKv-oIMGQ",
+				"MemberProgress": 3724982,
+				"MemberRank": 2
+			},
+			{
+				"PlayerId": "oPXYf7SRQs-Tov-9saSC5w",
+				"MemberProgress": 1158247,
+				"MemberRank": 10
+			},
+			{
+				"PlayerId": "U54NNBMOQZOPh4Mc6uGgTQ",
+				"MemberProgress": 384280,
+				"MemberRank": 24
+			},
+			{
+				"PlayerId": "sq7oL0LLQl-wOnjOlNBrcA",
+				"MemberProgress": 1385347,
+				"MemberRank": 7
+			},
+			{
+				"PlayerId": "ZRDORWZTRGy-mgZGjOlbww",
+				"MemberProgress": 854225,
+				"MemberRank": 14
+			},
+			{
+				"PlayerId": "jiHMDOWxTCuhfrAUqftGRQ",
+				"MemberProgress": 1215378,
+				"MemberRank": 9
+			},
+			{
+				"PlayerId": "AlaK01OqQx27LeJSqGuSZg",
+				"MemberProgress": 596149,
+				"MemberRank": 19
+			},
+			{
+				"PlayerId": "zrKf56gdT1u5nBiRggmWOw",
+				"MemberProgress": 187569,
+				"MemberRank": 32
+			},
+			{
+				"PlayerId": "FDIbZUHMQGim0uIQNGPabQ",
+				"MemberProgress": 2524001,
+				"MemberRank": 5
+			},
+			{
+				"PlayerId": "PQkhqxL2Th6J5Xr8AXFWhQ",
+				"MemberProgress": 3076508,
+				"MemberRank": 3
+			},
+			{
+				"PlayerId": "6cloas1LRfKyPWflZOM6Jw",
+				"MemberProgress": 349473,
+				"MemberRank": 26
+			},
+			{
+				"PlayerId": "ON0pEDYCSCqUdCR7qaZUkg",
+				"MemberProgress": 150302,
+				"MemberRank": 34
+			},
+			{
+				"PlayerId": "YGW5p2YDS_KvjOUn3r4gXA",
+				"MemberProgress": 567119,
+				"MemberRank": 20
+			},
+			{
+				"PlayerId": "0knXlZ-dRK2jSwxyRdKyBA",
+				"MemberProgress": 246430,
+				"MemberRank": 30
+			},
+			{
+				"PlayerId": "koKHfzp1QL2GVVDiXWUhBg",
+				"MemberProgress": 101983,
+				"MemberRank": 35
+			},
+			{
+				"PlayerId": "LcPtlKWBT_OTuRuCJnOfNQ",
+				"MemberProgress": 1265469,
+				"MemberRank": 8
+			},
+			{
+				"PlayerId": "E8lB2D7aRLyBqIPft238fg",
+				"MemberProgress": 565802,
+				"MemberRank": 21
+			},
+			{
+				"PlayerId": "Ck6bQBekQLakLx4NLppSsA",
+				"MemberProgress": 94186,
+				"MemberRank": 36
+			},
+			{
+				"PlayerId": "yHmV3y8KRxqyJWokd3zAEg",
+				"MemberProgress": 735718,
+				"MemberRank": 16
+			},
+			{
+				"PlayerId": "lfweQLJxSwSuQZ1AKdjUoA",
+				"MemberProgress": 349864,
+				"MemberRank": 25
+			},
+			{
+				"PlayerId": "PXoNMLL6RGq0-U9RIT2Dqg",
+				"MemberProgress": 175894,
+				"MemberRank": 33
+			},
+			{
+				"PlayerId": "K8FD0BbARA-fFXYsTs9P9g",
+				"MemberProgress": 1154119,
+				"MemberRank": 11
+			},
+			{
+				"PlayerId": "FPhk5o0fTZOO4LgY13p_0Q",
+				"MemberProgress": 1771374,
+				"MemberRank": 6
+			},
+			{
+				"PlayerId": "7ReBKspRTdWlohJWUm6o1w",
+				"MemberProgress": 391167,
+				"MemberRank": 23
+			},
+			{
+				"PlayerId": "NjdPNjt9T8-Od0vCYZ8qrg",
+				"MemberProgress": 42272,
+				"MemberRank": 37
+			},
+			{
+				"PlayerId": "aO--kL4bREW-29cr--TYGg",
+				"MemberProgress": 2678098,
+				"MemberRank": 4
+			},
+			{
+				"PlayerId": "VSjIpixcQViin4-7Pq4uLg",
+				"MemberProgress": 626328,
+				"MemberRank": 18
+			},
+			{
+				"PlayerId": "ADuf1D-9QHS6OCe-Tly5MQ",
+				"MemberProgress": 1002556,
+				"MemberRank": 13
+			},
+			{
+				"PlayerId": "jJl27pjZQHWyddIOvt4piA",
+				"MemberProgress": 688456,
+				"MemberRank": 17
+			},
+			{
+				"PlayerId": "IHh1p36VSHmHKu5q1fgCLg",
+				"MemberProgress": 420827,
+				"MemberRank": 22
+			}],
+			"Identifier": {
+				"CampaignId": "GUILD",
+				"CampaignMapId": "RAIDS",
+				"CampaignNodeId": "RANCOR",
+				"CampaignNodeDifficulty": 4,
+				"CampaignMissionId": "DIFF06"
+			},
+			"Duration": 48003,
+			"ProgressDeprecated": 0,
+			"Progress": 0.0
+		},
+		{
+			"RaidId": "rancor",
+			"RaidMember": [{
+				"PlayerId": "sXFHrht7RpiwdAVAzysU4g",
+				"MemberProgress": 1032215,
+				"MemberRank": 6
+			},
+			{
+				"PlayerId": "14O2Zs0ySY2YmIyJEcH00Q",
+				"MemberProgress": 158343,
+				"MemberRank": 22
+			},
+			{
+				"PlayerId": "YGW5p2YDS_KvjOUn3r4gXA",
+				"MemberProgress": 818489,
+				"MemberRank": 10
+			},
+			{
+				"PlayerId": "WtmAiR0CTlWZEunbsS78GA",
+				"MemberProgress": 333998,
+				"MemberRank": 18
+			},
+			{
+				"PlayerId": "q_RQX_EcTzimQ29sao-PMA",
+				"MemberProgress": 2141181,
+				"MemberRank": 1
+			},
+			{
+				"PlayerId": "E8lB2D7aRLyBqIPft238fg",
+				"MemberProgress": 1383343,
+				"MemberRank": 4
+			},
+			{
+				"PlayerId": "lfweQLJxSwSuQZ1AKdjUoA",
+				"MemberProgress": 347410,
+				"MemberRank": 17
+			},
+			{
+				"PlayerId": "Vxb1fruCTaCszg_ti84x0Q",
+				"MemberProgress": 166029,
+				"MemberRank": 21
+			},
+			{
+				"PlayerId": "qaYD9rEfREGUKHITb-6rBg",
+				"MemberProgress": 1019849,
+				"MemberRank": 7
+			},
+			{
+				"PlayerId": "0O-yZOocRWCeamdKg6Ffsg",
+				"MemberProgress": 891473,
+				"MemberRank": 8
+			},
+			{
+				"PlayerId": "PXoNMLL6RGq0-U9RIT2Dqg",
+				"MemberProgress": 725311,
+				"MemberRank": 11
+			},
+			{
+				"PlayerId": "-mwmwcMhRLuInMKv-oIMGQ",
+				"MemberProgress": 1824399,
+				"MemberRank": 2
+			},
+			{
+				"PlayerId": "XFx3c1kGQyu3_SA45FZYkA",
+				"MemberProgress": 208977,
+				"MemberRank": 19
+			},
+			{
+				"PlayerId": "Jus5SlCnTyKSb8CqPYs7dA",
+				"MemberProgress": 186162,
+				"MemberRank": 20
+			},
+			{
+				"PlayerId": "7ReBKspRTdWlohJWUm6o1w",
+				"MemberProgress": 504592,
+				"MemberRank": 14
+			},
+			{
+				"PlayerId": "NjdPNjt9T8-Od0vCYZ8qrg",
+				"MemberProgress": 502002,
+				"MemberRank": 15
+			},
+			{
+				"PlayerId": "U54NNBMOQZOPh4Mc6uGgTQ",
+				"MemberProgress": 484054,
+				"MemberRank": 16
+			},
+			{
+				"PlayerId": "-4ncX5YpTdOtQGkDWUe71Q",
+				"MemberProgress": 688234,
+				"MemberRank": 12
+			},
+			{
+				"PlayerId": "AlaK01OqQx27LeJSqGuSZg",
+				"MemberProgress": 649015,
+				"MemberRank": 13
+			},
+			{
+				"PlayerId": "lHEkcPsDSSiAnB6fIjB5Aw",
+				"MemberProgress": 832498,
+				"MemberRank": 9
+			},
+			{
+				"PlayerId": "FDIbZUHMQGim0uIQNGPabQ",
+				"MemberProgress": 1529364,
+				"MemberRank": 3
+			},
+			{
+				"PlayerId": "6cloas1LRfKyPWflZOM6Jw",
+				"MemberProgress": 1268074,
+				"MemberRank": 5
+			}],
+			"Identifier": {
+				"CampaignId": "GUILD",
+				"CampaignMapId": "RAIDS",
+				"CampaignNodeId": "RANCOR",
+				"CampaignNodeDifficulty": 4,
+				"CampaignMissionId": "DIFF04"
+			},
+			"Duration": 55537,
+			"ProgressDeprecated": 0,
+			"Progress": 0.0
+		},
+		{
+			"RaidId": "rancor",
+			"RaidMember": [{
+				"PlayerId": "sXFHrht7RpiwdAVAzysU4g",
+				"MemberProgress": 1003008,
+				"MemberRank": 7
+			},
+			{
+				"PlayerId": "ORZFZ-54QuWwI-cfIejgyw",
+				"MemberProgress": 428911,
+				"MemberRank": 19
+			},
+			{
+				"PlayerId": "fTDW_yM1Qqipvu96jHba1g",
+				"MemberProgress": 1726726,
+				"MemberRank": 2
+			},
+			{
+				"PlayerId": "4zUhtZAORvWmq4QAtI50sg",
+				"MemberProgress": 569720,
+				"MemberRank": 16
+			},
+			{
+				"PlayerId": "8Nw4E5I5QMefwbjIlfgkrw",
+				"MemberProgress": 3700735,
+				"MemberRank": 1
+			},
+			{
+				"PlayerId": "-mwmwcMhRLuInMKv-oIMGQ",
+				"MemberProgress": 319303,
+				"MemberRank": 25
+			},
+			{
+				"PlayerId": "ohW2K5y0SG2saFcjORHG3g",
+				"MemberProgress": 233323,
+				"MemberRank": 27
+			},
+			{
+				"PlayerId": "oPXYf7SRQs-Tov-9saSC5w",
+				"MemberProgress": 312307,
+				"MemberRank": 26
+			},
+			{
+				"PlayerId": "U54NNBMOQZOPh4Mc6uGgTQ",
+				"MemberProgress": 583770,
+				"MemberRank": 15
+			},
+			{
+				"PlayerId": "sq7oL0LLQl-wOnjOlNBrcA",
+				"MemberProgress": 938027,
+				"MemberRank": 8
+			},
+			{
+				"PlayerId": "ZRDORWZTRGy-mgZGjOlbww",
+				"MemberProgress": 81692,
+				"MemberRank": 29
+			},
+			{
+				"PlayerId": "jiHMDOWxTCuhfrAUqftGRQ",
+				"MemberProgress": 27484,
+				"MemberRank": 31
+			},
+			{
+				"PlayerId": "AlaK01OqQx27LeJSqGuSZg",
+				"MemberProgress": 392615,
+				"MemberRank": 20
+			},
+			{
+				"PlayerId": "ld853Y0KRIaZFCTWOx6qxQ",
+				"MemberProgress": 1372744,
+				"MemberRank": 3
+			},
+			{
+				"PlayerId": "lHEkcPsDSSiAnB6fIjB5Aw",
+				"MemberProgress": 339732,
+				"MemberRank": 24
+			},
+			{
+				"PlayerId": "FDIbZUHMQGim0uIQNGPabQ",
+				"MemberProgress": 348388,
+				"MemberRank": 23
+			},
+			{
+				"PlayerId": "PQkhqxL2Th6J5Xr8AXFWhQ",
+				"MemberProgress": 1078432,
+				"MemberRank": 6
+			},
+			{
+				"PlayerId": "6cloas1LRfKyPWflZOM6Jw",
+				"MemberProgress": 455862,
+				"MemberRank": 17
+			},
+			{
+				"PlayerId": "YGW5p2YDS_KvjOUn3r4gXA",
+				"MemberProgress": 900129,
+				"MemberRank": 9
+			},
+			{
+				"PlayerId": "0knXlZ-dRK2jSwxyRdKyBA",
+				"MemberProgress": 881517,
+				"MemberRank": 10
+			},
+			{
+				"PlayerId": "WtmAiR0CTlWZEunbsS78GA",
+				"MemberProgress": 383873,
+				"MemberRank": 22
+			},
+			{
+				"PlayerId": "LcPtlKWBT_OTuRuCJnOfNQ",
+				"MemberProgress": 793914,
+				"MemberRank": 12
+			},
+			{
+				"PlayerId": "lfweQLJxSwSuQZ1AKdjUoA",
+				"MemberProgress": 1265118,
+				"MemberRank": 4
+			},
+			{
+				"PlayerId": "PXoNMLL6RGq0-U9RIT2Dqg",
+				"MemberProgress": 437614,
+				"MemberRank": 18
+			},
+			{
+				"PlayerId": "7ReBKspRTdWlohJWUm6o1w",
+				"MemberProgress": 595444,
+				"MemberRank": 14
+			},
+			{
+				"PlayerId": "NjdPNjt9T8-Od0vCYZ8qrg",
+				"MemberProgress": 756554,
+				"MemberRank": 13
+			},
+			{
+				"PlayerId": "aO--kL4bREW-29cr--TYGg",
+				"MemberProgress": 43657,
+				"MemberRank": 30
+			},
+			{
+				"PlayerId": "VSjIpixcQViin4-7Pq4uLg",
+				"MemberProgress": 1101541,
+				"MemberRank": 5
+			},
+			{
+				"PlayerId": "ADuf1D-9QHS6OCe-Tly5MQ",
+				"MemberProgress": 856529,
+				"MemberRank": 11
+			},
+			{
+				"PlayerId": "jJl27pjZQHWyddIOvt4piA",
+				"MemberProgress": 87685,
+				"MemberRank": 28
+			},
+			{
+				"PlayerId": "7V5ozCd9Sj6JHfprcoCvHw",
+				"MemberProgress": 387420,
+				"MemberRank": 21
+			}],
+			"Identifier": {
+				"CampaignId": "GUILD",
+				"CampaignMapId": "RAIDS",
+				"CampaignNodeId": "RANCOR",
+				"CampaignNodeDifficulty": 4,
+				"CampaignMissionId": "DIFF05"
+			},
+			"Duration": 18517,
+			"ProgressDeprecated": 0,
+			"Progress": 0.0
+		},
+		{
+			"RaidId": "rancor",
+			"RaidMember": [{
+				"PlayerId": "ORZFZ-54QuWwI-cfIejgyw",
+				"MemberProgress": 182143,
+				"MemberRank": 22
+			},
+			{
+				"PlayerId": "fTDW_yM1Qqipvu96jHba1g",
+				"MemberProgress": 652289,
+				"MemberRank": 5
+			},
+			{
+				"PlayerId": "q_RQX_EcTzimQ29sao-PMA",
+				"MemberProgress": 288118,
+				"MemberRank": 13
+			},
+			{
+				"PlayerId": "Vxb1fruCTaCszg_ti84x0Q",
+				"MemberProgress": 265141,
+				"MemberRank": 17
+			},
+			{
+				"PlayerId": "8Nw4E5I5QMefwbjIlfgkrw",
+				"MemberProgress": 2529130,
+				"MemberRank": 1
+			},
+			{
+				"PlayerId": "-mwmwcMhRLuInMKv-oIMGQ",
+				"MemberProgress": 1935407,
+				"MemberRank": 2
+			},
+			{
+				"PlayerId": "CyTc5CQdS0mCsRI5ELdPUA",
+				"MemberProgress": 136319,
+				"MemberRank": 25
+			},
+			{
+				"PlayerId": "sq7oL0LLQl-wOnjOlNBrcA",
+				"MemberProgress": 306201,
+				"MemberRank": 11
+			},
+			{
+				"PlayerId": "ZRDORWZTRGy-mgZGjOlbww",
+				"MemberProgress": 141250,
+				"MemberRank": 23
+			},
+			{
+				"PlayerId": "zrKf56gdT1u5nBiRggmWOw",
+				"MemberProgress": 214066,
+				"MemberRank": 19
+			},
+			{
+				"PlayerId": "ld853Y0KRIaZFCTWOx6qxQ",
+				"MemberProgress": 294028,
+				"MemberRank": 12
+			},
+			{
+				"PlayerId": "FDIbZUHMQGim0uIQNGPabQ",
+				"MemberProgress": 420208,
+				"MemberRank": 9
+			},
+			{
+				"PlayerId": "PQkhqxL2Th6J5Xr8AXFWhQ",
+				"MemberProgress": 271144,
+				"MemberRank": 14
+			},
+			{
+				"PlayerId": "YGW5p2YDS_KvjOUn3r4gXA",
+				"MemberProgress": 229517,
+				"MemberRank": 18
+			},
+			{
+				"PlayerId": "0knXlZ-dRK2jSwxyRdKyBA",
+				"MemberProgress": 139101,
+				"MemberRank": 24
+			},
+			{
+				"PlayerId": "koKHfzp1QL2GVVDiXWUhBg",
+				"MemberProgress": 23909,
+				"MemberRank": 31
+			},
+			{
+				"PlayerId": "LcPtlKWBT_OTuRuCJnOfNQ",
+				"MemberProgress": 205631,
+				"MemberRank": 20
+			},
+			{
+				"PlayerId": "Ck6bQBekQLakLx4NLppSsA",
+				"MemberProgress": 64776,
+				"MemberRank": 29
+			},
+			{
+				"PlayerId": "yHmV3y8KRxqyJWokd3zAEg",
+				"MemberProgress": 269121,
+				"MemberRank": 15
+			},
+			{
+				"PlayerId": "lfweQLJxSwSuQZ1AKdjUoA",
+				"MemberProgress": 114940,
+				"MemberRank": 28
+			},
+			{
+				"PlayerId": "PXoNMLL6RGq0-U9RIT2Dqg",
+				"MemberProgress": 126109,
+				"MemberRank": 26
+			},
+			{
+				"PlayerId": "K8FD0BbARA-fFXYsTs9P9g",
+				"MemberProgress": 377419,
+				"MemberRank": 10
+			},
+			{
+				"PlayerId": "bjEGNgOQR4e53cfLPB8FrQ",
+				"MemberProgress": 1160734,
+				"MemberRank": 3
+			},
+			{
+				"PlayerId": "FPhk5o0fTZOO4LgY13p_0Q",
+				"MemberProgress": 506323,
+				"MemberRank": 7
+			},
+			{
+				"PlayerId": "7ReBKspRTdWlohJWUm6o1w",
+				"MemberProgress": 185833,
+				"MemberRank": 21
+			},
+			{
+				"PlayerId": "NjdPNjt9T8-Od0vCYZ8qrg",
+				"MemberProgress": 115355,
+				"MemberRank": 27
+			},
+			{
+				"PlayerId": "aO--kL4bREW-29cr--TYGg",
+				"MemberProgress": 427906,
+				"MemberRank": 8
+			},
+			{
+				"PlayerId": "ANTlh1ViQ8qDv26HuaudSw",
+				"MemberProgress": 730940,
+				"MemberRank": 4
+			},
+			{
+				"PlayerId": "ADuf1D-9QHS6OCe-Tly5MQ",
+				"MemberProgress": 268732,
+				"MemberRank": 16
+			},
+			{
+				"PlayerId": "jJl27pjZQHWyddIOvt4piA",
+				"MemberProgress": 565708,
+				"MemberRank": 6
+			},
+			{
+				"PlayerId": "7V5ozCd9Sj6JHfprcoCvHw",
+				"MemberProgress": 36179,
+				"MemberRank": 30
+			}],
+			"Identifier": {
+				"CampaignId": "GUILD",
+				"CampaignMapId": "RAIDS",
+				"CampaignNodeId": "RANCOR",
+				"CampaignNodeDifficulty": 4,
+				"CampaignMissionId": "HEROIC80"
+			},
+			"Duration": 7541,
+			"ProgressDeprecated": 0,
+			"Progress": 0.0
+		}],
+		"Progress": {
+			"RaidProgress": [{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "RANCOR",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF01"
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "RANCOR",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF02"
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "RANCOR",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF03"
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS2",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "HEROIC80"
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "RANCOR",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF04"
+				},
+				"Progress": 7
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "RANCOR",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF05"
+				},
+				"Progress": 7
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "RANCOR",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF06"
+				},
+				"Progress": 7
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "",
+					"CampaignNodeDifficulty": 0,
+					"CampaignMissionId": ""
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "HEROIC80"
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS2",
+					"CampaignNodeId": "",
+					"CampaignNodeDifficulty": 0,
+					"CampaignMissionId": ""
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "RANCOR",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": ""
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS2",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF06"
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS2",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": ""
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": ""
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "RANCOR",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "HEROIC80"
+				},
+				"Progress": 7
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": ""
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS2",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF01"
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS2",
+					"CampaignNodeId": "",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": ""
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS2",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF02"
+				},
+				"Progress": 2
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS2",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF03"
+				},
+				"Progress": 2
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF06"
+				},
+				"Progress": 3
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS2",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF04"
+				},
+				"Progress": 2
+			},
+			{
+				"Identifier": {
+					"CampaignId": "GUILD",
+					"CampaignMapId": "RAIDS2",
+					"CampaignNodeId": "AAT",
+					"CampaignNodeDifficulty": 4,
+					"CampaignMissionId": "DIFF05"
+				},
+				"Progress": 2
+			}]
+		}
+	}
+}

@@ -1,0 +1,12 @@
+package Protos;
+
+message FailedStoreTransactionEvent {
+   optional string player_id = 1 [default = ""];
+   optional string transaction_id = 2 [default = ""];
+   optional string item_id = 3 [default = ""];
+   optional int32 store_platform_id = 4 [default = 0];
+   optional int64 store_initiated_time = 5 [default = 0];
+   optional int64 store_receipt_time = 6 [default = 0];
+   optional string receipt = 8 [default = ""];
+   optional string failed_reason_code = 9 [default = ""];
+}

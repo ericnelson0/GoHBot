@@ -1,0 +1,11 @@
+package Protos;
+
+enum UnitClass {
+   WARRIOR = 1;
+   TACTICIAN = 2;
+   SCOUNDREL = 3;
+   LIGHT_FORCE = 4;
+   DARK_FORCE = 5;
+   UNITCLASS_STANDARD = 6;
+   UNITCLASS_COMMANDER = 7;
+}

@@ -1,0 +1,18 @@
+package Protos;
+
+message BattleUnitAbilityState {
+   optional string ability_id = 1 [default = ""];
+   optional int32 cooldown = 2 [default = 0];
+}
+message BattleUnitState {
+   optional string unit_id = 1 [default = ""];
+   optional string health_percent = 5 [default = ""];
+   repeated BattleUnitAbilityState ability_state = 6;
+   optional bool progress_item = 7 [default = false];
+   optional int64 current_health = 8 [default = 0];
+   optional string shield_percent = 9 [default = ""];
+   optional string turn_percent = 10 [default = ""];
+   optional int64 max_health = 11 [default = 0];
+   optional bool has_fled = 12 [default = false];
+   optional int64 max_shield = 13 [default = 0];
+}

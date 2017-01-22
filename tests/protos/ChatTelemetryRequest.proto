@@ -1,0 +1,10 @@
+package Protos;
+
+enum ChatInteraction {
+   OPEN = 1;
+   CLOSE = 2;
+}
+message ChatTelemetryRequest {
+   optional ChatInteraction chat_interaction = 1 [default = OPEN];
+   optional int32 chats_sent = 2 [default = 0];
+}

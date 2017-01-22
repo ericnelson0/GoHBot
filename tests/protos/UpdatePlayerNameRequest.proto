@@ -1,0 +1,5 @@
+package Protos;
+
+message UpdatePlayerNameRequest {
+   optional string new_name = 1 [default = ""];
+}

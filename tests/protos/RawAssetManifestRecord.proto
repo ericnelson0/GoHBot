@@ -1,0 +1,18 @@
+package Protos;
+
+message RawAssetManifestRecord {
+   optional string name = 1 [default = ""];
+   optional uint64 version = 2 [default = 0];
+   optional int32 size = 3 [default = 0];
+   optional int32 uncompressed_size = 4 [default = 0];
+   optional bool shared = 5 [default = false];
+   optional int32 rank = 6 [default = 0];
+   optional int32 packageType = 7 [default = 0];
+   repeated RawAssetManifestRecordEntry entries = 8;
+   repeated string dependencies = 9;
+}
+message RawAssetManifestRecordEntry {
+   optional string asset_name = 1 [default = ""];
+   optional int32 runtime_size = 2 [default = 0];
+   optional int32 clone_runtime_size = 3 [default = 0];
+}

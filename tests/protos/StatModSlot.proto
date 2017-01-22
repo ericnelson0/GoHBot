@@ -1,0 +1,10 @@
+package Protos;
+
+enum StatModSlot {
+   STATMOD_SLOT_01 = 2;
+   STATMOD_SLOT_02 = 3;
+   STATMOD_SLOT_03 = 4;
+   STATMOD_SLOT_04 = 5;
+   STATMOD_SLOT_05 = 6;
+   STATMOD_SLOT_06 = 7;
+}

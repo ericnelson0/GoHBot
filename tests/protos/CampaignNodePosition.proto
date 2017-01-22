@@ -1,0 +1,6 @@
+package Protos;
+
+message CampaignNodePosition {
+   optional float x = 1 [default = 0];
+   optional float y = 2 [default = 0];
+}

@@ -1,0 +1,5 @@
+package Protos;
+
+message EffectTag {
+   optional string tag = 1 [default = ""];
+}

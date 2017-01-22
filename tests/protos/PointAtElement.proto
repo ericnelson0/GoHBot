@@ -1,0 +1,39 @@
+package Protos;
+
+message PointAtElement {
+   optional string element_id = 1 [default = ""];
+   optional int32 offset_x = 2 [default = 0];
+   optional int32 offset_y = 3 [default = 0];
+   optional float rotation = 4 [default = 0];
+   optional int32 text_offset_x = 5 [default = 0];
+   optional int32 text_offset_y = 6 [default = 0];
+   optional string text_offset_anchor = 7 [default = ""];
+   optional bool update = 8 [default = false];
+   optional bool clamp = 9 [default = false];
+   optional PointAtRotationBehavior rotation_behavior = 10 [default = ROTATIONBEHAVIORNONE];
+   optional float delay_seconds = 11 [default = 0];
+   optional bool show_arrow = 12 [default = false];
+   optional bool show_highlight = 13 [default = false];
+   optional string image_source = 14 [default = ""];
+   optional int32 image_width = 15 [default = 0];
+   optional int32 image_height = 16 [default = 0];
+   optional int32 image_offset_x = 17 [default = 0];
+   optional int32 image_offset_y = 18 [default = 0];
+   optional PointerType pointer_type = 19 [default = CLICK];
+   optional bool tap_dismiss = 20 [default = false];
+   optional bool scrim_visible = 21 [default = false];
+   optional bool scrim_blocking = 22 [default = false];
+   optional bool show_text = 23 [default = false];
+   optional bool show_bartender = 24 [default = false];
+   optional string bartender_texture = 25 [default = ""];
+}
+enum PointAtRotationBehavior {
+   ROTATION_BEHAVIOR_NONE = 1;
+   ROTATION_BEHAVIOR_AUTO_FROM_CENTER = 2;
+   ROTATION_BEHAVIOR_AUTO_FROM_CENTER_IF_CLAMPED = 3;
+}
+enum PointerType {
+   POINT = 1;
+   CLICK = 2;
+   SWIPE = 3;
+}

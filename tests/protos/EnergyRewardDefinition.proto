@@ -1,0 +1,83 @@
+package Protos;
+
+message EnergyRewardDefinition {
+   optional EnergyType energy_type = 1 [default = PVE];
+   repeated EnergyRewardInstance instance = 2;
+   optional string claimable_title_key = 3 [default = ""];
+   optional string claimable_desc_key = 4 [default = ""];
+   optional string upcoming_title_key = 5 [default = ""];
+   optional string upcoming_desc_key = 6 [default = ""];
+   optional Requirement show_requirement = 7;
+}
+message EnergyRewardInstance {
+   optional EnergyRewardInstanceType type = 1 [default = HOUROFDAY];
+   optional int32 start = 2 [default = 0];
+   optional int32 duration = 3 [default = 0];
+   optional int32 amount = 4 [default = 0];
+}
+enum EnergyRewardInstanceType {
+   HOUR_OF_DAY = 1;
+}
+enum EnergyType {
+   PVE = 1;
+   PVP = 2;
+   SHIP_PVE = 3;
+   SHIP_PVP = 4;
+   CANTINA_PVE = 5;
+}
+enum EvaluationType {
+   AND = 1;
+   OR = 2;
+}
+message Requirement {
+   optional EvaluationType eval_type = 1 [default = AND];
+   repeated RequirementItem requirement_item = 2;
+   optional string id = 3 [default = ""];
+   optional string desc_key = 4 [default = ""];
+}
+message RequirementItem {
+   optional RequirementType type = 1 [default = REQUIREMENTINVALID];
+   optional string id = 2 [default = ""];
+   optional int32 value = 3 [default = 0];
+}
+enum RequirementType {
+   CURRENCY_REQUIREMENT = 3;
+   ROSTER_CHARACTER_NOT_CATEGORY_NOT_IN_SQUAD_REQUIREMENT = 10;
+   SQUAD_SIZE_MAXIMUM_REQUIREMENT = 11;
+   ROSTER_CHARACTER_CATEGORY_NOT_IN_USE_REQUIREMENT = 12;
+   ROSTER_CHARACTER_NOT_IN_USE_REQUIREMENT = 13;
+   SQUAD_SIZE_MINIMUM_REQUIREMENT = 14;
+   ENEMY_THREAT_LEVEL_REQUIREMENT = 15;
+   ANY_CHARACTER_READY_FOR_PROMOTION = 16;
+   UNIT_TRAINING_AVAILABLE = 19;
+   PLAYER_LEVEL_MIN_REQUIREMENT = 20;
+   ROSTER_UNIT_TYPE_REQUIREMENT = 22;
+   ROSTER_UNIT_TYPE_MAX_REQUIREMENT = 23;
+   UNIT_ABILITY_UPGRADE_AVAILABLE = 24;
+   UNIT_GEAR_EQUIP_AVAILABLE = 25;
+   CURRENT_UNIT_GEAR_EQUIP_AVAILABLE = 26;
+   PLAYER_UNIT_HEALTH_BELOW_PERCENT = 27;
+   REQUIREMENT_INVALID = 28;
+   CURRENT_CHARACTER_READY_FOR_PROMOTION = 29;
+   BATTLE_ANY_STATUS_EFFECT_ACTIVE = 30;
+   STORE_ITEM_AVAILABLE_FOR_PURCHASE = 31;
+   CURRENT_MISSION_HAS_GEAR_DROP = 32;
+   PLAYER_LEVEL_MAX_REQUIREMENT = 33;
+   CAMPAIGN_REQUIREMENT = 34;
+   ANY_DAILY_ACTIVITY_READY_FOR_CLAIM = 35;
+   FACEBOOK_LOGIN_AVAILABLE = 36;
+   ANY_UNIT_REACHED_MAX_RARITY = 37;
+   CURRENT_CHARACTER_READY_FOR_TIER_UP = 38;
+   EVENT_ACTIVE = 39;
+   BATTLE_ANY_UNIT_HAS_SHIELD = 40;
+   CURRENT_CHARACTER_MIN_TIER = 41;
+   UNIT_LEVEL_MAX_REQUIREMENT = 42;
+   UNIT_LEVEL_MIN_REQUIREMENT = 43;
+   ROSTER_UNIT_REQUIREMENT = 44;
+   UNIT_SHARD_REQUIREMENT = 45;
+   ROSTER_UNIT_COMBAT_TYPE_REQUIREMENT = 46;
+   BATTLE_TURN_COUNT = 47;
+   BATTLE_ENCOUNTER_STARTED = 48;
+   BATTLE_UNIT_TURN_SQUAD_CELL_INDEX = 49;
+   ROSTER_UNIT_CLASS_REQUIREMENT = 50;
+}

@@ -1,0 +1,10 @@
+package Protos;
+
+enum CampaignElementProgress {
+   HIDDEN = 1;
+   LOCKED = 2;
+   UNLOCKED = 3;
+   COMPLETE_ONE_STAR = 5;
+   COMPLETE_TWO_STAR = 6;
+   COMPLETE_THREE_STAR = 7;
+}

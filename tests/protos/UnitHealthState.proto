@@ -1,0 +1,7 @@
+package Protos;
+
+enum UnitHealthState {
+   UNIT_HEALTH_STATE_ANY = 1;
+   UNIT_HEALTH_STATE_ALIVE = 2;
+   UNIT_HEALTH_STATE_DEAD = 3;
+}

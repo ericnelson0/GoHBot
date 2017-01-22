@@ -1,0 +1,6 @@
+
+enum PointAtRotationBehavior {
+   NONE = 0;
+   AUTO_FROM_CENTER = 1;
+   AUTO_FROM_CENTER_IF_CLAMPED = 2;
+}

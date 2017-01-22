@@ -1,0 +1,8 @@
+package Protos;
+
+enum BattleTargetingTactic {
+   TARGET_RANDOM = 1;
+   TARGET_RANDOM_SWITCH = 2;
+   TARGET_RANDOM_OVERKILL = 3;
+   TARGET_RANDOM_WEIGHTED_SWITCH = 4;
+}

@@ -1,0 +1,8 @@
+package Protos;
+
+enum UnitType {
+   UNIT_TYPE_STANDARD = 1;
+   UNIT_TYPE_XP = 2;
+   UNIT_TYPE_SELL = 3;
+   UNIT_TYPE_PROMOTE = 4;
+}

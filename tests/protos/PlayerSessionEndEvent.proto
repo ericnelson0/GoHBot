@@ -1,0 +1,6 @@
+package Protos;
+
+message PlayerSessionEndEvent {
+   optional string player_id = 1 [default = ""];
+   optional string app_version = 2 [default = ""];
+}

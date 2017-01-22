@@ -1,0 +1,8 @@
+package Protos;
+
+message ChallengeProgress {
+   optional string id = 1 [default = ""];
+   optional int64 current_value = 2 [default = 0];
+   optional int64 complete_value = 3 [default = 0];
+   optional bool claimed = 4 [default = false];
+}

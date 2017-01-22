@@ -1,0 +1,6 @@
+package Protos;
+
+enum GuildRaidType {
+   RAID_TYPE_PERMANENT = 1;
+   RAID_TYPE_TIME_LIMITED = 2;
+}

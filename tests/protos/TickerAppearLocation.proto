@@ -1,0 +1,6 @@
+
+enum TickerAppearLocation {
+   HOMEBASE = 0;
+   STORE = 1;
+   UNDEFINED = 2;
+}

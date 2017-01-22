@@ -1,0 +1,96 @@
+package Protos;
+
+message BattleUnitAbilityState {
+   optional string ability_id = 1 [default = ""];
+   optional int32 cooldown = 2 [default = 0];
+}
+message BattleUnitState {
+   optional string unit_id = 1 [default = ""];
+   optional string health_percent = 5 [default = ""];
+   repeated BattleUnitAbilityState ability_state = 6;
+   optional bool progress_item = 7 [default = false];
+   optional int64 current_health = 8 [default = 0];
+   optional string shield_percent = 9 [default = ""];
+   optional string turn_percent = 10 [default = ""];
+   optional int64 max_health = 11 [default = 0];
+   optional bool has_fled = 12 [default = false];
+   optional int64 max_shield = 13 [default = 0];
+}
+message CampaignElementIdentifier {
+   optional string campaign_id = 1 [default = ""];
+   optional string campaign_map_id = 2 [default = ""];
+   optional string campaign_node_id = 3 [default = ""];
+   optional CampaignNodeDifficulty campaign_node_difficulty = 4 [default = NOTSET];
+   optional string campaign_mission_id = 5 [default = ""];
+}
+enum CampaignElementProgress {
+   HIDDEN = 1;
+   LOCKED = 2;
+   UNLOCKED = 3;
+   COMPLETE_ONE_STAR = 5;
+   COMPLETE_TWO_STAR = 6;
+   COMPLETE_THREE_STAR = 7;
+}
+enum CampaignNodeDifficulty {
+   NOT_SET = 0;
+   NORMAL_DIFF = 4;
+   HARD_DIFF = 5;
+   NIGHTMARE_DIFF = 6;
+   SPECIAL_DIFF = 7;
+   I_DIFF = 8;
+   II_DIFF = 9;
+   III_DIFF = 10;
+   IV_DIFF = 11;
+   V_DIFF = 12;
+   VI_DIFF = 13;
+}
+message GetGuildRaidStatusesResponse {
+   repeated GuildRaidStatus raid_status = 1;
+   repeated GuildRaidResult raid_result = 2;
+   repeated GuildRaidProgress raid_progress = 3;
+   optional GuildRaidRewardStatus raid_reward_status = 4;
+}
+message GuildRaidMember {
+   optional string player_id = 1 [default = ""];
+   optional int32 member_progress = 2 [default = 0];
+   optional int32 member_rank = 3 [default = 0];
+}
+message GuildRaidProgress {
+   optional CampaignElementIdentifier identifier = 1;
+   optional CampaignElementProgress progress = 2 [default = HIDDEN];
+}
+message GuildRaidResult {
+   optional string raid_id = 1 [default = ""];
+   repeated GuildRaidMember raid_member = 2;
+   optional CampaignElementIdentifier identifier = 3;
+   optional int64 duration = 4 [default = 0];
+   optional int32 progress_deprecated = 5 [default = 0];
+   optional float progress = 6 [default = 0];
+}
+message GuildRaidRewardStatus {
+   optional int64 reset_time = 1 [default = 0];
+   repeated CampaignElementIdentifier ineligible_identifier = 2;
+}
+message GuildRaidStatus {
+   optional string raid_id = 1 [default = ""];
+   optional int64 expire_time = 2 [default = 0];
+   optional float raid_progress = 3 [default = 0];
+   repeated GuildRaidMember raid_member = 5;
+   optional int32 encounter_index = 6 [default = 0];
+   repeated BattleUnitState opponent_unit_state = 8;
+   repeated BattleUnitState player_unit_state = 9;
+   optional CampaignElementIdentifier identifier = 10;
+   optional string instance_id = 11 [default = ""];
+   optional int64 roster_refresh_time = 14 [default = 0];
+   optional bool has_player_participated = 15 [default = false];
+   optional int32 last_encounter_index_player_participated = 16 [default = 0];
+   optional RaidState raid_state = 17 [default = RAIDINPROGRESS];
+   optional int64 tally_end_time = 18 [default = 0];
+   optional bool eligible_for_rewards = 19 [default = false];
+}
+enum RaidState {
+   RAID_IN_PROGRESS = 1;
+   RAID_IN_TALLY = 2;
+   RAID_COMPLETE = 3;
+   RAID_EXPIRED = 4;
+}

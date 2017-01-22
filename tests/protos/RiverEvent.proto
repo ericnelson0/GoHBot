@@ -1,0 +1,12 @@
+package Protos;
+
+message RiverEvent {
+   optional int32 type = 1 [default = 0];
+   optional int64 step = 2 [default = 0];
+   optional int64 timestamp = 3 [default = 0];
+   repeated RiverEventParameter parameter = 6;
+}
+message RiverEventParameter {
+   optional int32 keyType = 1 [default = 0];
+   optional string value = 2 [default = ""];
+}

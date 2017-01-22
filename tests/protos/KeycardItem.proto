@@ -1,0 +1,10 @@
+package Protos;
+
+message KeycardItem {
+   optional KeycardType type = 1 [default = IGCKEY];
+   optional int64 expires_time_seconds = 2 [default = 0];
+}
+enum KeycardType {
+   IGC_KEY = 1;
+   XP_KEY = 2;
+}

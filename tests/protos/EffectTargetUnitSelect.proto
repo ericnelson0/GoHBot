@@ -1,0 +1,9 @@
+package Protos;
+
+enum EffectTargetUnitSelect {
+   SELECT_ALL = 1;
+   SELECTED_TARGET = 2;
+   SELECT_RANDOM = 3;
+   SELECT_SELF = 4;
+   SELECT_PREVIOUS = 5;
+}

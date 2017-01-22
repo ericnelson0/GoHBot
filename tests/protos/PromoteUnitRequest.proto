@@ -1,0 +1,5 @@
+package Protos;
+
+message PromoteUnitRequest {
+   optional string unit_id = 1 [default = ""];
+}

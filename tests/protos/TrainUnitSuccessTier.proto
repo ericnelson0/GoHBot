@@ -1,0 +1,7 @@
+package Protos;
+
+enum TrainUnitSuccessTier {
+   TIER_ONE_SUCCESS = 0;
+   TIER_TWO_SUCCESS = 1;
+   TIER_THREE_SUCCESS = 2;
+}

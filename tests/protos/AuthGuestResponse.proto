@@ -1,0 +1,6 @@
+package Protos;
+
+message AuthGuestResponse {
+   optional string auth_id = 1 [default = ""];
+   optional string auth_token = 2 [default = ""];
+}

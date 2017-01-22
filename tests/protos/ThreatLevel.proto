@@ -1,0 +1,8 @@
+package Protos;
+
+enum ThreatLevel {
+   NORMAL = 1;
+   ELITE = 2;
+   BOSS = 3;
+   ANY = 4;
+}

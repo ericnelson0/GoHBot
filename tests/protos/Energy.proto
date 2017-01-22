@@ -1,0 +1,17 @@
+package Protos;
+
+message Energy {
+   optional EnergyType type = 1 [default = PVE];
+   optional int64 timestamp = 2 [default = 0];
+   optional int32 max_energy = 3 [default = 0];
+   optional int32 regen_rate = 4 [default = 0];
+   optional int32 regen_cost = 5 [default = 0];
+   optional int32 overflow = 6 [default = 0];
+}
+enum EnergyType {
+   PVE = 1;
+   PVP = 2;
+   SHIP_PVE = 3;
+   SHIP_PVP = 4;
+   CANTINA_PVE = 5;
+}

@@ -1,0 +1,14 @@
+package Protos;
+
+message PlayerBuyInEvent {
+   optional string player_id = 1 [default = ""];
+   optional string app_version = 2 [default = ""];
+   optional string transaction_id = 3 [default = ""];
+   optional double cost = 4 [default = 0];
+   optional string local_currency = 5 [default = ""];
+   optional string receipt = 9 [default = ""];
+   optional string app_store = 10 [default = ""];
+   optional string product_id = 11 [default = ""];
+   optional int32 quantity = 12 [default = 0];
+   optional string receipt_signature = 13 [default = ""];
+}

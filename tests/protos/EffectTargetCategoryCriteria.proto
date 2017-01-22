@@ -1,0 +1,6 @@
+package Protos;
+
+message EffectTargetCategoryCriteria {
+   optional bool exclude = 1 [default = false];
+   repeated string category_id = 2;
+}

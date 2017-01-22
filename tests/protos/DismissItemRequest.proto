@@ -1,0 +1,5 @@
+package Protos;
+
+message DismissItemRequest {
+   optional string item_id = 1 [default = ""];
+}

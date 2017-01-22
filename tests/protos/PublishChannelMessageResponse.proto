@@ -1,0 +1,28 @@
+package Protos;
+
+message ChannelEvent {
+   optional string id = 1 [default = ""];
+   optional string correlation_id = 2 [default = ""];
+   optional string channel_id = 3 [default = ""];
+   optional ChannelEventType event_type = 4 [default = DEFAULT];
+   optional string event_subtype = 5 [default = ""];
+   optional int64 timestamp = 6 [default = 0];
+   optional string author_id = 7 [default = ""];
+   optional string author_name = 8 [default = ""];
+   optional string message = 9 [default = ""];
+   repeated ChannelEventData data = 10;
+}
+message ChannelEventData {
+   optional string type = 5 [default = ""];
+   optional bytes payload = 6;
+}
+enum ChannelEventType {
+   DEFAULT = 0;
+   CHAT_MESSAGE = 1;
+   ACTIVITY_EVENT = 2;
+}
+message PublishChannelMessageResponse {
+   repeated ChannelEvent event = 1;
+   optional int64 update_timestamp = 2 [default = 0];
+   optional int32 update_interval = 3 [default = 0];
+}

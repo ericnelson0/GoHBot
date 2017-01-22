@@ -1,0 +1,20 @@
+package Protos;
+
+message ConfigEntry {
+   optional string key = 1 [default = ""];
+   optional string value = 2 [default = ""];
+}
+message MetadataResponse {
+   repeated ConfigEntry config = 1;
+   optional int32 asset_version = 4 [default = 0];
+   optional string asset_subpath = 5 [default = ""];
+   optional string tex_format = 6 [default = ""];
+   optional int64 server_timestamp = 7 [default = 0];
+   optional bool debug_mode = 8 [default = false];
+   optional string latest_localization_bundle_version = 9 [default = ""];
+   optional string latest_gamedata_version = 10 [default = ""];
+   optional int32 resource_cache_memory_limit = 11 [default = 0];
+   optional string gamedata_revision = 12 [default = ""];
+   optional bool channel_server_enabled = 13 [default = false];
+   optional string channel_server_endpoint = 14 [default = ""];
+}

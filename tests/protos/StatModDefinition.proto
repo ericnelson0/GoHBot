@@ -1,0 +1,68 @@
+package Protos;
+
+message ActionLink {
+   optional string link = 1 [default = ""];
+   optional ActionLinkType type = 2 [default = INTERNAL];
+}
+enum ActionLinkType {
+   INTERNAL = 1;
+   EXTERNAL = 2;
+}
+message CampaignElementIdentifier {
+   optional string campaign_id = 1 [default = ""];
+   optional string campaign_map_id = 2 [default = ""];
+   optional string campaign_node_id = 3 [default = ""];
+   optional CampaignNodeDifficulty campaign_node_difficulty = 4 [default = NOTSET];
+   optional string campaign_mission_id = 5 [default = ""];
+}
+enum CampaignNodeDifficulty {
+   NOT_SET = 0;
+   NORMAL_DIFF = 4;
+   HARD_DIFF = 5;
+   NIGHTMARE_DIFF = 6;
+   SPECIAL_DIFF = 7;
+   I_DIFF = 8;
+   II_DIFF = 9;
+   III_DIFF = 10;
+   IV_DIFF = 11;
+   V_DIFF = 12;
+   VI_DIFF = 13;
+}
+message LookupActionLink {
+   optional string desk_key = 1 [default = ""];
+   optional ActionLink action_link = 2;
+}
+message LookupMission {
+   optional CampaignElementIdentifier mission_identifier = 1;
+   optional bool event = 2 [default = false];
+}
+enum Rarity {
+   ONE_STAR = 1;
+   TWO_STAR = 2;
+   THREE_STAR = 3;
+   FOUR_STAR = 4;
+   FIVE_STAR = 5;
+   SIX_STAR = 6;
+   SEVEN_STAR = 7;
+   NO_STAR = 8;
+}
+message StatModDefinition {
+   optional string id = 1 [default = ""];
+   optional StatModSlot slot = 2 [default = STATMODSLOT01];
+   optional string set_id = 3 [default = ""];
+   optional Rarity rarity = 4 [default = ONESTAR];
+   optional string name_key = 5 [default = ""];
+   optional string desc_key = 6 [default = ""];
+   repeated LookupMission mission_lookup = 7;
+   repeated LookupMission raid_lookup = 8;
+   repeated LookupActionLink action_link_lookup = 9;
+   optional string level_table_id = 10 [default = ""];
+}
+enum StatModSlot {
+   STATMOD_SLOT_01 = 2;
+   STATMOD_SLOT_02 = 3;
+   STATMOD_SLOT_03 = 4;
+   STATMOD_SLOT_04 = 5;
+   STATMOD_SLOT_05 = 6;
+   STATMOD_SLOT_06 = 7;
+}

@@ -1,0 +1,6 @@
+package Protos;
+
+message TableRow {
+   optional string key = 1 [default = ""];
+   optional string value = 2 [default = ""];
+}

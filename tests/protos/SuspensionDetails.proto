@@ -1,0 +1,10 @@
+package Protos;
+
+message SuspensionDetails {
+   optional string subject_key = 1 [default = ""];
+   optional string subject_value = 2 [default = ""];
+   optional string details_key = 3 [default = ""];
+   optional string details_value = 4 [default = ""];
+   optional int64 suspended_until = 5 [default = 0];
+   optional int64 ally_code = 6 [default = 0];
+}

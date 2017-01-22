@@ -1,0 +1,39 @@
+package Protos;
+
+enum AcceptEncoding {
+   DEFAULTACCEPTENCODING = 0;
+   GZIPACCEPTENCODING = 1;
+}
+message RequestEnvelope {
+   optional int32 correlation_id = 1 [default = 0];
+   optional string service_name = 4 [default = ""];
+   optional string method_name = 5 [default = ""];
+   optional bytes payload = 6;
+   optional string auth_id = 7 [default = ""];
+   optional string auth_token = 8 [default = ""];
+   optional int32 client_version = 9 [default = 0];
+   optional int64 client_startup_timestamp = 11 [default = 0];
+   optional string platform = 12 [default = ""];
+   optional string region = 13 [default = ""];
+   optional string client_external_version = 14 [default = ""];
+   optional string client_internal_version = 15 [default = ""];
+   optional string request_id = 16 [default = ""];
+   optional AcceptEncoding accept_encoding = 17 [default = DEFAULTACCEPTENCODING];
+   repeated string flag = 18;
+   repeated string telemetry_event = 19;
+   optional int64 current_client_time = 20 [default = 0];
+   optional string nimble_session_id = 21 [default = ""];
+   optional string timezone = 22 [default = ""];
+   optional string firmware_version = 23 [default = ""];
+   optional string carrier = 24 [default = ""];
+   optional string network_access = 25 [default = ""];
+   optional string hardware_id = 26 [default = ""];
+   optional string advertiser_id = 27 [default = ""];
+   optional string vendor_id = 28 [default = ""];
+   optional string android_id = 29 [default = ""];
+   optional int32 jailbroken_flag = 30 [default = 0];
+   optional int32 piracy_flag = 31 [default = 0];
+   optional string synergy_id = 32 [default = ""];
+   optional string device_model = 33 [default = ""];
+   optional string device_id = 34 [default = ""];
+}

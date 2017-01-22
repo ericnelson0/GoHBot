@@ -1,0 +1,6 @@
+package Protos;
+
+enum ChanceRollType {
+   PER_UNIT = 1;
+   ALL_TARGETS = 2;
+}

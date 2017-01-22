@@ -1,0 +1,5 @@
+
+enum ChallengeRewardType {
+   FIXED = 0;
+   RATIO = 1;
+}

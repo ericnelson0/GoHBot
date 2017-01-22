@@ -1,0 +1,475 @@
+package Protos;
+
+message ActionLink {
+   optional string link = 1 [default = ""];
+   optional ActionLinkType type = 2 [default = INTERNAL];
+}
+enum ActionLinkType {
+   INTERNAL = 1;
+   EXTERNAL = 2;
+}
+message BucketItem {
+   optional string id = 1 [default = ""];
+   optional ItemType type = 2 [default = EMPTY];
+   optional int32 weight = 3 [default = 0];
+   optional int32 minQuantity = 4 [default = 0];
+   optional int32 maxQuantity = 5 [default = 0];
+   optional Rarity rarity = 6 [default = ONESTAR];
+   optional StatMod stat_mod = 7;
+}
+message CampaignElementIdentifier {
+   optional string campaign_id = 1 [default = ""];
+   optional string campaign_map_id = 2 [default = ""];
+   optional string campaign_node_id = 3 [default = ""];
+   optional CampaignNodeDifficulty campaign_node_difficulty = 4 [default = NOTSET];
+   optional string campaign_mission_id = 5 [default = ""];
+}
+enum CampaignNodeDifficulty {
+   NOT_SET = 0;
+   NORMAL_DIFF = 4;
+   HARD_DIFF = 5;
+   NIGHTMARE_DIFF = 6;
+   SPECIAL_DIFF = 7;
+   I_DIFF = 8;
+   II_DIFF = 9;
+   III_DIFF = 10;
+   IV_DIFF = 11;
+   V_DIFF = 12;
+   VI_DIFF = 13;
+}
+message CantinaCharacterDialog {
+   optional string texture = 1 [default = ""];
+}
+enum CategoryMatchType {
+   MATCH_ALL = 1;
+   MATCH_ANY = 2;
+}
+message CharacterDialog {
+   optional string character_prefab = 1 [default = ""];
+   repeated string animations = 2;
+   optional string audio_key = 3 [default = ""];
+   optional string layout = 4 [default = ""];
+   optional bool use_hologram_effect = 5 [default = false];
+}
+message ContextualMessage {
+   optional string id = 1 [default = ""];
+   optional ContextualMessageType type = 2 [default = MODALDIALOGONEBUTTON];
+   optional string title_key = 3 [default = ""];
+   optional string text_key = 4 [default = ""];
+   optional PointAtElement point_at = 7;
+   repeated string appear_event = 8;
+   repeated string dismiss_event = 9;
+   repeated string hide_event = 10;
+   optional string action_link = 11 [default = ""];
+   optional string next_message_id = 12 [default = ""];
+   optional Requirement client_requirement = 13;
+   optional CharacterDialog character_dialog = 14;
+   optional string next_message_id_decline = 15 [default = ""];
+   optional bool can_dismiss_while_hidden = 16 [default = false];
+   optional int32 ftue_sub_step = 17 [default = 0];
+   optional CantinaCharacterDialog cantina_character_dialog = 18;
+   optional ActionLink action_link_def = 19;
+}
+message ContextualMessageGroup {
+   optional string group_id = 1 [default = ""];
+   optional string start_message = 2 [default = ""];
+   repeated ContextualMessage message = 3;
+   optional int32 priority = 4 [default = 0];
+   optional bool can_dismiss_while_hidden = 5 [default = false];
+   optional int64 start_time = 6 [default = 0];
+   optional int64 end_time = 7 [default = 0];
+}
+enum ContextualMessageType {
+   POINT_AT_VIEW_ELEMENT = 1;
+   CHARACTER_DIALOG = 3;
+   MODAL_DIALOG_ONE_BUTTON = 4;
+   MODAL_DIALOG_TWO_BUTTON = 5;
+   CANTINA_CHARACTER_DIALOG = 6;
+}
+message CurrencyItem {
+   optional CurrencyType currency = 1 [default = GRIND];
+   optional int32 quantity = 2 [default = 0];
+}
+enum CurrencyType {
+   GRIND = 1;
+   PREMIUM = 2;
+   REAL_MONEY = 3;
+   SOCIAL = 4;
+   IGC_EVENT_KEYCARD = 8;
+   XP_EVENT_KEYCARD = 9;
+   PVP_CURRENCY = 10;
+   FORCE_POINT = 11;
+   PVP_SHIP_CURRENCY = 12;
+   FREE = 13;
+   WAR_SHIP_CURRENCY = 14;
+   GRIND_TICKET = 15;
+   SHARD_CURRENCY = 16;
+   GUILD_CURRENCY = 17;
+   GUILD_BANK_CURRENCY = 18;
+   SHIP_GRIND = 19;
+   GUILD_RAID_CURRENCY_01 = 20;
+   GUILD_RAID_CURRENCY_02 = 21;
+   GUILD_RAID_CURRENCY_03 = 22;
+   GUILD_RAID_CURRENCY_04 = 23;
+   GUILD_RAID_CURRENCY_05 = 24;
+   GUILD_RAID_CURRENCY_06 = 25;
+   GUILD_RAID_CURRENCY_07 = 26;
+   GUILD_RAID_CURRENCY_08 = 27;
+   GUILD_RAID_CURRENCY_09 = 28;
+   GUILD_RAID_CURRENCY_10 = 29;
+   GUILD_RAID_CURRENCY_11 = 30;
+   GUILD_RAID_CURRENCY_12 = 31;
+}
+message EntryCategoryAllowed {
+   repeated string category_id = 1;
+   optional int32 maximum_allowed_unit_quantity = 2 [default = 0];
+   optional CategoryMatchType match_type = 3 [default = MATCHANY];
+   optional int32 minimum_required_unit_quantity = 4 [default = 0];
+   optional Rarity minimum_unit_rarity = 5 [default = NOSTAR];
+   optional int32 minimum_owned_unit_quantity = 6 [default = 0];
+   optional int32 minimum_unit_level = 7 [default = 0];
+   optional UnitTier minimum_unit_tier = 8 [default = TIER01];
+   optional int32 maximum_reinforcement = 9 [default = 0];
+}
+message Environment {
+   optional string prefab = 1 [default = ""];
+   optional string layout = 2 [default = ""];
+   optional string layout_prefab = 3 [default = ""];
+}
+enum EvaluationType {
+   AND = 1;
+   OR = 2;
+}
+message GameEvent {
+   optional string id = 1 [default = ""];
+   optional int32 priority = 2 [default = 0];
+   optional string name_key = 3 [default = ""];
+   optional string summary_key = 4 [default = ""];
+   optional string desc_key = 5 [default = ""];
+   optional string image = 6 [default = ""];
+   optional GameEventType type = 7 [default = SCHEDULED];
+   optional BucketItem keycard_entry_cost = 8;
+   optional int64 keycard_duration = 9 [default = 0];
+   repeated GameEventInstance instance = 10;
+   optional GameEventStatus status = 12 [default = EVENTLOCKED];
+   optional CampaignElementIdentifier campaign_element_identifier = 13;
+   optional SquadType squad_type = 14 [default = SQUADEVENT];
+   optional string preview_key = 15 [default = ""];
+   optional string review_key = 16 [default = ""];
+   optional GameEventUILocation ui_location = 17 [default = GAMEEVENTUILOCATIONTRIALS];
+   optional string icon = 18 [default = ""];
+   optional bool defensive_squad_usage_cost_enabled = 19 [default = false];
+   repeated ContextualMessageGroup encounter_message = 20;
+   repeated Environment environment = 21;
+   optional string desc_key_unit_criteria_met = 22 [default = ""];
+}
+message GameEventInstance {
+   optional string id = 1 [default = ""];
+   optional int64 start_time = 2 [default = 0];
+   optional int64 end_time = 3 [default = 0];
+   optional int64 display_start_time = 4 [default = 0];
+   optional int64 display_end_time = 5 [default = 0];
+   optional bool time_limited = 6 [default = false];
+   optional CampaignElementIdentifier campaign_element_identifier = 7;
+   repeated BucketItem reward_preview = 8;
+   repeated RankRewardPreview rank_reward_preview = 9;
+   optional EntryCategoryAllowed entry_category_allowed = 10;
+   optional int32 defensive_squad_size = 11 [default = 0];
+   optional string unit_daily_usage_cap_key = 12 [default = ""];
+   optional int64 roster_refresh_time = 13 [default = 0];
+   optional bool joined = 14 [default = false];
+   optional string summary_key = 15 [default = ""];
+   optional int64 reward_time = 16 [default = 0];
+   optional int64 defensive_squad_save_time_limit = 17 [default = 0];
+}
+enum GameEventStatus {
+   EVENT_LOCKED = 1;
+   EVENT_UNLOCKED = 2;
+}
+enum GameEventType {
+   SCHEDULED = 1;
+   KEYCARD = 2;
+   PROGRESSION = 3;
+   MODS = 4;
+   PVP_EVENT = 5;
+}
+enum GameEventUILocation {
+   GAME_EVENT_UI_LOCATION_TRIALS = 1;
+   GAME_EVENT_UI_LOCATION_EVENTS = 2;
+   GAME_EVENT_UI_LOCATION_MODS = 3;
+   GAME_EVENT_UI_LOCATION_SHIP_TRIALS = 4;
+}
+message GetEventsResponse {
+   repeated GameEvent game_event = 1;
+}
+enum ItemType {
+   EMPTY = 1;
+   UNIT = 2;
+   CURRENCY = 3;
+   BUCKET = 4;
+   CONSUMABLE = 5;
+   XP = 6;
+   MATERIAL = 7;
+   ENERGY = 8;
+   UNIT_SHARD = 9;
+   RECIPE = 10;
+   EQUIPMENT = 11;
+   EVENT_KEYCARD = 12;
+   POWERUP_BUNDLE = 13;
+   MYSTERY_BOX = 14;
+   STAT_MOD = 15;
+   MYSTERY_STAT_MOD = 16;
+}
+message PointAtElement {
+   optional string element_id = 1 [default = ""];
+   optional int32 offset_x = 2 [default = 0];
+   optional int32 offset_y = 3 [default = 0];
+   optional float rotation = 4 [default = 0];
+   optional int32 text_offset_x = 5 [default = 0];
+   optional int32 text_offset_y = 6 [default = 0];
+   optional string text_offset_anchor = 7 [default = ""];
+   optional bool update = 8 [default = false];
+   optional bool clamp = 9 [default = false];
+   optional PointAtRotationBehavior rotation_behavior = 10 [default = ROTATIONBEHAVIORNONE];
+   optional float delay_seconds = 11 [default = 0];
+   optional bool show_arrow = 12 [default = false];
+   optional bool show_highlight = 13 [default = false];
+   optional string image_source = 14 [default = ""];
+   optional int32 image_width = 15 [default = 0];
+   optional int32 image_height = 16 [default = 0];
+   optional int32 image_offset_x = 17 [default = 0];
+   optional int32 image_offset_y = 18 [default = 0];
+   optional PointerType pointer_type = 19 [default = CLICK];
+   optional bool tap_dismiss = 20 [default = false];
+   optional bool scrim_visible = 21 [default = false];
+   optional bool scrim_blocking = 22 [default = false];
+   optional bool show_text = 23 [default = false];
+   optional bool show_bartender = 24 [default = false];
+   optional string bartender_texture = 25 [default = ""];
+}
+enum PointAtRotationBehavior {
+   ROTATION_BEHAVIOR_NONE = 1;
+   ROTATION_BEHAVIOR_AUTO_FROM_CENTER = 2;
+   ROTATION_BEHAVIOR_AUTO_FROM_CENTER_IF_CLAMPED = 3;
+}
+enum PointerType {
+   POINT = 1;
+   CLICK = 2;
+   SWIPE = 3;
+}
+message RankRewardPreview {
+   optional int32 rank_start = 1 [default = 0];
+   optional int32 rank_end = 2 [default = 0];
+   repeated BucketItem primary_reward = 3;
+   repeated BucketItem detailed_reward = 4;
+}
+enum Rarity {
+   ONE_STAR = 1;
+   TWO_STAR = 2;
+   THREE_STAR = 3;
+   FOUR_STAR = 4;
+   FIVE_STAR = 5;
+   SIX_STAR = 6;
+   SEVEN_STAR = 7;
+   NO_STAR = 8;
+}
+message Requirement {
+   optional EvaluationType eval_type = 1 [default = AND];
+   repeated RequirementItem requirement_item = 2;
+   optional string id = 3 [default = ""];
+   optional string desc_key = 4 [default = ""];
+}
+message RequirementItem {
+   optional RequirementType type = 1 [default = REQUIREMENTINVALID];
+   optional string id = 2 [default = ""];
+   optional int32 value = 3 [default = 0];
+}
+enum RequirementType {
+   CURRENCY_REQUIREMENT = 3;
+   ROSTER_CHARACTER_NOT_CATEGORY_NOT_IN_SQUAD_REQUIREMENT = 10;
+   SQUAD_SIZE_MAXIMUM_REQUIREMENT = 11;
+   ROSTER_CHARACTER_CATEGORY_NOT_IN_USE_REQUIREMENT = 12;
+   ROSTER_CHARACTER_NOT_IN_USE_REQUIREMENT = 13;
+   SQUAD_SIZE_MINIMUM_REQUIREMENT = 14;
+   ENEMY_THREAT_LEVEL_REQUIREMENT = 15;
+   ANY_CHARACTER_READY_FOR_PROMOTION = 16;
+   UNIT_TRAINING_AVAILABLE = 19;
+   PLAYER_LEVEL_MIN_REQUIREMENT = 20;
+   ROSTER_UNIT_TYPE_REQUIREMENT = 22;
+   ROSTER_UNIT_TYPE_MAX_REQUIREMENT = 23;
+   UNIT_ABILITY_UPGRADE_AVAILABLE = 24;
+   UNIT_GEAR_EQUIP_AVAILABLE = 25;
+   CURRENT_UNIT_GEAR_EQUIP_AVAILABLE = 26;
+   PLAYER_UNIT_HEALTH_BELOW_PERCENT = 27;
+   REQUIREMENT_INVALID = 28;
+   CURRENT_CHARACTER_READY_FOR_PROMOTION = 29;
+   BATTLE_ANY_STATUS_EFFECT_ACTIVE = 30;
+   STORE_ITEM_AVAILABLE_FOR_PURCHASE = 31;
+   CURRENT_MISSION_HAS_GEAR_DROP = 32;
+   PLAYER_LEVEL_MAX_REQUIREMENT = 33;
+   CAMPAIGN_REQUIREMENT = 34;
+   ANY_DAILY_ACTIVITY_READY_FOR_CLAIM = 35;
+   FACEBOOK_LOGIN_AVAILABLE = 36;
+   ANY_UNIT_REACHED_MAX_RARITY = 37;
+   CURRENT_CHARACTER_READY_FOR_TIER_UP = 38;
+   EVENT_ACTIVE = 39;
+   BATTLE_ANY_UNIT_HAS_SHIELD = 40;
+   CURRENT_CHARACTER_MIN_TIER = 41;
+   UNIT_LEVEL_MAX_REQUIREMENT = 42;
+   UNIT_LEVEL_MIN_REQUIREMENT = 43;
+   ROSTER_UNIT_REQUIREMENT = 44;
+   UNIT_SHARD_REQUIREMENT = 45;
+   ROSTER_UNIT_COMBAT_TYPE_REQUIREMENT = 46;
+   BATTLE_TURN_COUNT = 47;
+   BATTLE_ENCOUNTER_STARTED = 48;
+   BATTLE_UNIT_TURN_SQUAD_CELL_INDEX = 49;
+   ROSTER_UNIT_CLASS_REQUIREMENT = 50;
+}
+enum SquadType {
+   SQUAD_NEUTRAL = 1;
+   SQUAD_LIGHT = 2;
+   SQUAD_DARK = 3;
+   SQUAD_EVENT = 4;
+   SQUAD_PVP = 5;
+   SQUAD_RESTRICTED = 6;
+   SQUAD_SUPPLIED = 7;
+   SQUAD_WAR = 8;
+   SQUAD_EVENT_01 = 9;
+   SQUAD_EVENT_02 = 10;
+   SQUAD_EVENT_03 = 11;
+   SQUAD_EVENT_04 = 12;
+   SQUAD_EVENT_05 = 13;
+   SQUAD_EVENT_06 = 14;
+   SQUAD_EVENT_07 = 15;
+   SQUAD_EVENT_08 = 16;
+   SQUAD_EVENT_09 = 17;
+   SQUAD_EVENT_10 = 18;
+   SQUAD_EVENT_11 = 19;
+   SQUAD_EVENT_12 = 20;
+   SQUAD_EVENT_13 = 21;
+   SQUAD_EVENT_14 = 22;
+   SQUAD_EVENT_15 = 23;
+   SQUAD_EVENT_16 = 24;
+   SQUAD_EVENT_17 = 25;
+   SQUAD_EVENT_18 = 26;
+   SQUAD_EVENT_19 = 27;
+   SQUAD_EVENT_20 = 28;
+   SQUAD_WAR_DEFENSIVE = 29;
+   SQUAD_GUILD_RAID = 30;
+   SQUAD_STAT_MOD_BATTLES = 31;
+   SQUAD_EVENT_DEFENSIVE = 32;
+}
+message Stat {
+   optional string stat_id = 1 [default = ""];
+   optional UnitStat unit_stat_id = 3 [default = UNITSTATMAXHEALTH];
+   optional int32 stat_value_decimal_old = 4 [default = 0];
+   optional int64 stat_value_decimal = 5 [default = 0];
+}
+message StatMod {
+   optional string id = 1 [default = ""];
+   optional string definition_id = 2 [default = ""];
+   optional int32 level = 4 [default = 0];
+   optional StatModTier tier = 5 [default = STATMODTIER01];
+   optional CurrencyItem sell_value = 9;
+   optional CurrencyItem remove_cost = 10;
+   optional bool locked = 11 [default = false];
+   optional StatModStat primary_stat = 12;
+   repeated StatModStat secondary_stat = 13;
+   optional int32 xp = 14 [default = 0];
+   optional CurrencyItem level_cost = 15;
+}
+message StatModStat {
+   optional string updater_id = 1 [default = ""];
+   optional Stat stat = 2;
+   repeated string roll = 3;
+}
+enum StatModTier {
+   STATMOD_TIER_01 = 1;
+   STATMOD_TIER_02 = 2;
+   STATMOD_TIER_03 = 3;
+   STATMOD_TIER_04 = 4;
+   STATMOD_TIER_05 = 5;
+}
+enum UnitStat {
+   UNIT_STAT_MAX_HEALTH = 1;
+   UNIT_STAT_STRENGTH = 2;
+   UNIT_STAT_AGILITY = 3;
+   UNIT_STAT_INTELLIGENCE = 4;
+   UNIT_STAT_SPEED = 5;
+   UNIT_STAT_ATTACK_DAMAGE = 6;
+   UNIT_STAT_ABILITY_POWER = 7;
+   UNIT_STAT_ARMOR = 8;
+   UNIT_STAT_SUPPRESSION = 9;
+   UNIT_STAT_ARMOR_PENETRATION = 10;
+   UNIT_STAT_SUPPRESSION_PENETRATION = 11;
+   UNIT_STAT_DODGE_RATING = 12;
+   UNIT_STAT_DEFLECTION_RATING = 13;
+   UNIT_STAT_ATTACK_CRITICAL_RATING = 14;
+   UNIT_STAT_ABILITY_CRITICAL_RATING = 15;
+   UNIT_STAT_CRITICAL_DAMAGE = 16;
+   UNIT_STAT_ACCURACY = 17;
+   UNIT_STAT_RESISTANCE = 18;
+   UNIT_STAT_DODGE_PERCENT_ADDITIVE = 19;
+   UNIT_STAT_DEFLECTION_PERCENT_ADDITIVE = 20;
+   UNIT_STAT_ATTACK_CRITICAL_PERCENT_ADDITIVE = 21;
+   UNIT_STAT_ABILITY_CRITICAL_PERCENT_ADDITIVE = 22;
+   UNIT_STAT_ARMOR_PERCENT_ADDITIVE = 23;
+   UNIT_STAT_SUPPRESSION_PERCENT_ADDITIVE = 24;
+   UNIT_STAT_ARMOR_PENETRATION_PERCENT_ADDITIVE = 25;
+   UNIT_STAT_SUPPRESSION_PENETRATION_PERCENT_ADDITIVE = 26;
+   UNIT_STAT_HEALTH_STEAL = 27;
+   UNIT_STAT_MAX_SHIELD = 28;
+   UNIT_STAT_SHIELD_PENETRATION = 29;
+   UNIT_STAT_HEALTH_REGEN = 30;
+   UNIT_STAT_ATTACK_DAMAGE_PERCENT_ADDITIVE = 31;
+   UNIT_STAT_ABILITY_POWER_PERCENT_ADDITIVE = 32;
+   UNIT_STAT_DODGE_NEGATE_PERCENT_ADDITIVE = 33;
+   UNIT_STAT_DEFLECTION_NEGATE_PERCENT_ADDITIVE = 34;
+   UNIT_STAT_ATTACK_CRITICAL_NEGATE_PERCENT_ADDITIVE = 35;
+   UNIT_STAT_ABILITY_CRITICAL_NEGATE_PERCENT_ADDITIVE = 36;
+   UNIT_STAT_DODGE_NEGATE_RATING = 37;
+   UNIT_STAT_DEFLECTION_NEGATE_RATING = 38;
+   UNIT_STAT_ATTACK_CRITICAL_NEGATE_RATING = 39;
+   UNIT_STAT_ABILITY_CRITICAL_NEGATE_RATING = 40;
+   UNIT_STAT_OFFENSE = 41;
+   UNIT_STAT_DEFENSE = 42;
+   UNIT_STAT_DEFENSE_PENETRATION = 43;
+   UNIT_STAT_EVASION_RATING = 44;
+   UNIT_STAT_CRITICAL_RATING = 45;
+   UNIT_STAT_EVASION_NEGATE_RATING = 46;
+   UNIT_STAT_CRITICAL_NEGATE_RATING = 47;
+   UNIT_STAT_OFFENSE_PERCENT_ADDITIVE = 48;
+   UNIT_STAT_DEFENSE_PERCENT_ADDITIVE = 49;
+   UNIT_STAT_DEFENSE_PENETRATION_PERCENT_ADDITIVE = 50;
+   UNIT_STAT_EVASION_PERCENT_ADDITIVE = 51;
+   UNIT_STAT_EVASION_NEGATE_PERCENT_ADDITIVE = 52;
+   UNIT_STAT_CRITICAL_CHANCE_PERCENT_ADDITIVE = 53;
+   UNIT_STAT_CRITICAL_NEGATE_CHANCE_PERCENT_ADDITIVE = 54;
+   UNIT_STAT_MAX_HEALTH_PERCENT_ADDITIVE = 55;
+   UNIT_STAT_MAX_SHIELD_PERCENT_ADDITIVE = 56;
+   UNIT_STAT_SPEED_PERCENT_ADDITIVE = 57;
+   UNIT_STAT_COUNTER_ATTACK_RATING = 58;
+   UNIT_STAT_TAUNT = 59;
+}
+enum UnitTier {
+   TIER_01 = 1;
+   TIER_02 = 2;
+   TIER_03 = 3;
+   TIER_04 = 4;
+   TIER_05 = 5;
+   TIER_06 = 6;
+   TIER_07 = 7;
+   TIER_08 = 8;
+   TIER_09 = 9;
+   TIER_10 = 10;
+   TIER_11 = 11;
+   TIER_12 = 12;
+   TIER_13 = 13;
+   TIER_14 = 14;
+   TIER_15 = 15;
+   TIER_16 = 16;
+   TIER_17 = 17;
+   TIER_18 = 18;
+   TIER_19 = 19;
+   TIER_20 = 20;
+}

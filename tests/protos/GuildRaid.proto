@@ -1,0 +1,69 @@
+package Protos;
+
+message CampaignElementIdentifier {
+   optional string campaign_id = 1 [default = ""];
+   optional string campaign_map_id = 2 [default = ""];
+   optional string campaign_node_id = 3 [default = ""];
+   optional CampaignNodeDifficulty campaign_node_difficulty = 4 [default = NOTSET];
+   optional string campaign_mission_id = 5 [default = ""];
+}
+enum CampaignNodeDifficulty {
+   NOT_SET = 0;
+   NORMAL_DIFF = 4;
+   HARD_DIFF = 5;
+   NIGHTMARE_DIFF = 6;
+   SPECIAL_DIFF = 7;
+   I_DIFF = 8;
+   II_DIFF = 9;
+   III_DIFF = 10;
+   IV_DIFF = 11;
+   V_DIFF = 12;
+   VI_DIFF = 13;
+}
+message GuildRaid {
+   optional string id = 1 [default = ""];
+   optional int32 priority = 2 [default = 0];
+   optional string name_key = 3 [default = ""];
+   optional string summary_key = 4 [default = ""];
+   optional string desc_key = 5 [default = ""];
+   optional string image = 6 [default = ""];
+   optional SquadType squad_type = 8 [default = SQUADGUILDRAID];
+   optional CampaignElementIdentifier campaign_element_identifier = 9;
+   optional string icon_prefab = 11 [default = ""];
+   optional string promotion_key = 12 [default = ""];
+   optional string portrait_icon = 13 [default = ""];
+}
+enum SquadType {
+   SQUAD_NEUTRAL = 1;
+   SQUAD_LIGHT = 2;
+   SQUAD_DARK = 3;
+   SQUAD_EVENT = 4;
+   SQUAD_PVP = 5;
+   SQUAD_RESTRICTED = 6;
+   SQUAD_SUPPLIED = 7;
+   SQUAD_WAR = 8;
+   SQUAD_EVENT_01 = 9;
+   SQUAD_EVENT_02 = 10;
+   SQUAD_EVENT_03 = 11;
+   SQUAD_EVENT_04 = 12;
+   SQUAD_EVENT_05 = 13;
+   SQUAD_EVENT_06 = 14;
+   SQUAD_EVENT_07 = 15;
+   SQUAD_EVENT_08 = 16;
+   SQUAD_EVENT_09 = 17;
+   SQUAD_EVENT_10 = 18;
+   SQUAD_EVENT_11 = 19;
+   SQUAD_EVENT_12 = 20;
+   SQUAD_EVENT_13 = 21;
+   SQUAD_EVENT_14 = 22;
+   SQUAD_EVENT_15 = 23;
+   SQUAD_EVENT_16 = 24;
+   SQUAD_EVENT_17 = 25;
+   SQUAD_EVENT_18 = 26;
+   SQUAD_EVENT_19 = 27;
+   SQUAD_EVENT_20 = 28;
+   SQUAD_WAR_DEFENSIVE = 29;
+   SQUAD_GUILD_RAID = 30;
+   SQUAD_STAT_MOD_BATTLES = 31;
+   SQUAD_EVENT_DEFENSIVE = 32;
+}

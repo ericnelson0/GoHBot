@@ -1,0 +1,1385 @@
+package Protos;
+
+message AbilityReference {
+   optional string ability_id = 1 [default = ""];
+   optional UnitTier required_tier = 2 [default = TIER01];
+   optional Rarity required_rarity = 3 [default = ONESTAR];
+}
+message ActionLink {
+   optional string link = 1 [default = ""];
+   optional ActionLinkType type = 2 [default = INTERNAL];
+}
+enum ActionLinkType {
+   INTERNAL = 1;
+   EXTERNAL = 2;
+}
+message Ally {
+   optional string ally_id = 1 [default = ""];
+   optional string ally_name = 2 [default = ""];
+   optional AllyStatus ally_status = 3 [default = ALLIED];
+   optional int64 timestamp = 4 [default = 0];
+   optional int64 ally_code = 5 [default = 0];
+   optional Unit character_combat_leader = 6;
+   optional Unit ship_combat_leader = 7;
+   optional int64 last_used_in_battle = 8 [default = 0];
+   optional int32 player_level = 9 [default = 0];
+   optional int64 arena_rank = 10 [default = 0];
+   optional int64 arena_wins = 11 [default = 0];
+   optional int64 arena_losses = 12 [default = 0];
+   optional int32 completed_missions = 13 [default = 0];
+   optional AllyGuildPreview guild = 14;
+}
+message AllyGuildPreview {
+   optional string guild_id = 1 [default = ""];
+   optional string guild_name = 2 [default = ""];
+}
+message AllyList {
+   repeated Ally ally = 1;
+   optional int32 max_size = 2 [default = 0];
+}
+enum AllyStatus {
+   ALLIED = 0;
+   REQUEST_SENT = 1;
+}
+enum BattleTargetingTactic {
+   TARGET_RANDOM = 1;
+   TARGET_RANDOM_SWITCH = 2;
+   TARGET_RANDOM_OVERKILL = 3;
+   TARGET_RANDOM_WEIGHTED_SWITCH = 4;
+}
+message BattleUnitAbilityState {
+   optional string ability_id = 1 [default = ""];
+   optional int32 cooldown = 2 [default = 0];
+}
+message BattleUnitState {
+   optional string unit_id = 1 [default = ""];
+   optional string health_percent = 5 [default = ""];
+   repeated BattleUnitAbilityState ability_state = 6;
+   optional bool progress_item = 7 [default = false];
+   optional int64 current_health = 8 [default = 0];
+   optional string shield_percent = 9 [default = ""];
+   optional string turn_percent = 10 [default = ""];
+   optional int64 max_health = 11 [default = 0];
+   optional bool has_fled = 12 [default = false];
+   optional int64 max_shield = 13 [default = 0];
+}
+message BucketItem {
+   optional string id = 1 [default = ""];
+   optional ItemType type = 2 [default = EMPTY];
+   optional int32 weight = 3 [default = 0];
+   optional int32 minQuantity = 4 [default = 0];
+   optional int32 maxQuantity = 5 [default = 0];
+   optional Rarity rarity = 6 [default = ONESTAR];
+   optional StatMod stat_mod = 7;
+}
+message Campaign {
+   optional string id = 1 [default = ""];
+   optional string name_key = 2 [default = ""];
+   optional string description_key = 3 [default = ""];
+   optional string image = 4 [default = ""];
+   optional CampaignType campaign_type = 5 [default = STANDARD];
+   repeated CampaignMap campaign_map = 6;
+   optional CampaignElementProgress progress = 7 [default = HIDDEN];
+   optional string unlock_requirement_localization_key = 9 [default = ""];
+   optional string daily_battle_cap_key = 10 [default = ""];
+   optional EntryCategoryAllowed entry_category_allowed = 11;
+   optional bool grind_enabled = 12 [default = false];
+}
+message CampaignCinematic {
+   optional CinematicTrigger trigger = 2;
+   optional Environment environment = 3;
+   optional Environment subsequent_viewing_environment = 4;
+}
+message CampaignElementIdentifier {
+   optional string campaign_id = 1 [default = ""];
+   optional string campaign_map_id = 2 [default = ""];
+   optional string campaign_node_id = 3 [default = ""];
+   optional CampaignNodeDifficulty campaign_node_difficulty = 4 [default = NOTSET];
+   optional string campaign_mission_id = 5 [default = ""];
+}
+enum CampaignElementProgress {
+   HIDDEN = 1;
+   LOCKED = 2;
+   UNLOCKED = 3;
+   COMPLETE_ONE_STAR = 5;
+   COMPLETE_TWO_STAR = 6;
+   COMPLETE_THREE_STAR = 7;
+}
+message CampaignMap {
+   optional string id = 1 [default = ""];
+   optional string name_key = 2 [default = ""];
+   optional string image = 3 [default = ""];
+   optional string profile_image = 4 [default = ""];
+   optional string profile_description_key = 5 [default = ""];
+   repeated CampaignNodeDifficultyGroup campaign_node_difficulty_group = 6;
+   optional CampaignElementProgress progress = 7 [default = HIDDEN];
+   repeated BucketItem entry_ownership_requirement = 8;
+   optional string unlock_requirement_localization_key = 10 [default = ""];
+   optional bool is_player_squad_supplied = 11 [default = false];
+   optional string daily_battle_cap_key = 12 [default = ""];
+   optional EntryCategoryAllowed entry_category_allowed = 13;
+   optional bool grind_enabled = 14 [default = false];
+}
+message CampaignMissionEnemyPreview {
+   optional BucketItem base_enemy_item = 1;
+   optional int32 enemy_level = 2 [default = 0];
+   optional UnitTier enemy_tier = 3 [default = TIER01];
+}
+message CampaignNode {
+   optional string id = 1 [default = ""];
+   optional string name_key = 2 [default = ""];
+   repeated CampaignNodeMission campaign_node_mission = 4;
+   optional string home_prefab = 5 [default = ""];
+   optional ForceAlignment force_alignment = 6 [default = NEUTRAL];
+   optional UnitClass dominant_class = 7 [default = UNITCLASSSTANDARD];
+   optional CombatType combat_type = 8 [default = CHARACTER];
+   optional bool is_cannon = 9 [default = false];
+   optional CampaignElementProgress progress = 10 [default = HIDDEN];
+   optional string unlock_requirement_localization_key = 13 [default = ""];
+   optional string daily_battle_cap_key = 14 [default = ""];
+   optional EntryCategoryAllowed entry_category_allowed = 15;
+   optional string cooldown_key = 16 [default = ""];
+   optional bool grind_enabled = 17 [default = false];
+}
+enum CampaignNodeDifficulty {
+   NOT_SET = 0;
+   NORMAL_DIFF = 4;
+   HARD_DIFF = 5;
+   NIGHTMARE_DIFF = 6;
+   SPECIAL_DIFF = 7;
+   I_DIFF = 8;
+   II_DIFF = 9;
+   III_DIFF = 10;
+   IV_DIFF = 11;
+   V_DIFF = 12;
+   VI_DIFF = 13;
+}
+message CampaignNodeDifficultyGroup {
+   optional CampaignNodeDifficulty campaign_node_difficulty = 1 [default = NORMALDIFF];
+   repeated CampaignNode campaign_node = 2;
+   optional CampaignElementProgress progress = 3 [default = HIDDEN];
+   optional string unlock_requirement_localization_key = 4 [default = ""];
+   optional string daily_battle_cap_key = 5 [default = ""];
+   optional EntryCategoryAllowed entry_category_allowed = 6;
+   optional bool grind_enabled = 7 [default = false];
+}
+message CampaignNodeEncounter {
+   repeated CampaignCinematic encounter_cinematics = 3;
+   repeated Environment environment = 4;
+   repeated ContextualMessageGroup encounter_message = 5;
+   optional string audio_key = 6 [default = ""];
+   optional bool continueDuringStartCinematic = 7 [default = false];
+   optional string limit_break_drop_modifier = 8 [default = ""];
+   optional bool allow_chance_mechanics = 11 [default = false];
+   repeated ContextualMessageGroup first_time_encounter_message = 12;
+   optional string encounter_icon = 13 [default = ""];
+   optional string encounter_desc_key = 14 [default = ""];
+   optional int32 encounter_icon_position = 15 [default = 0];
+   optional ColorType raid_progress_color = 16 [default = WHITE];
+}
+message CampaignNodeMission {
+   optional string id = 1 [default = ""];
+   optional string name_key = 2 [default = ""];
+   optional string desc_key = 3 [default = ""];
+   optional UnitClass dominant_class = 5 [default = WARRIOR];
+   optional CombatType combat_type = 6 [default = CHARACTER];
+   repeated BucketItem enemy_preview = 7;
+   repeated BucketItem reward_preview = 8;
+   repeated CampaignNodeEncounter campaign_node_encounter = 9;
+   optional string audio_key = 11 [default = ""];
+   optional CampaignElementProgress progress = 12 [default = HIDDEN];
+   repeated BucketItem entry_cost_requirement = 14;
+   optional EntryCategoryAllowed entry_category_allowed = 15;
+   optional string short_name_key = 16 [default = ""];
+   optional string group_name_key = 17 [default = ""];
+   optional string group_image = 18 [default = ""];
+   optional string unlock_requirement_localization_key = 19 [default = ""];
+   optional string cooldown_key = 21 [default = ""];
+   optional string daily_battle_cap_key = 22 [default = ""];
+   repeated BucketItem first_complete_reward_preview = 23;
+   repeated CampaignMissionEnemyPreview enemy_unit_preview = 24;
+   optional string prefab = 25 [default = ""];
+   optional Position position = 26;
+   repeated AbilityReference player_ability_ref = 27;
+   repeated BucketItem activate_cost = 28;
+   repeated RankRewardPreview rank_reward_preview = 29;
+   optional string detail_image = 30 [default = ""];
+   optional string detail_desc_key = 31 [default = ""];
+   optional string raid_config_id = 32 [default = ""];
+   repeated DynamicDescription dynamic_description = 33;
+   optional ItemType node_display_item = 34 [default = EMPTY];
+   optional bool grind_enabled = 35 [default = false];
+}
+enum CampaignType {
+   STANDARD = 1;
+   ONBOARDING = 2;
+   CAMPAIGN_EVENT = 3;
+   GUILD_RAID = 4;
+   CAMPAIGN_PVE_LIGHT = 5;
+   CAMPAIGN_PVE_DARK = 6;
+   CAMPAIGN_PVE_MOD_BATTLES = 7;
+   CAMPAIGN_PVE_HOLOCRON = 8;
+}
+message CantinaCharacterDialog {
+   optional string texture = 1 [default = ""];
+}
+enum CategoryMatchType {
+   MATCH_ALL = 1;
+   MATCH_ANY = 2;
+}
+message ChallengeProgress {
+   optional string id = 1 [default = ""];
+   optional int64 current_value = 2 [default = 0];
+   optional int64 complete_value = 3 [default = 0];
+   optional bool claimed = 4 [default = false];
+}
+message CharacterDialog {
+   optional string character_prefab = 1 [default = ""];
+   repeated string animations = 2;
+   optional string audio_key = 3 [default = ""];
+   optional string layout = 4 [default = ""];
+   optional bool use_hologram_effect = 5 [default = false];
+}
+message CinematicTrigger {
+   optional string trigger_condition = 1 [default = ""];
+}
+enum ColorType {
+   WHITE = 1;
+   RED = 2;
+   ORANGE = 3;
+   YELLOW = 4;
+   GREEN = 5;
+}
+enum CombatType {
+   CHARACTER = 1;
+   SHIP = 2;
+}
+message ConfigEntry {
+   optional string key = 1 [default = ""];
+   optional string value = 2 [default = ""];
+}
+message ContextualMessage {
+   optional string id = 1 [default = ""];
+   optional ContextualMessageType type = 2 [default = MODALDIALOGONEBUTTON];
+   optional string title_key = 3 [default = ""];
+   optional string text_key = 4 [default = ""];
+   optional PointAtElement point_at = 7;
+   repeated string appear_event = 8;
+   repeated string dismiss_event = 9;
+   repeated string hide_event = 10;
+   optional string action_link = 11 [default = ""];
+   optional string next_message_id = 12 [default = ""];
+   optional Requirement client_requirement = 13;
+   optional CharacterDialog character_dialog = 14;
+   optional string next_message_id_decline = 15 [default = ""];
+   optional bool can_dismiss_while_hidden = 16 [default = false];
+   optional int32 ftue_sub_step = 17 [default = 0];
+   optional CantinaCharacterDialog cantina_character_dialog = 18;
+   optional ActionLink action_link_def = 19;
+}
+message ContextualMessageGroup {
+   optional string group_id = 1 [default = ""];
+   optional string start_message = 2 [default = ""];
+   repeated ContextualMessage message = 3;
+   optional int32 priority = 4 [default = 0];
+   optional bool can_dismiss_while_hidden = 5 [default = false];
+   optional int64 start_time = 6 [default = 0];
+   optional int64 end_time = 7 [default = 0];
+}
+enum ContextualMessageType {
+   POINT_AT_VIEW_ELEMENT = 1;
+   CHARACTER_DIALOG = 3;
+   MODAL_DIALOG_ONE_BUTTON = 4;
+   MODAL_DIALOG_TWO_BUTTON = 5;
+   CANTINA_CHARACTER_DIALOG = 6;
+}
+message Cooldown {
+   optional string id = 1 [default = ""];
+   optional BucketItem refresh_cost = 3;
+}
+message CooldownStatus {
+   optional string id = 1 [default = ""];
+   optional int64 cooldown_time = 2 [default = 0];
+}
+message CraftingMaterial {
+   optional string id = 1 [default = ""];
+   optional int32 quantity = 2 [default = 0];
+}
+message CrewGroup {
+   repeated CrewGroupMember crew_group_member = 1;
+   optional int32 crew_slot = 2 [default = 0];
+}
+message CrewGroupMember {
+   optional string unit_id = 2 [default = ""];
+   optional Unit unit = 3;
+}
+message CurrencyItem {
+   optional CurrencyType currency = 1 [default = GRIND];
+   optional int32 quantity = 2 [default = 0];
+}
+enum CurrencyType {
+   GRIND = 1;
+   PREMIUM = 2;
+   REAL_MONEY = 3;
+   SOCIAL = 4;
+   IGC_EVENT_KEYCARD = 8;
+   XP_EVENT_KEYCARD = 9;
+   PVP_CURRENCY = 10;
+   FORCE_POINT = 11;
+   PVP_SHIP_CURRENCY = 12;
+   FREE = 13;
+   WAR_SHIP_CURRENCY = 14;
+   GRIND_TICKET = 15;
+   SHARD_CURRENCY = 16;
+   GUILD_CURRENCY = 17;
+   GUILD_BANK_CURRENCY = 18;
+   SHIP_GRIND = 19;
+   GUILD_RAID_CURRENCY_01 = 20;
+   GUILD_RAID_CURRENCY_02 = 21;
+   GUILD_RAID_CURRENCY_03 = 22;
+   GUILD_RAID_CURRENCY_04 = 23;
+   GUILD_RAID_CURRENCY_05 = 24;
+   GUILD_RAID_CURRENCY_06 = 25;
+   GUILD_RAID_CURRENCY_07 = 26;
+   GUILD_RAID_CURRENCY_08 = 27;
+   GUILD_RAID_CURRENCY_09 = 28;
+   GUILD_RAID_CURRENCY_10 = 29;
+   GUILD_RAID_CURRENCY_11 = 30;
+   GUILD_RAID_CURRENCY_12 = 31;
+}
+message DailyActionCap {
+   optional string id = 1 [default = ""];
+   optional int32 max_actions = 2 [default = 0];
+   repeated BucketItem purchase_cost = 4;
+   optional bool unlimited_purchases = 5 [default = false];
+}
+message DailyActionCapStatus {
+   optional string id = 1 [default = ""];
+   optional int32 actions_used = 2 [default = 0];
+   optional int32 purchase_count = 3 [default = 0];
+   optional int64 status_expire_time = 4 [default = 0];
+}
+message DailyLogin {
+   optional string daily_login_title = 1 [default = ""];
+   optional string daily_login_message = 2 [default = ""];
+   optional int64 start_time = 3 [default = 0];
+   optional int64 expire_time = 4 [default = 0];
+   optional int32 current_reward_index = 5 [default = 0];
+   optional int64 last_claimed = 6 [default = 0];
+   repeated BucketItem daily_reward = 7;
+}
+message DynamicDescription {
+   optional DynamicDescriptionType description_type = 1 [default = LAYOUTTEXT];
+   optional string unit_texture = 2 [default = ""];
+   optional string unit_name_key = 3 [default = ""];
+   optional string ability_name_key = 4 [default = ""];
+   optional string ability_description_key = 5 [default = ""];
+   optional string ability_texture = 6 [default = ""];
+   optional string header_key = 7 [default = ""];
+   optional string text_key = 8 [default = ""];
+   optional int32 margin_left = 9 [default = 0];
+   repeated DynamicDescriptionTextColumn text_column = 10;
+   optional DynamicDescriptionTextAlignmentType text_alignment = 11 [default = TEXTALIGNMENTLEFT];
+}
+enum DynamicDescriptionTextAlignmentType {
+   TEXT_ALIGNMENT_LEFT = 1;
+   TEXT_ALIGNMENT_RIGHT = 2;
+   TEXT_ALIGNMENT_CENTER = 3;
+}
+message DynamicDescriptionTextColumn {
+   optional string header_key = 1 [default = ""];
+   optional string body_key = 2 [default = ""];
+   optional DynamicDescriptionTextAlignmentType body_alignment = 3 [default = TEXTALIGNMENTLEFT];
+}
+enum DynamicDescriptionType {
+   LAYOUT_TEXT = 1;
+   LAYOUT_UNIT = 2;
+   LAYOUT_ABILITY = 3;
+   LAYOUT_HEADER = 4;
+   LAYOUT_TEXT_COLUMN = 5;
+   LAYOUT_HORIZONTAL_BREAK = 6;
+}
+message Energy {
+   optional EnergyType type = 1 [default = PVE];
+   optional int64 timestamp = 2 [default = 0];
+   optional int32 max_energy = 3 [default = 0];
+   optional int32 regen_rate = 4 [default = 0];
+   optional int32 regen_cost = 5 [default = 0];
+   optional int32 overflow = 6 [default = 0];
+}
+message EnergyBonusTime {
+   optional EnergyType energy_type = 1 [default = PVE];
+   optional int64 last_bonus_energy_time = 2 [default = 0];
+}
+message EnergyRewardDefinition {
+   optional EnergyType energy_type = 1 [default = PVE];
+   repeated EnergyRewardInstance instance = 2;
+   optional string claimable_title_key = 3 [default = ""];
+   optional string claimable_desc_key = 4 [default = ""];
+   optional string upcoming_title_key = 5 [default = ""];
+   optional string upcoming_desc_key = 6 [default = ""];
+   optional Requirement show_requirement = 7;
+}
+message EnergyRewardInstance {
+   optional EnergyRewardInstanceType type = 1 [default = HOUROFDAY];
+   optional int32 start = 2 [default = 0];
+   optional int32 duration = 3 [default = 0];
+   optional int32 amount = 4 [default = 0];
+}
+enum EnergyRewardInstanceType {
+   HOUR_OF_DAY = 1;
+}
+enum EnergyType {
+   PVE = 1;
+   PVP = 2;
+   SHIP_PVE = 3;
+   SHIP_PVP = 4;
+   CANTINA_PVE = 5;
+}
+enum EnrollmentStatus {
+   ENROLLMENT_OPEN = 1;
+   ENROLLMENT_INVITE = 2;
+   ENROLLMENT_CLOSED = 3;
+}
+message EntryCategoryAllowed {
+   repeated string category_id = 1;
+   optional int32 maximum_allowed_unit_quantity = 2 [default = 0];
+   optional CategoryMatchType match_type = 3 [default = MATCHANY];
+   optional int32 minimum_required_unit_quantity = 4 [default = 0];
+   optional Rarity minimum_unit_rarity = 5 [default = NOSTAR];
+   optional int32 minimum_owned_unit_quantity = 6 [default = 0];
+   optional int32 minimum_unit_level = 7 [default = 0];
+   optional UnitTier minimum_unit_tier = 8 [default = TIER01];
+   optional int32 maximum_reinforcement = 9 [default = 0];
+}
+message Environment {
+   optional string prefab = 1 [default = ""];
+   optional string layout = 2 [default = ""];
+   optional string layout_prefab = 3 [default = ""];
+}
+message Equipment {
+   optional string id = 1 [default = ""];
+   optional int32 quantity = 2 [default = 0];
+}
+message EquipmentSlot {
+   optional string equipment_id = 1 [default = ""];
+   optional int32 slot = 2 [default = 0];
+}
+enum EvaluationType {
+   AND = 1;
+   OR = 2;
+}
+message Filter {
+   optional int32 min_player_level = 1 [default = 0];
+   optional int32 max_player_level = 2 [default = 0];
+   optional double min_player_spend = 3 [default = 0];
+   optional double max_player_spend = 4 [default = 0];
+   optional string min_pve_map_unlocked = 5 [default = ""];
+   optional int32 min_pve_map_node_unlocked = 6 [default = 0];
+   optional string max_pve_map_unlocked = 7 [default = ""];
+   optional int32 max_pve_map_node_unlocked = 8 [default = 0];
+}
+enum ForceAlignment {
+   NEUTRAL = 1;
+   LIGHT = 2;
+   DARK = 3;
+}
+message GameEvent {
+   optional string id = 1 [default = ""];
+   optional int32 priority = 2 [default = 0];
+   optional string name_key = 3 [default = ""];
+   optional string summary_key = 4 [default = ""];
+   optional string desc_key = 5 [default = ""];
+   optional string image = 6 [default = ""];
+   optional GameEventType type = 7 [default = SCHEDULED];
+   optional BucketItem keycard_entry_cost = 8;
+   optional int64 keycard_duration = 9 [default = 0];
+   repeated GameEventInstance instance = 10;
+   optional GameEventStatus status = 12 [default = EVENTLOCKED];
+   optional CampaignElementIdentifier campaign_element_identifier = 13;
+   optional SquadType squad_type = 14 [default = SQUADEVENT];
+   optional string preview_key = 15 [default = ""];
+   optional string review_key = 16 [default = ""];
+   optional GameEventUILocation ui_location = 17 [default = GAMEEVENTUILOCATIONTRIALS];
+   optional string icon = 18 [default = ""];
+   optional bool defensive_squad_usage_cost_enabled = 19 [default = false];
+   repeated ContextualMessageGroup encounter_message = 20;
+   repeated Environment environment = 21;
+   optional string desc_key_unit_criteria_met = 22 [default = ""];
+}
+message GameEventInstance {
+   optional string id = 1 [default = ""];
+   optional int64 start_time = 2 [default = 0];
+   optional int64 end_time = 3 [default = 0];
+   optional int64 display_start_time = 4 [default = 0];
+   optional int64 display_end_time = 5 [default = 0];
+   optional bool time_limited = 6 [default = false];
+   optional CampaignElementIdentifier campaign_element_identifier = 7;
+   repeated BucketItem reward_preview = 8;
+   repeated RankRewardPreview rank_reward_preview = 9;
+   optional EntryCategoryAllowed entry_category_allowed = 10;
+   optional int32 defensive_squad_size = 11 [default = 0];
+   optional string unit_daily_usage_cap_key = 12 [default = ""];
+   optional int64 roster_refresh_time = 13 [default = 0];
+   optional bool joined = 14 [default = false];
+   optional string summary_key = 15 [default = ""];
+   optional int64 reward_time = 16 [default = 0];
+   optional int64 defensive_squad_save_time_limit = 17 [default = 0];
+}
+enum GameEventStatus {
+   EVENT_LOCKED = 1;
+   EVENT_UNLOCKED = 2;
+}
+enum GameEventType {
+   SCHEDULED = 1;
+   KEYCARD = 2;
+   PROGRESSION = 3;
+   MODS = 4;
+   PVP_EVENT = 5;
+}
+enum GameEventUILocation {
+   GAME_EVENT_UI_LOCATION_TRIALS = 1;
+   GAME_EVENT_UI_LOCATION_EVENTS = 2;
+   GAME_EVENT_UI_LOCATION_MODS = 3;
+   GAME_EVENT_UI_LOCATION_SHIP_TRIALS = 4;
+}
+message Guild {
+   optional GuildProfile profile = 1;
+   repeated GuildMember member = 2;
+   repeated GuildInviteStatus invite_status = 3;
+   repeated GuildRaidStatus raid_status = 4;
+   optional GuildInventory inventory = 5;
+   repeated GuildRaidResult raid_result = 6;
+   optional GuildProgress progress = 7;
+}
+message GuildInventory {
+   repeated CurrencyItem currency_item = 1;
+   repeated CurrencyItem current_daily_limit = 2;
+}
+message GuildInviteStatus {
+   optional string guild_id = 1 [default = ""];
+   optional int64 expire_time = 2 [default = 0];
+   optional string player_id = 3 [default = ""];
+   optional GuildInviteType type = 4 [default = GUILDJOINREQUEST];
+   optional Unit leader_unit = 5;
+   optional int64 sent_time = 6 [default = 0];
+   optional int32 player_level = 7 [default = 0];
+   optional string player_name = 8 [default = ""];
+}
+enum GuildInviteType {
+   GUILD_JOIN_REQUEST = 1;
+   GUILD_INVITATION = 2;
+}
+message GuildMember {
+   optional string player_id = 1 [default = ""];
+   optional string player_name = 2 [default = ""];
+   optional int32 player_level = 3 [default = 0];
+   optional GuildMemberLevel member_level = 4 [default = GUILDMEMBER];
+   optional Unit leader_unit = 5;
+   optional int64 contribution = 6 [default = 0];
+   optional int32 guild_xp = 7 [default = 0];
+   optional int64 last_activity_time = 8 [default = 0];
+   optional int32 squad_power = 9 [default = 0];
+   optional int64 lifetime_contribution = 10 [default = 0];
+   repeated GuildMemberContribution member_contribution = 11;
+}
+message GuildMemberContribution {
+   optional MemberContributionType type = 1 [default = CONTRIBUTIONTYPECOMMENDATION];
+   optional int64 current_value = 2 [default = 0];
+   optional int64 lifetime_value = 3 [default = 0];
+}
+enum GuildMemberLevel {
+   GUILD_PENDING = 1;
+   GUILD_MEMBER = 2;
+   GUILD_OFFICER = 3;
+   GUILD_LEADER = 4;
+}
+message GuildProfile {
+   optional string id = 1 [default = ""];
+   optional string name = 2 [default = ""];
+   optional string external_message_key = 3 [default = ""];
+   repeated string message_criteria_key = 4;
+   optional string logo = 5 [default = ""];
+   optional string logo_background = 6 [default = ""];
+   optional EnrollmentStatus enrollment_status = 7 [default = ENROLLMENTINVITE];
+   optional int32 trophy = 8 [default = 0];
+   optional int32 member_count = 9 [default = 0];
+   optional int32 member_max = 10 [default = 0];
+   optional int32 level = 11 [default = 0];
+   optional int32 rank = 12 [default = 0];
+   optional int32 level_requirement = 13 [default = 0];
+   optional int32 raid_win = 14 [default = 0];
+   optional int64 leaderboard_score = 15 [default = 0];
+   optional string banner_color_id = 16 [default = ""];
+   optional string banner_logo_id = 17 [default = ""];
+}
+message GuildProgress {
+   repeated GuildRaidProgress raid_progress = 1;
+}
+message GuildRaidMember {
+   optional string player_id = 1 [default = ""];
+   optional int32 member_progress = 2 [default = 0];
+   optional int32 member_rank = 3 [default = 0];
+}
+message GuildRaidProgress {
+   optional CampaignElementIdentifier identifier = 1;
+   optional CampaignElementProgress progress = 2 [default = HIDDEN];
+}
+message GuildRaidResult {
+   optional string raid_id = 1 [default = ""];
+   repeated GuildRaidMember raid_member = 2;
+   optional CampaignElementIdentifier identifier = 3;
+   optional int64 duration = 4 [default = 0];
+   optional int32 progress_deprecated = 5 [default = 0];
+   optional float progress = 6 [default = 0];
+}
+message GuildRaidStatus {
+   optional string raid_id = 1 [default = ""];
+   optional int64 expire_time = 2 [default = 0];
+   optional float raid_progress = 3 [default = 0];
+   repeated GuildRaidMember raid_member = 5;
+   optional int32 encounter_index = 6 [default = 0];
+   repeated BattleUnitState opponent_unit_state = 8;
+   repeated BattleUnitState player_unit_state = 9;
+   optional CampaignElementIdentifier identifier = 10;
+   optional string instance_id = 11 [default = ""];
+   optional int64 roster_refresh_time = 14 [default = 0];
+   optional bool has_player_participated = 15 [default = false];
+   optional int32 last_encounter_index_player_participated = 16 [default = 0];
+   optional RaidState raid_state = 17 [default = RAIDINPROGRESS];
+   optional int64 tally_end_time = 18 [default = 0];
+   optional bool eligible_for_rewards = 19 [default = false];
+}
+message Inbox {
+   repeated InboxMessage message = 1;
+}
+message InboxAlly {
+   optional string player_name = 1 [default = ""];
+   optional int32 player_level = 2 [default = 0];
+   optional string leader_unit_definition_id = 3 [default = ""];
+   optional int32 leader_unit_level = 4 [default = 0];
+   optional UnitTier leader_unit_tier = 5 [default = TIER01];
+}
+message InboxGuild {
+   optional string name = 1 [default = ""];
+   optional int32 level = 2 [default = 0];
+   optional string logo = 3 [default = ""];
+   optional string logo_background = 4 [default = ""];
+   optional int32 rank = 5 [default = 0];
+   optional int32 member_count = 6 [default = 0];
+   optional int32 member_max = 7 [default = 0];
+   optional string guild_banner_color = 8 [default = ""];
+   optional string guild_banner_logo = 9 [default = ""];
+}
+message InboxMessage {
+   optional string id = 1 [default = ""];
+   optional string subject_key = 2 [default = ""];
+   optional string subject_value = 3 [default = ""];
+   optional string message_key = 4 [default = ""];
+   optional string message_value = 5 [default = ""];
+   optional int64 expire_time = 6 [default = 0];
+   repeated BucketItem attachment = 7;
+   optional InboxMessageType type = 8 [default = BASIC];
+   optional string source_key = 9 [default = ""];
+   optional string source_value = 10 [default = ""];
+   optional int64 start_time = 11 [default = 0];
+   optional InboxAlly ally = 12;
+   optional InboxStoreReceipt store_receipt = 14;
+   optional bool from_support = 15 [default = false];
+   optional int32 rank = 16 [default = 0];
+   optional InboxGuild guild = 17;
+   optional ActionLink action_link = 18;
+   optional int32 score = 19 [default = 0];
+   repeated StatMod stat_mod = 20;
+   repeated InboxPlayerValueEntry player_value_entry = 21;
+}
+enum InboxMessageType {
+   BASIC = 1;
+   ALLY_REQUEST = 2;
+   STORE_RECEIPT = 3;
+   RANK_REWARD = 4;
+   GUILD_INVITE = 5;
+   JOIN_GUILD_REQUEST = 6;
+   GUILD_RANKED_REWARD = 7;
+   GUILD_EXCHANGE_AWARD = 8;
+   GAME_EVENT_REWARD = 9;
+}
+message InboxPlayerValueEntry {
+   optional string player_id = 1 [default = ""];
+   optional string player_name = 2 [default = ""];
+   optional int32 value = 3 [default = 0];
+}
+message InboxStoreReceipt {
+   optional string store_item_id = 1 [default = ""];
+   optional string store_item_name_key = 2 [default = ""];
+   optional int32 store_item_remaining = 3 [default = 0];
+}
+message InitialDataResponse {
+   optional string id = 1 [default = ""];
+   optional Player player = 2;
+   repeated string swrve_ab_variants = 3;
+   repeated ConfigEntry config_override = 4;
+   optional Inventory inventory = 5;
+   repeated Campaign campaign = 12;
+   repeated GameEvent game_event = 13;
+   repeated InterstitialMessage interstitial_message = 15;
+   optional Inbox inbox = 16;
+   repeated ContextualMessageGroup active_message = 17;
+   optional Store store = 18;
+   optional PurchasedInfo purchase_stats = 19;
+   repeated DailyLogin daily_login = 20;
+   repeated ChallengeProgress challenge_progress = 21;
+   optional int64 challenge_reset_time = 22 [default = 0];
+   optional Squad onboarding_character_squad = 25;
+   optional Squad onboarding_ship_squad = 26;
+   optional AllyList ally_list = 27;
+   repeated string unlocked_recipe_ids = 29;
+   repeated Cooldown cooldown = 30;
+   repeated CooldownStatus cooldown_status = 31;
+   repeated DailyActionCap daily_action_cap = 32;
+   repeated DailyActionCapStatus daily_action_cap_status = 33;
+   repeated string onboarding_social_pack_unit_id = 34;
+   repeated War war = 35;
+   repeated SubscriptionStatus subscription_status = 36;
+   repeated PvpDailyRankReward pvp_daily_rank_reward = 37;
+   repeated BucketItem facebook_connect_incentive = 38;
+   optional Guild guild = 40;
+   optional GuildInviteStatus invite_status = 41;
+   repeated EnergyRewardDefinition energy_reward = 42;
+   repeated RankRewardPreview pvp_daily_rank_reward_preview = 44;
+   repeated MysteryBoxDefinition mystery_box = 45;
+   repeated MysteryStatModDefinition mystery_stat_mod = 46;
+   optional bool using_tutorial_arena_opponents = 47 [default = false];
+   repeated RankRewardPreview ship_pvp_daily_rank_reward_preview = 48;
+}
+message InterstitialMessage {
+   optional string id = 1 [default = ""];
+   optional InterstitialMessageType type = 2 [default = NEWSLETTER];
+   optional string title_key = 3 [default = ""];
+   optional string desc_key = 4 [default = ""];
+   optional string image = 5 [default = ""];
+   optional string action_link = 6 [default = ""];
+   optional int64 start_time = 7 [default = 0];
+   optional int64 end_time = 8 [default = 0];
+   optional int32 priority = 9 [default = 0];
+   optional Requirement visibility_requirement = 10;
+   optional TickerMessage ticker_message = 11;
+   optional NewsletterMessage newsletter_message = 12;
+   repeated InterstitialTrigger trigger = 13;
+   optional ActionLink action_link_def = 14;
+}
+enum InterstitialMessageType {
+   TICKER = 1;
+   NEWS_LETTER = 2;
+   HOME_PROMO = 3;
+}
+message InterstitialTrigger {
+   optional string id = 1 [default = ""];
+   optional InterstitialTriggerType interstitial_trigger_type = 2 [default = EVENT];
+}
+enum InterstitialTriggerType {
+   EVENT = 1;
+   CHALLENGE = 2;
+   STORE = 3;
+}
+message Inventory {
+   repeated Unit unit = 1;
+   repeated Squad squad = 2;
+   repeated Squad ship_squad = 3;
+   repeated CraftingMaterial material = 5;
+   repeated CurrencyItem currency_item = 9;
+   repeated Equipment equipment = 10;
+   repeated KeycardItem keycard_item = 11;
+   repeated StatMod equipped_mod = 12;
+   repeated StatMod unequipped_mod = 13;
+}
+enum ItemType {
+   EMPTY = 1;
+   UNIT = 2;
+   CURRENCY = 3;
+   BUCKET = 4;
+   CONSUMABLE = 5;
+   XP = 6;
+   MATERIAL = 7;
+   ENERGY = 8;
+   UNIT_SHARD = 9;
+   RECIPE = 10;
+   EQUIPMENT = 11;
+   EVENT_KEYCARD = 12;
+   POWERUP_BUNDLE = 13;
+   MYSTERY_BOX = 14;
+   STAT_MOD = 15;
+   MYSTERY_STAT_MOD = 16;
+}
+message KeycardItem {
+   optional KeycardType type = 1 [default = IGCKEY];
+   optional int64 expires_time_seconds = 2 [default = 0];
+}
+enum KeycardType {
+   IGC_KEY = 1;
+   XP_KEY = 2;
+}
+enum MemberContributionType {
+   CONTRIBUTION_TYPE_COMMENDATION = 1;
+   CONTRIBUTION_TYPE_TRIBUTE = 2;
+   CONTRIBUTION_TYPE_DONATION = 3;
+}
+message MysteryBoxDefinition {
+   optional string id = 1 [default = ""];
+   optional string texture = 2 [default = ""];
+   optional string title_key = 3 [default = ""];
+   optional string desc_key = 4 [default = ""];
+   optional string details_title_key = 5 [default = ""];
+   optional string details_desc_key = 6 [default = ""];
+   optional string icon_text_key = 7 [default = ""];
+   repeated BucketItem preview_item = 8;
+}
+message MysteryStatModDefinition {
+   optional string id = 1 [default = ""];
+   optional StatModSlot slot_old = 2 [default = STATMODSLOT01];
+   optional string set_id = 3 [default = ""];
+   optional Rarity min_rarity = 4 [default = ONESTAR];
+   optional Rarity max_rarity = 5 [default = SEVENSTAR];
+   optional StatModTier min_tier = 6 [default = STATMODTIER01];
+   optional StatModTier max_tier = 7 [default = STATMODTIER05];
+   repeated StatModSlot slot = 8;
+   optional string desc_key = 9 [default = ""];
+}
+message NewsletterMessage {
+   optional NewsletterMessageType newsletter_message_type = 1 [default = TEXTWITHTEXTURE];
+   optional int64 alert_frequency = 2 [default = 0];
+   optional int32 max_alert_count = 3 [default = 0];
+}
+enum NewsletterMessageType {
+   TEXT = 1;
+   TEXT_WITH_TEXTURE = 2;
+}
+message Offer {
+   optional CurrencyType payment_currency = 1 [default = GRIND];
+   optional int32 price = 2 [default = 0];
+   optional int32 in_app_product_id = 3 [default = 0];
+   optional string cost_key = 4 [default = ""];
+   optional string cooldown_key = 5 [default = ""];
+   optional string daily_purchase_cap_key = 6 [default = ""];
+}
+message Player {
+   optional bool character_onboarding_complete = 1 [default = false];
+   optional int32 xp = 2 [default = 0];
+   optional int32 level = 3 [default = 0];
+   repeated Energy energy = 4;
+   optional string name = 7 [default = ""];
+   optional int32 amount_spent = 8 [default = 0];
+   optional bool ship_onboarding_complete = 9 [default = false];
+   optional int32 name_change_count = 10 [default = 0];
+   optional int32 free_name_change_count = 11 [default = 0];
+   optional int64 last_guild_join_time = 12 [default = 0];
+   optional string synergy_id = 16 [default = ""];
+   optional string synergy_sell_id = 17 [default = ""];
+   optional string facebook_id = 18 [default = ""];
+   optional int64 ally_code = 19 [default = 0];
+   optional bool eula_accepted = 20 [default = false];
+   optional bool can_submit_ticket = 21 [default = false];
+   optional YearMonth age = 22;
+   optional sint32 local_time_zone_offset_minutes = 23 [default = 0];
+   optional sint64 debug_time_offset = 24 [default = 0];
+   optional int64 last_login_time = 27 [default = 0];
+   optional int64 last_spent_time = 28 [default = 0];
+   optional bool push_notes_enabled = 29 [default = false];
+   optional bool facebook_connect_incentive = 33 [default = false];
+   repeated EnergyBonusTime last_energy_bonus_time = 34;
+   optional string country_code = 35 [default = ""];
+}
+message PointAtElement {
+   optional string element_id = 1 [default = ""];
+   optional int32 offset_x = 2 [default = 0];
+   optional int32 offset_y = 3 [default = 0];
+   optional float rotation = 4 [default = 0];
+   optional int32 text_offset_x = 5 [default = 0];
+   optional int32 text_offset_y = 6 [default = 0];
+   optional string text_offset_anchor = 7 [default = ""];
+   optional bool update = 8 [default = false];
+   optional bool clamp = 9 [default = false];
+   optional PointAtRotationBehavior rotation_behavior = 10 [default = ROTATIONBEHAVIORNONE];
+   optional float delay_seconds = 11 [default = 0];
+   optional bool show_arrow = 12 [default = false];
+   optional bool show_highlight = 13 [default = false];
+   optional string image_source = 14 [default = ""];
+   optional int32 image_width = 15 [default = 0];
+   optional int32 image_height = 16 [default = 0];
+   optional int32 image_offset_x = 17 [default = 0];
+   optional int32 image_offset_y = 18 [default = 0];
+   optional PointerType pointer_type = 19 [default = CLICK];
+   optional bool tap_dismiss = 20 [default = false];
+   optional bool scrim_visible = 21 [default = false];
+   optional bool scrim_blocking = 22 [default = false];
+   optional bool show_text = 23 [default = false];
+   optional bool show_bartender = 24 [default = false];
+   optional string bartender_texture = 25 [default = ""];
+}
+enum PointAtRotationBehavior {
+   ROTATION_BEHAVIOR_NONE = 1;
+   ROTATION_BEHAVIOR_AUTO_FROM_CENTER = 2;
+   ROTATION_BEHAVIOR_AUTO_FROM_CENTER_IF_CLAMPED = 3;
+}
+enum PointerType {
+   POINT = 1;
+   CLICK = 2;
+   SWIPE = 3;
+}
+message Position {
+   optional string x = 1 [default = ""];
+   optional string y = 2 [default = ""];
+   optional string z = 3 [default = ""];
+}
+message PurchasedInfo {
+   repeated PurchasedStat purchased_stats = 1;
+}
+message PurchasedStat {
+   optional string id = 1 [default = ""];
+   optional int32 quantity = 2 [default = 0];
+}
+message PvpDailyRankReward {
+   optional int32 rank_start = 1 [default = 0];
+   optional int32 rank_end = 2 [default = 0];
+   repeated BucketItem primary_reward = 3;
+   repeated BucketItem detailed_reward = 4;
+}
+enum RaidState {
+   RAID_IN_PROGRESS = 1;
+   RAID_IN_TALLY = 2;
+   RAID_COMPLETE = 3;
+   RAID_EXPIRED = 4;
+}
+message RankRewardPreview {
+   optional int32 rank_start = 1 [default = 0];
+   optional int32 rank_end = 2 [default = 0];
+   repeated BucketItem primary_reward = 3;
+   repeated BucketItem detailed_reward = 4;
+}
+enum Rarity {
+   ONE_STAR = 1;
+   TWO_STAR = 2;
+   THREE_STAR = 3;
+   FOUR_STAR = 4;
+   FIVE_STAR = 5;
+   SIX_STAR = 6;
+   SEVEN_STAR = 7;
+   NO_STAR = 8;
+}
+message Requirement {
+   optional EvaluationType eval_type = 1 [default = AND];
+   repeated RequirementItem requirement_item = 2;
+   optional string id = 3 [default = ""];
+   optional string desc_key = 4 [default = ""];
+}
+message RequirementItem {
+   optional RequirementType type = 1 [default = REQUIREMENTINVALID];
+   optional string id = 2 [default = ""];
+   optional int32 value = 3 [default = 0];
+}
+enum RequirementType {
+   CURRENCY_REQUIREMENT = 3;
+   ROSTER_CHARACTER_NOT_CATEGORY_NOT_IN_SQUAD_REQUIREMENT = 10;
+   SQUAD_SIZE_MAXIMUM_REQUIREMENT = 11;
+   ROSTER_CHARACTER_CATEGORY_NOT_IN_USE_REQUIREMENT = 12;
+   ROSTER_CHARACTER_NOT_IN_USE_REQUIREMENT = 13;
+   SQUAD_SIZE_MINIMUM_REQUIREMENT = 14;
+   ENEMY_THREAT_LEVEL_REQUIREMENT = 15;
+   ANY_CHARACTER_READY_FOR_PROMOTION = 16;
+   UNIT_TRAINING_AVAILABLE = 19;
+   PLAYER_LEVEL_MIN_REQUIREMENT = 20;
+   ROSTER_UNIT_TYPE_REQUIREMENT = 22;
+   ROSTER_UNIT_TYPE_MAX_REQUIREMENT = 23;
+   UNIT_ABILITY_UPGRADE_AVAILABLE = 24;
+   UNIT_GEAR_EQUIP_AVAILABLE = 25;
+   CURRENT_UNIT_GEAR_EQUIP_AVAILABLE = 26;
+   PLAYER_UNIT_HEALTH_BELOW_PERCENT = 27;
+   REQUIREMENT_INVALID = 28;
+   CURRENT_CHARACTER_READY_FOR_PROMOTION = 29;
+   BATTLE_ANY_STATUS_EFFECT_ACTIVE = 30;
+   STORE_ITEM_AVAILABLE_FOR_PURCHASE = 31;
+   CURRENT_MISSION_HAS_GEAR_DROP = 32;
+   PLAYER_LEVEL_MAX_REQUIREMENT = 33;
+   CAMPAIGN_REQUIREMENT = 34;
+   ANY_DAILY_ACTIVITY_READY_FOR_CLAIM = 35;
+   FACEBOOK_LOGIN_AVAILABLE = 36;
+   ANY_UNIT_REACHED_MAX_RARITY = 37;
+   CURRENT_CHARACTER_READY_FOR_TIER_UP = 38;
+   EVENT_ACTIVE = 39;
+   BATTLE_ANY_UNIT_HAS_SHIELD = 40;
+   CURRENT_CHARACTER_MIN_TIER = 41;
+   UNIT_LEVEL_MAX_REQUIREMENT = 42;
+   UNIT_LEVEL_MIN_REQUIREMENT = 43;
+   ROSTER_UNIT_REQUIREMENT = 44;
+   UNIT_SHARD_REQUIREMENT = 45;
+   ROSTER_UNIT_COMBAT_TYPE_REQUIREMENT = 46;
+   BATTLE_TURN_COUNT = 47;
+   BATTLE_ENCOUNTER_STARTED = 48;
+   BATTLE_UNIT_TURN_SQUAD_CELL_INDEX = 49;
+   ROSTER_UNIT_CLASS_REQUIREMENT = 50;
+}
+message Shipment {
+   optional ShipmentType shipment_type = 1 [default = SHIPMENTPVE];
+   repeated ShipmentItem shipment_item = 2;
+   optional int64 next_refresh_time = 3 [default = 0];
+   optional string daily_refresh_cap_key = 4 [default = ""];
+}
+message ShipmentItem {
+   optional string item_id = 12 [default = ""];
+   optional BucketItem preview_item = 13;
+   optional BucketItem purchase_cost = 14;
+   optional int64 start_time = 15 [default = 0];
+   optional int64 end_time = 16 [default = 0];
+   optional bool purchased = 17 [default = false];
+}
+enum ShipmentType {
+   SHIPMENT_PVP = 1;
+   SHIPMENT_PVE = 2;
+   SHIPMENT_SHIP_WAR = 3;
+   SHIPMENT_CANTINA = 4;
+   SHIPMENT_SHIP_PVP = 5;
+   SHIPMENT_SHARD = 6;
+   SHIPMENT_GUILD = 7;
+   SHIPMENT_MOD = 8;
+}
+message Skill {
+   optional string id = 1 [default = ""];
+   optional int32 tier = 2 [default = 0];
+}
+enum SpecialValue {
+   NONE = 1;
+   MOST_POPULAR = 2;
+   BEST_VALUE = 3;
+}
+message Squad {
+   repeated SquadCell cell = 1;
+   optional BattleTargetingTactic targeting_tactic = 3 [default = TARGETRANDOM];
+   optional SquadType squad_type = 4 [default = SQUADNEUTRAL];
+   optional string targeting_set_id = 5 [default = ""];
+   optional int64 expire_time = 6 [default = 0];
+   optional int64 last_save_time = 7 [default = 0];
+}
+message SquadCell {
+   optional string unit_id = 1 [default = ""];
+   optional string unit_def_id = 2 [default = ""];
+   optional int32 cell_index = 3 [default = 0];
+   optional UnitBattleStat unitBattleStat = 6;
+   optional bool is_leader = 7 [default = false];
+   optional bool is_ally = 8 [default = false];
+   repeated CrewGroup crew_group = 9;
+   optional string message_reticle = 10 [default = ""];
+   optional bool progress_item = 11 [default = false];
+}
+enum SquadType {
+   SQUAD_NEUTRAL = 1;
+   SQUAD_LIGHT = 2;
+   SQUAD_DARK = 3;
+   SQUAD_EVENT = 4;
+   SQUAD_PVP = 5;
+   SQUAD_RESTRICTED = 6;
+   SQUAD_SUPPLIED = 7;
+   SQUAD_WAR = 8;
+   SQUAD_EVENT_01 = 9;
+   SQUAD_EVENT_02 = 10;
+   SQUAD_EVENT_03 = 11;
+   SQUAD_EVENT_04 = 12;
+   SQUAD_EVENT_05 = 13;
+   SQUAD_EVENT_06 = 14;
+   SQUAD_EVENT_07 = 15;
+   SQUAD_EVENT_08 = 16;
+   SQUAD_EVENT_09 = 17;
+   SQUAD_EVENT_10 = 18;
+   SQUAD_EVENT_11 = 19;
+   SQUAD_EVENT_12 = 20;
+   SQUAD_EVENT_13 = 21;
+   SQUAD_EVENT_14 = 22;
+   SQUAD_EVENT_15 = 23;
+   SQUAD_EVENT_16 = 24;
+   SQUAD_EVENT_17 = 25;
+   SQUAD_EVENT_18 = 26;
+   SQUAD_EVENT_19 = 27;
+   SQUAD_EVENT_20 = 28;
+   SQUAD_WAR_DEFENSIVE = 29;
+   SQUAD_GUILD_RAID = 30;
+   SQUAD_STAT_MOD_BATTLES = 31;
+   SQUAD_EVENT_DEFENSIVE = 32;
+}
+message Stat {
+   optional string stat_id = 1 [default = ""];
+   optional UnitStat unit_stat_id = 3 [default = UNITSTATMAXHEALTH];
+   optional int32 stat_value_decimal_old = 4 [default = 0];
+   optional int64 stat_value_decimal = 5 [default = 0];
+}
+message StatDef {
+   repeated Stat stat = 19;
+}
+message StatMod {
+   optional string id = 1 [default = ""];
+   optional string definition_id = 2 [default = ""];
+   optional int32 level = 4 [default = 0];
+   optional StatModTier tier = 5 [default = STATMODTIER01];
+   optional CurrencyItem sell_value = 9;
+   optional CurrencyItem remove_cost = 10;
+   optional bool locked = 11 [default = false];
+   optional StatModStat primary_stat = 12;
+   repeated StatModStat secondary_stat = 13;
+   optional int32 xp = 14 [default = 0];
+   optional CurrencyItem level_cost = 15;
+}
+enum StatModSlot {
+   STATMOD_SLOT_01 = 2;
+   STATMOD_SLOT_02 = 3;
+   STATMOD_SLOT_03 = 4;
+   STATMOD_SLOT_04 = 5;
+   STATMOD_SLOT_05 = 6;
+   STATMOD_SLOT_06 = 7;
+}
+message StatModStat {
+   optional string updater_id = 1 [default = ""];
+   optional Stat stat = 2;
+   repeated string roll = 3;
+}
+enum StatModTier {
+   STATMOD_TIER_01 = 1;
+   STATMOD_TIER_02 = 2;
+   STATMOD_TIER_03 = 3;
+   STATMOD_TIER_04 = 4;
+   STATMOD_TIER_05 = 5;
+}
+message Store {
+   repeated StoreItem store_item = 1;
+   optional string store_version = 2 [default = ""];
+   repeated Shipment shipment = 10;
+}
+message StoreItem {
+   required string id = 1;
+   repeated Offer offer = 2;
+   optional int32 order = 3 [default = 0];
+   optional StoreTab store_tab = 4 [default = PACK];
+   optional int32 quantity = 5 [default = 0];
+   optional int32 max_purchase_per_transaction = 6 [default = 0];
+   optional int32 purchase_limit = 7 [default = 0];
+   optional string ui_icon = 8 [default = ""];
+   optional Filter filter = 10;
+   optional int64 start_time = 11 [default = 0];
+   optional int64 end_time = 12 [default = 0];
+   optional SpecialValue special_value = 13 [default = NONE];
+   optional Rarity rarity_preview = 14 [default = NOSTAR];
+   optional string name_key = 15 [default = ""];
+   optional string description_key = 16 [default = ""];
+   optional string detailed_description_key = 17 [default = ""];
+   optional string promo_text1_key = 18 [default = ""];
+   optional string promo_text2_key = 19 [default = ""];
+   optional string promo_background = 20 [default = ""];
+   optional string carousel_text_key = 22 [default = ""];
+   optional Rarity rarity_max_preview = 24 [default = NOSTAR];
+   optional int32 bonus_quantity = 26 [default = 0];
+   optional bool show_buy_confirmation = 27 [default = false];
+   optional string chance_at_text_key = 28 [default = ""];
+   optional string pack_opening_crystal_prefab = 29 [default = ""];
+   optional bool allow_skip_pack_opening = 30 [default = false];
+   optional Requirement show_requirement = 31;
+   optional string guarantee_key = 32 [default = ""];
+   optional Subscription subscription = 33;
+   repeated BucketItem pack_item_preview = 34;
+   repeated StoreItemPreview item_preview = 35;
+   optional StoreItemType item_type = 36 [default = STOREITEMTYPEPACK];
+   repeated StoreLocation store_location = 37;
+}
+message StoreItemPreview {
+   optional int32 min_level = 1 [default = 0];
+   optional int32 max_level = 2 [default = 0];
+   repeated BucketItem item = 3;
+}
+enum StoreItemType {
+   STOREITEMTYPE_PACK = 1;
+   STOREITEMTYPE_PREMIUM_CURRENCY = 2;
+   STOREITEMTYPE_UPSIGHT = 3;
+   STOREITEMTYPE_POWERUP_BUNDLES = 4;
+}
+message StoreLocation {
+   optional StoreTab store_tab = 1 [default = PACK];
+   optional int32 order = 2 [default = 0];
+}
+enum StoreTab {
+   PACK = 1;
+   PREMIUM_CURRENCY = 2;
+   UPSIGHT = 5;
+   POWERUP_BUNDLES = 10;
+   SHIP_PACK = 11;
+}
+message Subscription {
+   optional SubscriptionType type = 1 [default = SUBSCRIPTIONDAILY];
+   optional int32 duration = 2 [default = 0];
+   optional string top_description_key = 3 [default = ""];
+   optional string success_message_key = 4 [default = ""];
+   optional string detail_description_key = 5 [default = ""];
+}
+message SubscriptionStatus {
+   optional string item_id = 1 [default = ""];
+   optional int32 remaining = 2 [default = 0];
+}
+enum SubscriptionType {
+   SUBSCRIPTION_DAILY = 1;
+}
+enum TickerAppearLocation {
+   HOMEBASE_TICKER = 1;
+   STORE_TICKER = 2;
+}
+message TickerMessage {
+   repeated TickerAppearLocation appear_location = 1;
+}
+message Unit {
+   optional string id = 1 [default = ""];
+   optional string definition_id = 2 [default = ""];
+   optional Rarity current_rarity = 8 [default = NOSTAR];
+   optional int32 current_level = 9 [default = 0];
+   optional int32 current_xp = 10 [default = 0];
+   optional string promotion_recipe_reference = 12 [default = ""];
+   repeated Skill skill = 16;
+   optional StatDef unit_stat = 17;
+   repeated EquipmentSlot equipment = 18;
+   optional UnitTier current_tier = 19 [default = TIER01];
+   repeated string equipped_stat_mod_old = 20;
+   repeated StatMod equipped_stat_mod = 21;
+}
+message UnitBattleStat {
+   optional int32 action_count_min = 4 [default = 0];
+   optional int32 action_count_max = 5 [default = 0];
+   optional StatDef battle_stat = 7;
+   optional int32 level = 8 [default = 0];
+   optional UnitTier tier = 9 [default = TIER01];
+   repeated EquipmentSlot equipment = 10;
+   repeated Skill skill = 11;
+   repeated StatMod stat_mod = 12;
+}
+enum UnitClass {
+   WARRIOR = 1;
+   TACTICIAN = 2;
+   SCOUNDREL = 3;
+   LIGHT_FORCE = 4;
+   DARK_FORCE = 5;
+   UNITCLASS_STANDARD = 6;
+   UNITCLASS_COMMANDER = 7;
+}
+enum UnitStat {
+   UNIT_STAT_MAX_HEALTH = 1;
+   UNIT_STAT_STRENGTH = 2;
+   UNIT_STAT_AGILITY = 3;
+   UNIT_STAT_INTELLIGENCE = 4;
+   UNIT_STAT_SPEED = 5;
+   UNIT_STAT_ATTACK_DAMAGE = 6;
+   UNIT_STAT_ABILITY_POWER = 7;
+   UNIT_STAT_ARMOR = 8;
+   UNIT_STAT_SUPPRESSION = 9;
+   UNIT_STAT_ARMOR_PENETRATION = 10;
+   UNIT_STAT_SUPPRESSION_PENETRATION = 11;
+   UNIT_STAT_DODGE_RATING = 12;
+   UNIT_STAT_DEFLECTION_RATING = 13;
+   UNIT_STAT_ATTACK_CRITICAL_RATING = 14;
+   UNIT_STAT_ABILITY_CRITICAL_RATING = 15;
+   UNIT_STAT_CRITICAL_DAMAGE = 16;
+   UNIT_STAT_ACCURACY = 17;
+   UNIT_STAT_RESISTANCE = 18;
+   UNIT_STAT_DODGE_PERCENT_ADDITIVE = 19;
+   UNIT_STAT_DEFLECTION_PERCENT_ADDITIVE = 20;
+   UNIT_STAT_ATTACK_CRITICAL_PERCENT_ADDITIVE = 21;
+   UNIT_STAT_ABILITY_CRITICAL_PERCENT_ADDITIVE = 22;
+   UNIT_STAT_ARMOR_PERCENT_ADDITIVE = 23;
+   UNIT_STAT_SUPPRESSION_PERCENT_ADDITIVE = 24;
+   UNIT_STAT_ARMOR_PENETRATION_PERCENT_ADDITIVE = 25;
+   UNIT_STAT_SUPPRESSION_PENETRATION_PERCENT_ADDITIVE = 26;
+   UNIT_STAT_HEALTH_STEAL = 27;
+   UNIT_STAT_MAX_SHIELD = 28;
+   UNIT_STAT_SHIELD_PENETRATION = 29;
+   UNIT_STAT_HEALTH_REGEN = 30;
+   UNIT_STAT_ATTACK_DAMAGE_PERCENT_ADDITIVE = 31;
+   UNIT_STAT_ABILITY_POWER_PERCENT_ADDITIVE = 32;
+   UNIT_STAT_DODGE_NEGATE_PERCENT_ADDITIVE = 33;
+   UNIT_STAT_DEFLECTION_NEGATE_PERCENT_ADDITIVE = 34;
+   UNIT_STAT_ATTACK_CRITICAL_NEGATE_PERCENT_ADDITIVE = 35;
+   UNIT_STAT_ABILITY_CRITICAL_NEGATE_PERCENT_ADDITIVE = 36;
+   UNIT_STAT_DODGE_NEGATE_RATING = 37;
+   UNIT_STAT_DEFLECTION_NEGATE_RATING = 38;
+   UNIT_STAT_ATTACK_CRITICAL_NEGATE_RATING = 39;
+   UNIT_STAT_ABILITY_CRITICAL_NEGATE_RATING = 40;
+   UNIT_STAT_OFFENSE = 41;
+   UNIT_STAT_DEFENSE = 42;
+   UNIT_STAT_DEFENSE_PENETRATION = 43;
+   UNIT_STAT_EVASION_RATING = 44;
+   UNIT_STAT_CRITICAL_RATING = 45;
+   UNIT_STAT_EVASION_NEGATE_RATING = 46;
+   UNIT_STAT_CRITICAL_NEGATE_RATING = 47;
+   UNIT_STAT_OFFENSE_PERCENT_ADDITIVE = 48;
+   UNIT_STAT_DEFENSE_PERCENT_ADDITIVE = 49;
+   UNIT_STAT_DEFENSE_PENETRATION_PERCENT_ADDITIVE = 50;
+   UNIT_STAT_EVASION_PERCENT_ADDITIVE = 51;
+   UNIT_STAT_EVASION_NEGATE_PERCENT_ADDITIVE = 52;
+   UNIT_STAT_CRITICAL_CHANCE_PERCENT_ADDITIVE = 53;
+   UNIT_STAT_CRITICAL_NEGATE_CHANCE_PERCENT_ADDITIVE = 54;
+   UNIT_STAT_MAX_HEALTH_PERCENT_ADDITIVE = 55;
+   UNIT_STAT_MAX_SHIELD_PERCENT_ADDITIVE = 56;
+   UNIT_STAT_SPEED_PERCENT_ADDITIVE = 57;
+   UNIT_STAT_COUNTER_ATTACK_RATING = 58;
+   UNIT_STAT_TAUNT = 59;
+}
+enum UnitTier {
+   TIER_01 = 1;
+   TIER_02 = 2;
+   TIER_03 = 3;
+   TIER_04 = 4;
+   TIER_05 = 5;
+   TIER_06 = 6;
+   TIER_07 = 7;
+   TIER_08 = 8;
+   TIER_09 = 9;
+   TIER_10 = 10;
+   TIER_11 = 11;
+   TIER_12 = 12;
+   TIER_13 = 13;
+   TIER_14 = 14;
+   TIER_15 = 15;
+   TIER_16 = 16;
+   TIER_17 = 17;
+   TIER_18 = 18;
+   TIER_19 = 19;
+   TIER_20 = 20;
+}
+message War {
+   optional string id = 1 [default = ""];
+   repeated WarNode node = 2;
+   repeated BattleUnitState war_roster = 3;
+   optional bool war_invalid = 4 [default = false];
+}
+message WarNode {
+   optional string id = 1 [default = ""];
+   optional WarNodeType type = 2 [default = NODETYPEOPPONENT];
+   optional WarNodeStatus status = 3 [default = NODEHIDDEN];
+   optional Squad opponent = 4;
+   optional Position position = 5;
+   optional WarOpponent war_opponent = 6;
+}
+enum WarNodeStatus {
+   NODE_HIDDEN = 1;
+   NODE_LOCKED = 2;
+   NODE_UNLOCKED = 3;
+   NODE_CLAIMABLE = 4;
+   NODE_COMPLETED = 5;
+}
+enum WarNodeType {
+   NODETYPE_OPPONENT = 1;
+   NODETYPE_CHEST_COMMON = 2;
+   NODETYPE_CHEST_RARE = 3;
+   NODETYPE_CHEST_EPIC = 4;
+}
+message WarOpponent {
+   optional string id = 1 [default = ""];
+   optional string player_name = 2 [default = ""];
+   optional int32 level = 3 [default = 0];
+   optional Squad squad = 4;
+   optional int32 power = 5 [default = 0];
+}
+message YearMonth {
+   optional uint32 year = 1 [default = 0];
+   optional uint32 month = 2 [default = 0];
+}

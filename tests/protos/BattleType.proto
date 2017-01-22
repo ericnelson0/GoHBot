@@ -1,0 +1,8 @@
+package Protos;
+
+enum BattleType {
+   PVE_BATTLE = 1;
+   PVP_BATTLE = 2;
+   WAR_BATTLE = 3;
+   GUILD_RAID_BATTLE = 4;
+}

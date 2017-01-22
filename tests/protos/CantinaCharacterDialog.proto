@@ -1,0 +1,5 @@
+package Protos;
+
+message CantinaCharacterDialog {
+   optional string texture = 1 [default = ""];
+}

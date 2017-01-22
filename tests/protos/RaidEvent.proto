@@ -1,0 +1,5 @@
+package Protos;
+
+message RaidEvent {
+   repeated string guild_member_id = 1;
+}

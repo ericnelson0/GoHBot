@@ -1,0 +1,101 @@
+package Protos;
+
+message Ability {
+   optional string id = 1 [default = ""];
+   optional string name_key = 2 [default = ""];
+   optional string desc_key = 3 [default = ""];
+   optional string prefab_name = 5 [default = ""];
+   repeated BattleCondition trigger_condition = 6;
+   optional string stacking_line_override = 8 [default = ""];
+   repeated AbilityTier tier = 9;
+   optional int32 cooldown = 11 [default = 0];
+   optional string icon = 13 [default = ""];
+   optional string apply_type_tooltip_key = 14 [default = ""];
+   repeated EffectTag descriptive_tag = 15;
+   repeated EffectReference effect_reference = 17;
+   optional MessageDialog confirmation_message = 18;
+   optional AbilityButtonLocationType button_location = 19 [default = ABILITYSTANDARD];
+   optional string short_desc_key = 20 [default = ""];
+}
+enum AbilityButtonLocationType {
+   ABILITY_STANDARD = 1;
+   ABILITY_ADDITIONAL = 2;
+   ABILITY_HIDDEN = 3;
+}
+message AbilityTier {
+   optional string desc_key = 1 [default = ""];
+   optional string upgrade_desc_key = 2 [default = ""];
+   optional int32 cooldown_override = 5 [default = 0];
+   repeated EffectReference effect_reference = 6;
+}
+message BattleCondition {
+   optional ConditionType condition_type = 1 [default = ROUNDCOUNT];
+   optional string condition_value = 2 [default = ""];
+}
+enum ConditionType {
+   ROUND_COUNT = 1;
+   END_OF_ROUND = 2;
+   START_OF_ROUND = 3;
+   START_OF_BATTLE = 4;
+   CHANCE = 5;
+   START_OF_ENCOUNTER = 7;
+   CRIT = 8;
+   RECEIVE_CRIT = 9;
+   PERFORM_MOVE = 10;
+   ATTACK = 11;
+   LIMIT_BREAK = 12;
+   RECEIVE_DAMAGE = 13;
+   RECEIVE_HEAL = 14;
+   COMBO = 15;
+   RECEIVE_COMBO = 16;
+   KILL = 17;
+   REVIVE = 18;
+   ENEMY_KILLED = 19;
+   ALLY_KILLED = 20;
+   DEATH = 21;
+   ALLY_REVIVED = 22;
+   ENEMY_REVIVED = 23;
+   END_OF_ENCOUNTER = 24;
+   START_OF_TURN = 25;
+   HEALTH_DECREASE = 26;
+   HEALTH_INCREASE = 27;
+   PERSISTENT_EFFECT_ADD = 28;
+   PERSISTENT_EFFECT_REMOVE = 29;
+   DODGED = 30;
+   WAS_DODGED = 31;
+   END_OF_TURN = 32;
+   RESISTED = 33;
+   WAS_RESISTED = 34;
+   START_MOVE = 35;
+   START_ATTACK = 36;
+   START_LIMIT_BREAK = 37;
+   PRE_EFFECT_EVAL = 38;
+   RECEIVE_PRE_EFFECT_EVAL = 39;
+   POST_EFFECT_EVAL = 40;
+   RECEIVE_POST_EFFECT_EVAL = 41;
+   PRE_EVASION_EVAL = 42;
+   RECEIVE_PRE_EVASION_EVAL = 43;
+   POST_EVASION_EVAL = 44;
+   RECEIVE_POST_EVASION_EVAL = 45;
+   START_OF_GUILD_RAID_FOR_PLAYER = 46;
+   START_OF_GUILD_RAID_ENCOUNTER_FOR_PLAYER = 47;
+   PRE_RECEIVE_DAMAGE = 48;
+   FULL_TURN_COMPLETE = 49;
+   PERSISTENT_EFFECT_ADD_INSTANCE = 50;
+   PERSISTENT_EFFECT_REMOVE_INSTANCE = 51;
+   FLED = 52;
+   ALLY_FLED = 53;
+   ENEMY_FLED = 54;
+}
+message EffectReference {
+   optional string id = 1 [default = ""];
+   repeated int32 context_index = 2;
+   optional int32 max_bonus_move = 3 [default = 0];
+}
+message EffectTag {
+   optional string tag = 1 [default = ""];
+}
+message MessageDialog {
+   optional string title_key = 1 [default = ""];
+   optional string desc_key = 2 [default = ""];
+}

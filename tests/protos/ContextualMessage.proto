@@ -1,0 +1,139 @@
+package Protos;
+
+message ActionLink {
+   optional string link = 1 [default = ""];
+   optional ActionLinkType type = 2 [default = INTERNAL];
+}
+enum ActionLinkType {
+   INTERNAL = 1;
+   EXTERNAL = 2;
+}
+message CantinaCharacterDialog {
+   optional string texture = 1 [default = ""];
+}
+message CharacterDialog {
+   optional string character_prefab = 1 [default = ""];
+   repeated string animations = 2;
+   optional string audio_key = 3 [default = ""];
+   optional string layout = 4 [default = ""];
+   optional bool use_hologram_effect = 5 [default = false];
+}
+message ContextualMessage {
+   optional string id = 1 [default = ""];
+   optional ContextualMessageType type = 2 [default = MODALDIALOGONEBUTTON];
+   optional string title_key = 3 [default = ""];
+   optional string text_key = 4 [default = ""];
+   optional PointAtElement point_at = 7;
+   repeated string appear_event = 8;
+   repeated string dismiss_event = 9;
+   repeated string hide_event = 10;
+   optional string action_link = 11 [default = ""];
+   optional string next_message_id = 12 [default = ""];
+   optional Requirement client_requirement = 13;
+   optional CharacterDialog character_dialog = 14;
+   optional string next_message_id_decline = 15 [default = ""];
+   optional bool can_dismiss_while_hidden = 16 [default = false];
+   optional int32 ftue_sub_step = 17 [default = 0];
+   optional CantinaCharacterDialog cantina_character_dialog = 18;
+   optional ActionLink action_link_def = 19;
+}
+enum ContextualMessageType {
+   POINT_AT_VIEW_ELEMENT = 1;
+   CHARACTER_DIALOG = 3;
+   MODAL_DIALOG_ONE_BUTTON = 4;
+   MODAL_DIALOG_TWO_BUTTON = 5;
+   CANTINA_CHARACTER_DIALOG = 6;
+}
+enum EvaluationType {
+   AND = 1;
+   OR = 2;
+}
+message PointAtElement {
+   optional string element_id = 1 [default = ""];
+   optional int32 offset_x = 2 [default = 0];
+   optional int32 offset_y = 3 [default = 0];
+   optional float rotation = 4 [default = 0];
+   optional int32 text_offset_x = 5 [default = 0];
+   optional int32 text_offset_y = 6 [default = 0];
+   optional string text_offset_anchor = 7 [default = ""];
+   optional bool update = 8 [default = false];
+   optional bool clamp = 9 [default = false];
+   optional PointAtRotationBehavior rotation_behavior = 10 [default = ROTATIONBEHAVIORNONE];
+   optional float delay_seconds = 11 [default = 0];
+   optional bool show_arrow = 12 [default = false];
+   optional bool show_highlight = 13 [default = false];
+   optional string image_source = 14 [default = ""];
+   optional int32 image_width = 15 [default = 0];
+   optional int32 image_height = 16 [default = 0];
+   optional int32 image_offset_x = 17 [default = 0];
+   optional int32 image_offset_y = 18 [default = 0];
+   optional PointerType pointer_type = 19 [default = CLICK];
+   optional bool tap_dismiss = 20 [default = false];
+   optional bool scrim_visible = 21 [default = false];
+   optional bool scrim_blocking = 22 [default = false];
+   optional bool show_text = 23 [default = false];
+   optional bool show_bartender = 24 [default = false];
+   optional string bartender_texture = 25 [default = ""];
+}
+enum PointAtRotationBehavior {
+   ROTATION_BEHAVIOR_NONE = 1;
+   ROTATION_BEHAVIOR_AUTO_FROM_CENTER = 2;
+   ROTATION_BEHAVIOR_AUTO_FROM_CENTER_IF_CLAMPED = 3;
+}
+enum PointerType {
+   POINT = 1;
+   CLICK = 2;
+   SWIPE = 3;
+}
+message Requirement {
+   optional EvaluationType eval_type = 1 [default = AND];
+   repeated RequirementItem requirement_item = 2;
+   optional string id = 3 [default = ""];
+   optional string desc_key = 4 [default = ""];
+}
+message RequirementItem {
+   optional RequirementType type = 1 [default = REQUIREMENTINVALID];
+   optional string id = 2 [default = ""];
+   optional int32 value = 3 [default = 0];
+}
+enum RequirementType {
+   CURRENCY_REQUIREMENT = 3;
+   ROSTER_CHARACTER_NOT_CATEGORY_NOT_IN_SQUAD_REQUIREMENT = 10;
+   SQUAD_SIZE_MAXIMUM_REQUIREMENT = 11;
+   ROSTER_CHARACTER_CATEGORY_NOT_IN_USE_REQUIREMENT = 12;
+   ROSTER_CHARACTER_NOT_IN_USE_REQUIREMENT = 13;
+   SQUAD_SIZE_MINIMUM_REQUIREMENT = 14;
+   ENEMY_THREAT_LEVEL_REQUIREMENT = 15;
+   ANY_CHARACTER_READY_FOR_PROMOTION = 16;
+   UNIT_TRAINING_AVAILABLE = 19;
+   PLAYER_LEVEL_MIN_REQUIREMENT = 20;
+   ROSTER_UNIT_TYPE_REQUIREMENT = 22;
+   ROSTER_UNIT_TYPE_MAX_REQUIREMENT = 23;
+   UNIT_ABILITY_UPGRADE_AVAILABLE = 24;
+   UNIT_GEAR_EQUIP_AVAILABLE = 25;
+   CURRENT_UNIT_GEAR_EQUIP_AVAILABLE = 26;
+   PLAYER_UNIT_HEALTH_BELOW_PERCENT = 27;
+   REQUIREMENT_INVALID = 28;
+   CURRENT_CHARACTER_READY_FOR_PROMOTION = 29;
+   BATTLE_ANY_STATUS_EFFECT_ACTIVE = 30;
+   STORE_ITEM_AVAILABLE_FOR_PURCHASE = 31;
+   CURRENT_MISSION_HAS_GEAR_DROP = 32;
+   PLAYER_LEVEL_MAX_REQUIREMENT = 33;
+   CAMPAIGN_REQUIREMENT = 34;
+   ANY_DAILY_ACTIVITY_READY_FOR_CLAIM = 35;
+   FACEBOOK_LOGIN_AVAILABLE = 36;
+   ANY_UNIT_REACHED_MAX_RARITY = 37;
+   CURRENT_CHARACTER_READY_FOR_TIER_UP = 38;
+   EVENT_ACTIVE = 39;
+   BATTLE_ANY_UNIT_HAS_SHIELD = 40;
+   CURRENT_CHARACTER_MIN_TIER = 41;
+   UNIT_LEVEL_MAX_REQUIREMENT = 42;
+   UNIT_LEVEL_MIN_REQUIREMENT = 43;
+   ROSTER_UNIT_REQUIREMENT = 44;
+   UNIT_SHARD_REQUIREMENT = 45;
+   ROSTER_UNIT_COMBAT_TYPE_REQUIREMENT = 46;
+   BATTLE_TURN_COUNT = 47;
+   BATTLE_ENCOUNTER_STARTED = 48;
+   BATTLE_UNIT_TURN_SQUAD_CELL_INDEX = 49;
+   ROSTER_UNIT_CLASS_REQUIREMENT = 50;
+}

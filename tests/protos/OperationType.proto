@@ -1,0 +1,6 @@
+package Protos;
+
+enum OperationType {
+   ADDITIVE = 1;
+   MULTIPLICATIVE = 2;
+}

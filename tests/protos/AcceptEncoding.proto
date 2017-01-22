@@ -1,0 +1,6 @@
+package Protos;
+
+enum AcceptEncoding {
+   DEFAULT_ACCEPT_ENCODING = 0;
+   GZIP_ACCEPT_ENCODING = 1;
+}

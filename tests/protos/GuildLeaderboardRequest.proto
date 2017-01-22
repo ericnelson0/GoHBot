@@ -1,0 +1,12 @@
+package Protos;
+
+message GuildLeaderboardRequest {
+   optional int32 count = 1 [default = 0];
+   repeated string raid_def_id = 2;
+   repeated GuildLeaderboardType leaderboard_type = 3;
+   optional bool include_player_guild = 4 [default = false];
+}
+enum GuildLeaderboardType {
+   GUILD_RAID_ALL_COMP_PTS = 1;
+   GUILD_RAID_COMP_PTS = 2;
+}

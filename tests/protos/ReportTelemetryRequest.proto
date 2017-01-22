@@ -1,0 +1,6 @@
+package Protos;
+
+message ReportTelemetryRequest {
+   repeated string telemetry_event = 1;
+   optional int64 current_client_time = 2 [default = 0];
+}

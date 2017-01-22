@@ -1,0 +1,11 @@
+package Protos;
+
+enum CombatType {
+   CHARACTER = 1;
+   SHIP = 2;
+}
+message MatchMakingRequest {
+   optional CombatType combat_type = 4 [default = CHARACTER];
+   optional string event_id = 5 [default = ""];
+   optional string event_instance_id = 6 [default = ""];
+}

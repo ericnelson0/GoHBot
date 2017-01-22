@@ -1,0 +1,10 @@
+package Protos;
+
+message PublishChannelMessageRequest {
+   optional string channel_id = 1 [default = ""];
+   optional string correlation_id = 2 [default = ""];
+   optional string message = 3 [default = ""];
+   optional int32 event_count = 4 [default = 0];
+   optional int64 last_update_timestamp = 5 [default = 0];
+   optional int32 last_update_interval = 6 [default = 0];
+}

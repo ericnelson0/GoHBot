@@ -1,0 +1,6 @@
+package Protos;
+
+message BattleConsumeRecord {
+   optional string consume_id = 1 [default = ""];
+   repeated string target_unit_id = 2;
+}

@@ -1,0 +1,6 @@
+package Protos;
+
+message RiverEventParameter {
+   optional int32 keyType = 1 [default = 0];
+   optional string value = 2 [default = ""];
+}

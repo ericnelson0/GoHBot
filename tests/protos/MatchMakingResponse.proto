@@ -1,0 +1,211 @@
+package Protos;
+
+message CurrencyItem {
+   optional CurrencyType currency = 1 [default = GRIND];
+   optional int32 quantity = 2 [default = 0];
+}
+enum CurrencyType {
+   GRIND = 1;
+   PREMIUM = 2;
+   REAL_MONEY = 3;
+   SOCIAL = 4;
+   IGC_EVENT_KEYCARD = 8;
+   XP_EVENT_KEYCARD = 9;
+   PVP_CURRENCY = 10;
+   FORCE_POINT = 11;
+   PVP_SHIP_CURRENCY = 12;
+   FREE = 13;
+   WAR_SHIP_CURRENCY = 14;
+   GRIND_TICKET = 15;
+   SHARD_CURRENCY = 16;
+   GUILD_CURRENCY = 17;
+   GUILD_BANK_CURRENCY = 18;
+   SHIP_GRIND = 19;
+   GUILD_RAID_CURRENCY_01 = 20;
+   GUILD_RAID_CURRENCY_02 = 21;
+   GUILD_RAID_CURRENCY_03 = 22;
+   GUILD_RAID_CURRENCY_04 = 23;
+   GUILD_RAID_CURRENCY_05 = 24;
+   GUILD_RAID_CURRENCY_06 = 25;
+   GUILD_RAID_CURRENCY_07 = 26;
+   GUILD_RAID_CURRENCY_08 = 27;
+   GUILD_RAID_CURRENCY_09 = 28;
+   GUILD_RAID_CURRENCY_10 = 29;
+   GUILD_RAID_CURRENCY_11 = 30;
+   GUILD_RAID_CURRENCY_12 = 31;
+}
+message EquipmentSlot {
+   optional string equipment_id = 1 [default = ""];
+   optional int32 slot = 2 [default = 0];
+}
+message LeaderboardStatus {
+   optional int32 rank = 1 [default = 0];
+   optional int32 rank_delta = 2 [default = 0];
+   optional int32 score = 3 [default = 0];
+   optional int32 score_delta = 4 [default = 0];
+}
+message MatchMakingResponse {
+   repeated MatchedPlayer opponent = 1;
+   optional int32 player_rank = 2 [default = 0];
+   optional bool using_tutorial_arena_opponents = 3 [default = false];
+   optional LeaderboardStatus player_status = 4;
+}
+message MatchedPlayer {
+   optional string id = 1 [default = ""];
+   optional string player_name = 2 [default = ""];
+   optional int32 level = 3 [default = 0];
+   repeated Unit squad_unit = 4;
+   optional int32 power = 6 [default = 0];
+   optional int32 rank = 7 [default = 0];
+   optional LeaderboardStatus opponent_status = 8;
+   optional MatchedPlayerScoreConfig score_config = 9;
+}
+message MatchedPlayerScoreConfig {
+   optional int32 points_per_enemy_defeated = 1 [default = 0];
+   optional int32 points_per_ally_survivor = 2 [default = 0];
+}
+enum Rarity {
+   ONE_STAR = 1;
+   TWO_STAR = 2;
+   THREE_STAR = 3;
+   FOUR_STAR = 4;
+   FIVE_STAR = 5;
+   SIX_STAR = 6;
+   SEVEN_STAR = 7;
+   NO_STAR = 8;
+}
+message Skill {
+   optional string id = 1 [default = ""];
+   optional int32 tier = 2 [default = 0];
+}
+message Stat {
+   optional string stat_id = 1 [default = ""];
+   optional UnitStat unit_stat_id = 3 [default = UNITSTATMAXHEALTH];
+   optional int32 stat_value_decimal_old = 4 [default = 0];
+   optional int64 stat_value_decimal = 5 [default = 0];
+}
+message StatDef {
+   repeated Stat stat = 19;
+}
+message StatMod {
+   optional string id = 1 [default = ""];
+   optional string definition_id = 2 [default = ""];
+   optional int32 level = 4 [default = 0];
+   optional StatModTier tier = 5 [default = STATMODTIER01];
+   optional CurrencyItem sell_value = 9;
+   optional CurrencyItem remove_cost = 10;
+   optional bool locked = 11 [default = false];
+   optional StatModStat primary_stat = 12;
+   repeated StatModStat secondary_stat = 13;
+   optional int32 xp = 14 [default = 0];
+   optional CurrencyItem level_cost = 15;
+}
+message StatModStat {
+   optional string updater_id = 1 [default = ""];
+   optional Stat stat = 2;
+   repeated string roll = 3;
+}
+enum StatModTier {
+   STATMOD_TIER_01 = 1;
+   STATMOD_TIER_02 = 2;
+   STATMOD_TIER_03 = 3;
+   STATMOD_TIER_04 = 4;
+   STATMOD_TIER_05 = 5;
+}
+message Unit {
+   optional string id = 1 [default = ""];
+   optional string definition_id = 2 [default = ""];
+   optional Rarity current_rarity = 8 [default = NOSTAR];
+   optional int32 current_level = 9 [default = 0];
+   optional int32 current_xp = 10 [default = 0];
+   optional string promotion_recipe_reference = 12 [default = ""];
+   repeated Skill skill = 16;
+   optional StatDef unit_stat = 17;
+   repeated EquipmentSlot equipment = 18;
+   optional UnitTier current_tier = 19 [default = TIER01];
+   repeated string equipped_stat_mod_old = 20;
+   repeated StatMod equipped_stat_mod = 21;
+}
+enum UnitStat {
+   UNIT_STAT_MAX_HEALTH = 1;
+   UNIT_STAT_STRENGTH = 2;
+   UNIT_STAT_AGILITY = 3;
+   UNIT_STAT_INTELLIGENCE = 4;
+   UNIT_STAT_SPEED = 5;
+   UNIT_STAT_ATTACK_DAMAGE = 6;
+   UNIT_STAT_ABILITY_POWER = 7;
+   UNIT_STAT_ARMOR = 8;
+   UNIT_STAT_SUPPRESSION = 9;
+   UNIT_STAT_ARMOR_PENETRATION = 10;
+   UNIT_STAT_SUPPRESSION_PENETRATION = 11;
+   UNIT_STAT_DODGE_RATING = 12;
+   UNIT_STAT_DEFLECTION_RATING = 13;
+   UNIT_STAT_ATTACK_CRITICAL_RATING = 14;
+   UNIT_STAT_ABILITY_CRITICAL_RATING = 15;
+   UNIT_STAT_CRITICAL_DAMAGE = 16;
+   UNIT_STAT_ACCURACY = 17;
+   UNIT_STAT_RESISTANCE = 18;
+   UNIT_STAT_DODGE_PERCENT_ADDITIVE = 19;
+   UNIT_STAT_DEFLECTION_PERCENT_ADDITIVE = 20;
+   UNIT_STAT_ATTACK_CRITICAL_PERCENT_ADDITIVE = 21;
+   UNIT_STAT_ABILITY_CRITICAL_PERCENT_ADDITIVE = 22;
+   UNIT_STAT_ARMOR_PERCENT_ADDITIVE = 23;
+   UNIT_STAT_SUPPRESSION_PERCENT_ADDITIVE = 24;
+   UNIT_STAT_ARMOR_PENETRATION_PERCENT_ADDITIVE = 25;
+   UNIT_STAT_SUPPRESSION_PENETRATION_PERCENT_ADDITIVE = 26;
+   UNIT_STAT_HEALTH_STEAL = 27;
+   UNIT_STAT_MAX_SHIELD = 28;
+   UNIT_STAT_SHIELD_PENETRATION = 29;
+   UNIT_STAT_HEALTH_REGEN = 30;
+   UNIT_STAT_ATTACK_DAMAGE_PERCENT_ADDITIVE = 31;
+   UNIT_STAT_ABILITY_POWER_PERCENT_ADDITIVE = 32;
+   UNIT_STAT_DODGE_NEGATE_PERCENT_ADDITIVE = 33;
+   UNIT_STAT_DEFLECTION_NEGATE_PERCENT_ADDITIVE = 34;
+   UNIT_STAT_ATTACK_CRITICAL_NEGATE_PERCENT_ADDITIVE = 35;
+   UNIT_STAT_ABILITY_CRITICAL_NEGATE_PERCENT_ADDITIVE = 36;
+   UNIT_STAT_DODGE_NEGATE_RATING = 37;
+   UNIT_STAT_DEFLECTION_NEGATE_RATING = 38;
+   UNIT_STAT_ATTACK_CRITICAL_NEGATE_RATING = 39;
+   UNIT_STAT_ABILITY_CRITICAL_NEGATE_RATING = 40;
+   UNIT_STAT_OFFENSE = 41;
+   UNIT_STAT_DEFENSE = 42;
+   UNIT_STAT_DEFENSE_PENETRATION = 43;
+   UNIT_STAT_EVASION_RATING = 44;
+   UNIT_STAT_CRITICAL_RATING = 45;
+   UNIT_STAT_EVASION_NEGATE_RATING = 46;
+   UNIT_STAT_CRITICAL_NEGATE_RATING = 47;
+   UNIT_STAT_OFFENSE_PERCENT_ADDITIVE = 48;
+   UNIT_STAT_DEFENSE_PERCENT_ADDITIVE = 49;
+   UNIT_STAT_DEFENSE_PENETRATION_PERCENT_ADDITIVE = 50;
+   UNIT_STAT_EVASION_PERCENT_ADDITIVE = 51;
+   UNIT_STAT_EVASION_NEGATE_PERCENT_ADDITIVE = 52;
+   UNIT_STAT_CRITICAL_CHANCE_PERCENT_ADDITIVE = 53;
+   UNIT_STAT_CRITICAL_NEGATE_CHANCE_PERCENT_ADDITIVE = 54;
+   UNIT_STAT_MAX_HEALTH_PERCENT_ADDITIVE = 55;
+   UNIT_STAT_MAX_SHIELD_PERCENT_ADDITIVE = 56;
+   UNIT_STAT_SPEED_PERCENT_ADDITIVE = 57;
+   UNIT_STAT_COUNTER_ATTACK_RATING = 58;
+   UNIT_STAT_TAUNT = 59;
+}
+enum UnitTier {
+   TIER_01 = 1;
+   TIER_02 = 2;
+   TIER_03 = 3;
+   TIER_04 = 4;
+   TIER_05 = 5;
+   TIER_06 = 6;
+   TIER_07 = 7;
+   TIER_08 = 8;
+   TIER_09 = 9;
+   TIER_10 = 10;
+   TIER_11 = 11;
+   TIER_12 = 12;
+   TIER_13 = 13;
+   TIER_14 = 14;
+   TIER_15 = 15;
+   TIER_16 = 16;
+   TIER_17 = 17;
+   TIER_18 = 18;
+   TIER_19 = 19;
+   TIER_20 = 20;
+}

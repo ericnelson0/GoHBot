@@ -1,0 +1,36 @@
+package Protos;
+
+message CurrencyItem {
+   optional CurrencyType currency = 1 [default = GRIND];
+   optional int32 quantity = 2 [default = 0];
+}
+enum CurrencyType {
+   GRIND = 1;
+   PREMIUM = 2;
+   REAL_MONEY = 3;
+   SOCIAL = 4;
+   IGC_EVENT_KEYCARD = 8;
+   XP_EVENT_KEYCARD = 9;
+   PVP_CURRENCY = 10;
+   FORCE_POINT = 11;
+   PVP_SHIP_CURRENCY = 12;
+   FREE = 13;
+   WAR_SHIP_CURRENCY = 14;
+   GRIND_TICKET = 15;
+   SHARD_CURRENCY = 16;
+   GUILD_CURRENCY = 17;
+   GUILD_BANK_CURRENCY = 18;
+   SHIP_GRIND = 19;
+   GUILD_RAID_CURRENCY_01 = 20;
+   GUILD_RAID_CURRENCY_02 = 21;
+   GUILD_RAID_CURRENCY_03 = 22;
+   GUILD_RAID_CURRENCY_04 = 23;
+   GUILD_RAID_CURRENCY_05 = 24;
+   GUILD_RAID_CURRENCY_06 = 25;
+   GUILD_RAID_CURRENCY_07 = 26;
+   GUILD_RAID_CURRENCY_08 = 27;
+   GUILD_RAID_CURRENCY_09 = 28;
+   GUILD_RAID_CURRENCY_10 = 29;
+   GUILD_RAID_CURRENCY_11 = 30;
+   GUILD_RAID_CURRENCY_12 = 31;
+}

@@ -1,0 +1,11 @@
+package Protos;
+
+message NewsletterMessage {
+   optional NewsletterMessageType newsletter_message_type = 1 [default = TEXTWITHTEXTURE];
+   optional int64 alert_frequency = 2 [default = 0];
+   optional int32 max_alert_count = 3 [default = 0];
+}
+enum NewsletterMessageType {
+   TEXT = 1;
+   TEXT_WITH_TEXTURE = 2;
+}

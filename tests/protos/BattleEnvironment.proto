@@ -1,0 +1,6 @@
+package Protos;
+
+message BattleEnvironment {
+   optional string prefab = 1 [default = ""];
+   repeated string audio_package = 3;
+}

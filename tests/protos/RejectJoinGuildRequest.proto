@@ -1,0 +1,5 @@
+package Protos;
+
+message RejectJoinGuildRequest {
+   optional string player_id = 1 [default = ""];
+}

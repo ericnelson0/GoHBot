@@ -1,0 +1,9 @@
+package Protos;
+
+enum StoreTab {
+   PACK = 1;
+   PREMIUM_CURRENCY = 2;
+   UPSIGHT = 5;
+   POWERUP_BUNDLES = 10;
+   SHIP_PACK = 11;
+}

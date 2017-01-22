@@ -1,0 +1,8 @@
+package Protos;
+
+message DevicePreferences {
+   optional bool pushnotes_allowed = 1 [default = false];
+   optional bool music_setting = 2 [default = false];
+   optional bool sfx_setting = 3 [default = false];
+   optional string network_connection = 4 [default = ""];
+}

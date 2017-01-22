@@ -1,0 +1,8 @@
+package Protos;
+
+enum WarNodeType {
+   NODETYPE_OPPONENT = 1;
+   NODETYPE_CHEST_COMMON = 2;
+   NODETYPE_CHEST_RARE = 3;
+   NODETYPE_CHEST_EPIC = 4;
+}

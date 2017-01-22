@@ -1,0 +1,5 @@
+package Protos;
+
+message ClaimDailyRewardRequest {
+   optional int32 current_reward_index = 1 [default = 0];
+}

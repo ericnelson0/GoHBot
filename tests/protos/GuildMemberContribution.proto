@@ -1,0 +1,12 @@
+package Protos;
+
+message GuildMemberContribution {
+   optional MemberContributionType type = 1 [default = CONTRIBUTIONTYPECOMMENDATION];
+   optional int64 current_value = 2 [default = 0];
+   optional int64 lifetime_value = 3 [default = 0];
+}
+enum MemberContributionType {
+   CONTRIBUTION_TYPE_COMMENDATION = 1;
+   CONTRIBUTION_TYPE_TRIBUTE = 2;
+   CONTRIBUTION_TYPE_DONATION = 3;
+}

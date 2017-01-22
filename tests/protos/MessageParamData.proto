@@ -1,0 +1,11 @@
+package Protos;
+
+message MessageParam {
+   optional string key = 1 [default = ""];
+   optional string value = 2 [default = ""];
+   repeated string param_value = 3;
+}
+message MessageParamData {
+   optional string key = 1 [default = ""];
+   repeated MessageParam param = 2;
+}

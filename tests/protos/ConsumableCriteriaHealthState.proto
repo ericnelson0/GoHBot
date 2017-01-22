@@ -1,0 +1,7 @@
+package Protos;
+
+enum ConsumableCriteriaHealthState {
+   ALIVE = 1;
+   DEAD = 2;
+   DAMAGED = 3;
+}

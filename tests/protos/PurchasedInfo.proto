@@ -1,0 +1,9 @@
+package Protos;
+
+message PurchasedInfo {
+   repeated PurchasedStat purchased_stats = 1;
+}
+message PurchasedStat {
+   optional string id = 1 [default = ""];
+   optional int32 quantity = 2 [default = 0];
+}

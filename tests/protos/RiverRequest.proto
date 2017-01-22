@@ -1,0 +1,35 @@
+package Protos;
+
+message RiverEvent {
+   optional int32 type = 1 [default = 0];
+   optional int64 step = 2 [default = 0];
+   optional int64 timestamp = 3 [default = 0];
+   repeated RiverEventParameter parameter = 6;
+}
+message RiverEventParameter {
+   optional int32 keyType = 1 [default = 0];
+   optional string value = 2 [default = ""];
+}
+message RiverRequest {
+   optional string synergy_id = 1 [default = ""];
+   optional string player_id = 2 [default = ""];
+   repeated RiverEvent event = 3;
+   optional string buildId = 4 [default = ""];
+   optional string server_session_id = 5 [default = ""];
+   optional string sell_id = 6 [default = ""];
+   optional string nimble_session_id = 7 [default = ""];
+   optional string platform = 8 [default = ""];
+   optional string timezone = 9 [default = ""];
+   optional string firmware_version = 10 [default = ""];
+   optional string carrier = 11 [default = ""];
+   optional string network_access = 12 [default = ""];
+   optional string hardware_id = 13 [default = ""];
+   optional string advertiser_id = 14 [default = ""];
+   optional string vendor_id = 15 [default = ""];
+   optional string android_id = 16 [default = ""];
+   optional int32 jailbroken_flag = 17 [default = 0];
+   optional int32 piracy_flag = 18 [default = 0];
+   optional string client_ip_address = 19 [default = ""];
+   optional string country_code = 20 [default = ""];
+   optional string device_id = 21 [default = ""];
+}

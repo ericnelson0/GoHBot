@@ -1,0 +1,141 @@
+package Protos;
+
+message ActionLink {
+   optional string link = 1 [default = ""];
+   optional ActionLinkType type = 2 [default = INTERNAL];
+}
+enum ActionLinkType {
+   INTERNAL = 1;
+   EXTERNAL = 2;
+}
+message CampaignElementIdentifier {
+   optional string campaign_id = 1 [default = ""];
+   optional string campaign_map_id = 2 [default = ""];
+   optional string campaign_node_id = 3 [default = ""];
+   optional CampaignNodeDifficulty campaign_node_difficulty = 4 [default = NOTSET];
+   optional string campaign_mission_id = 5 [default = ""];
+}
+enum CampaignNodeDifficulty {
+   NOT_SET = 0;
+   NORMAL_DIFF = 4;
+   HARD_DIFF = 5;
+   NIGHTMARE_DIFF = 6;
+   SPECIAL_DIFF = 7;
+   I_DIFF = 8;
+   II_DIFF = 9;
+   III_DIFF = 10;
+   IV_DIFF = 11;
+   V_DIFF = 12;
+   VI_DIFF = 13;
+}
+message CraftingMaterialDef {
+   optional string id = 1 [default = ""];
+   optional string name_key = 2 [default = ""];
+   optional string desc_key = 3 [default = ""];
+   optional string icon_key = 4 [default = ""];
+   optional CurrencyItem sell_value = 5;
+   repeated LookupMission lookup_mission = 6;
+   optional int32 xp_value = 7 [default = 0];
+   optional MaterialType type = 8 [default = CRAFTINGMATERIAL];
+   optional UnitClass unit_class = 9 [default = WARRIOR];
+   optional Rarity rarity = 10 [default = NOSTAR];
+   optional int32 training_cost = 11 [default = 0];
+   optional int32 training_cost_max_level = 12 [default = 0];
+   optional string unit_def_reference = 13 [default = ""];
+   optional UnitTier tier = 14 [default = TIER01];
+   optional int64 obtainable_time = 15 [default = 0];
+   repeated LookupMission raid_lookup = 16;
+   repeated LookupActionLink action_link_lookup = 17;
+}
+message CurrencyItem {
+   optional CurrencyType currency = 1 [default = GRIND];
+   optional int32 quantity = 2 [default = 0];
+}
+enum CurrencyType {
+   GRIND = 1;
+   PREMIUM = 2;
+   REAL_MONEY = 3;
+   SOCIAL = 4;
+   IGC_EVENT_KEYCARD = 8;
+   XP_EVENT_KEYCARD = 9;
+   PVP_CURRENCY = 10;
+   FORCE_POINT = 11;
+   PVP_SHIP_CURRENCY = 12;
+   FREE = 13;
+   WAR_SHIP_CURRENCY = 14;
+   GRIND_TICKET = 15;
+   SHARD_CURRENCY = 16;
+   GUILD_CURRENCY = 17;
+   GUILD_BANK_CURRENCY = 18;
+   SHIP_GRIND = 19;
+   GUILD_RAID_CURRENCY_01 = 20;
+   GUILD_RAID_CURRENCY_02 = 21;
+   GUILD_RAID_CURRENCY_03 = 22;
+   GUILD_RAID_CURRENCY_04 = 23;
+   GUILD_RAID_CURRENCY_05 = 24;
+   GUILD_RAID_CURRENCY_06 = 25;
+   GUILD_RAID_CURRENCY_07 = 26;
+   GUILD_RAID_CURRENCY_08 = 27;
+   GUILD_RAID_CURRENCY_09 = 28;
+   GUILD_RAID_CURRENCY_10 = 29;
+   GUILD_RAID_CURRENCY_11 = 30;
+   GUILD_RAID_CURRENCY_12 = 31;
+}
+message LookupActionLink {
+   optional string desk_key = 1 [default = ""];
+   optional ActionLink action_link = 2;
+}
+message LookupMission {
+   optional CampaignElementIdentifier mission_identifier = 1;
+   optional bool event = 2 [default = false];
+}
+enum MaterialType {
+   CRAFTING_MATERIAL = 1;
+   XP_MATERIAL = 2;
+   UNIT_SHARD_MATERIAL = 3;
+   PROMOTION_MATERIAL = 4;
+   SKILL_MATERIAL = 5;
+   SELL_MATERIAL = 6;
+   SHIP_XP_MATERIAL = 7;
+}
+enum Rarity {
+   ONE_STAR = 1;
+   TWO_STAR = 2;
+   THREE_STAR = 3;
+   FOUR_STAR = 4;
+   FIVE_STAR = 5;
+   SIX_STAR = 6;
+   SEVEN_STAR = 7;
+   NO_STAR = 8;
+}
+enum UnitClass {
+   WARRIOR = 1;
+   TACTICIAN = 2;
+   SCOUNDREL = 3;
+   LIGHT_FORCE = 4;
+   DARK_FORCE = 5;
+   UNITCLASS_STANDARD = 6;
+   UNITCLASS_COMMANDER = 7;
+}
+enum UnitTier {
+   TIER_01 = 1;
+   TIER_02 = 2;
+   TIER_03 = 3;
+   TIER_04 = 4;
+   TIER_05 = 5;
+   TIER_06 = 6;
+   TIER_07 = 7;
+   TIER_08 = 8;
+   TIER_09 = 9;
+   TIER_10 = 10;
+   TIER_11 = 11;
+   TIER_12 = 12;
+   TIER_13 = 13;
+   TIER_14 = 14;
+   TIER_15 = 15;
+   TIER_16 = 16;
+   TIER_17 = 17;
+   TIER_18 = 18;
+   TIER_19 = 19;
+   TIER_20 = 20;
+}

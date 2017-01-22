@@ -1,0 +1,25 @@
+package Protos;
+
+message AuthGuestRequest {
+   optional string uid = 1 [default = ""];
+   optional string device_platform = 2 [default = ""];
+   optional string language = 3 [default = ""];
+   optional string player_name = 4 [default = ""];
+   optional string bundle_id = 5 [default = ""];
+   optional string region = 6 [default = ""];
+   optional sint32 local_time_zone_offset_minutes = 7 [default = 0];
+   optional SessionStartContext session_start_context = 8 [default = NORMALAPPSTART];
+   optional DevicePreferences device_preferences = 9;
+}
+message DevicePreferences {
+   optional bool pushnotes_allowed = 1 [default = false];
+   optional bool music_setting = 2 [default = false];
+   optional bool sfx_setting = 3 [default = false];
+   optional string network_connection = 4 [default = ""];
+}
+enum SessionStartContext {
+   PUSHNOTE = 0;
+   NORMALAPPSTART = 1;
+   RESUME = 2;
+   RESTART = 3;
+}

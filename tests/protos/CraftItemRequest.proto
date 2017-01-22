@@ -1,0 +1,5 @@
+package Protos;
+
+message CraftItemRequest {
+   repeated string recipe_id = 1;
+}

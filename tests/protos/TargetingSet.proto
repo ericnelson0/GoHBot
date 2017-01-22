@@ -1,0 +1,11 @@
+package Protos;
+
+message TargetingSet {
+   optional string id = 1 [default = ""];
+   repeated TargetingWeight weight = 2;
+}
+message TargetingWeight {
+   optional string type = 1 [default = ""];
+   optional string param = 2 [default = ""];
+   optional int32 value_decimal = 4 [default = 0];
+}

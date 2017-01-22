@@ -1,0 +1,13 @@
+package Protos;
+
+message AbilityTier {
+   optional string desc_key = 1 [default = ""];
+   optional string upgrade_desc_key = 2 [default = ""];
+   optional int32 cooldown_override = 5 [default = 0];
+   repeated EffectReference effect_reference = 6;
+}
+message EffectReference {
+   optional string id = 1 [default = ""];
+   repeated int32 context_index = 2;
+   optional int32 max_bonus_move = 3 [default = 0];
+}

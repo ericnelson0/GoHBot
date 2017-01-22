@@ -1,0 +1,9 @@
+package Protos;
+
+enum EffectTargetBattleSide {
+   BOTH_SIDES = 1;
+   ALLY_SIDE = 2;
+   ENEMY_SIDE = 3;
+   PLAYER_SIDE = 4;
+   OPPONENT_SIDE = 5;
+}

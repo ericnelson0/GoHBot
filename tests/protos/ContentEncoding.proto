@@ -1,0 +1,6 @@
+package Protos;
+
+enum ContentEncoding {
+   DEFAULT_CONTENT_ENCODING = 0;
+   GZIP_CONTENT_ENCODING = 1;
+}

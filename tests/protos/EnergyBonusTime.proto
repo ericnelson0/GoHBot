@@ -1,0 +1,13 @@
+package Protos;
+
+message EnergyBonusTime {
+   optional EnergyType energy_type = 1 [default = PVE];
+   optional int64 last_bonus_energy_time = 2 [default = 0];
+}
+enum EnergyType {
+   PVE = 1;
+   PVP = 2;
+   SHIP_PVE = 3;
+   SHIP_PVP = 4;
+   CANTINA_PVE = 5;
+}

@@ -1,0 +1,46 @@
+package Protos;
+
+message BattleAction {
+   optional int32 record_index = 1 [default = 0];
+   optional BattleMoveRecord battle_move_record = 2;
+}
+message BattleMoveRecord {
+   optional string source_unit_id = 1 [default = ""];
+   repeated BattleTarget target = 2;
+   optional bool crit = 4 [default = false];
+   optional bool encounter_completed = 5 [default = false];
+   optional bool weakAgainst = 7 [default = false];
+   optional bool strongAgainst = 8 [default = false];
+   optional MoveType move_type = 9 [default = MOVETYPENONE];
+   optional bool hitSuccess = 10 [default = false];
+   optional EffectApplyType apply_type = 11 [default = UNAVOIDABLE];
+   optional EffectDamageType damage_type = 12 [default = UNMITIGABLE];
+   optional string source_damage = 13 [default = ""];
+   optional string crit_damage = 14 [default = ""];
+   optional string mitigation = 15 [default = ""];
+   optional string applied_effect_id = 16 [default = ""];
+   optional string ability_id = 17 [default = ""];
+}
+message BattleTarget {
+   optional string unit_id = 1 [default = ""];
+   optional int32 health_delta = 2 [default = 0];
+   optional int64 amount_decimal = 4 [default = 0];
+}
+enum EffectApplyType {
+   UNAVOIDABLE = 1;
+   PHYSICAL = 2;
+   MENTAL = 3;
+}
+enum EffectDamageType {
+   UNMITIGABLE = 1;
+   ATTACK_DAMAGE = 2;
+   ABILITY_POWER = 3;
+}
+enum MoveType {
+   MOVETYPE_ATTACK = 1;
+   MOVETYPE_LIMIT_BREAK = 2;
+   MOVETYPE_CRYSTAL = 3;
+   MOVETYPE_NONE = 4;
+   MOVETYPE_LEADER_ABILITY = 5;
+   MOVETYPE_CONSUMABLE = 6;
+}

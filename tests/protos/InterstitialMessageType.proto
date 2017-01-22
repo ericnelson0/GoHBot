@@ -1,0 +1,7 @@
+
+enum InterstitialMessageType {
+   TICKER = 0;
+   NEWS_LETTER = 1;
+   HOME_PROMO = 2;
+   UNDEFINED = 3;
+}

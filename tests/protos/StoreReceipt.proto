@@ -1,0 +1,9 @@
+package Protos;
+
+message StoreReceipt {
+   optional string transaction_id = 1 [default = ""];
+   required string receipt = 2;
+   optional string signature = 3 [default = ""];
+   optional string product_id = 4 [default = ""];
+   optional string store_version = 5 [default = ""];
+}

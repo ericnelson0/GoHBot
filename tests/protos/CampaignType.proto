@@ -1,0 +1,12 @@
+package Protos;
+
+enum CampaignType {
+   STANDARD = 1;
+   ONBOARDING = 2;
+   CAMPAIGN_EVENT = 3;
+   GUILD_RAID = 4;
+   CAMPAIGN_PVE_LIGHT = 5;
+   CAMPAIGN_PVE_DARK = 6;
+   CAMPAIGN_PVE_MOD_BATTLES = 7;
+   CAMPAIGN_PVE_HOLOCRON = 8;
+}

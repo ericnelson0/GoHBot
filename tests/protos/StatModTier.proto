@@ -1,0 +1,9 @@
+package Protos;
+
+enum StatModTier {
+   STATMOD_TIER_01 = 1;
+   STATMOD_TIER_02 = 2;
+   STATMOD_TIER_03 = 3;
+   STATMOD_TIER_04 = 4;
+   STATMOD_TIER_05 = 5;
+}

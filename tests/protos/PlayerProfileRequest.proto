@@ -1,0 +1,6 @@
+package Protos;
+
+message PlayerProfileRequest {
+   optional string player_id = 1 [default = ""];
+   optional string ally_code = 2 [default = ""];
+}

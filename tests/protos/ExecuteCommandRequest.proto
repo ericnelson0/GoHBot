@@ -1,0 +1,6 @@
+package Protos;
+
+message ExecuteCommandRequest {
+   optional string command = 1 [default = ""];
+   optional string arguments = 2 [default = ""];
+}

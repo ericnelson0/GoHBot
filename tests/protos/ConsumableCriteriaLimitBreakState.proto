@@ -1,0 +1,7 @@
+package Protos;
+
+enum ConsumableCriteriaLimitBreakState {
+   FULL = 1;
+   NOT_FULL = 2;
+   CRITERIA_NONE = 3;
+}

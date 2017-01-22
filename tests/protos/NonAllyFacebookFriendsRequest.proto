@@ -1,0 +1,9 @@
+package Protos;
+
+message FacebookFriend {
+   optional string facebook_id = 1 [default = ""];
+   optional string facebook_real_name = 2 [default = ""];
+}
+message NonAllyFacebookFriendsRequest {
+   repeated FacebookFriend players = 1;
+}

@@ -1,0 +1,12 @@
+package Protos;
+
+message Category {
+   optional string id = 1 [default = ""];
+   optional string desc_key = 2 [default = ""];
+   optional bool visible = 3 [default = false];
+   repeated CombatType ui_filter = 4;
+}
+enum CombatType {
+   CHARACTER = 1;
+   SHIP = 2;
+}

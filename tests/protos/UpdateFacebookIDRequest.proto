@@ -1,0 +1,5 @@
+package Protos;
+
+message UpdateFacebookIDRequest {
+   optional string facebook_id = 1 [default = ""];
+}

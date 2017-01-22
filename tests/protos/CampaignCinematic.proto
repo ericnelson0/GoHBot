@@ -1,0 +1,15 @@
+package Protos;
+
+message CampaignCinematic {
+   optional CinematicTrigger trigger = 2;
+   optional Environment environment = 3;
+   optional Environment subsequent_viewing_environment = 4;
+}
+message CinematicTrigger {
+   optional string trigger_condition = 1 [default = ""];
+}
+message Environment {
+   optional string prefab = 1 [default = ""];
+   optional string layout = 2 [default = ""];
+   optional string layout_prefab = 3 [default = ""];
+}

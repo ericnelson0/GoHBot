@@ -1,0 +1,5 @@
+
+enum ChallengeType {
+   DAILY = 0;
+   LIFETIME = 1;
+}

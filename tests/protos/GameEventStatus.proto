@@ -1,0 +1,6 @@
+package Protos;
+
+enum GameEventStatus {
+   EVENT_LOCKED = 1;
+   EVENT_UNLOCKED = 2;
+}

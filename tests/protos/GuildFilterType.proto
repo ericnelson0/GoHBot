@@ -1,0 +1,6 @@
+package Protos;
+
+enum GuildFilterType {
+   ALLY_GUILDS = 2;
+   RECOMMENDED_GUILDS = 3;
+}

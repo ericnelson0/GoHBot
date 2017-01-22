@@ -1,0 +1,9 @@
+package Protos;
+
+enum RewardReason {
+   VIRAL = 0;
+   BATTLE_AWARD = 1;
+   BURSTLY = 2;
+   NONE = 3;
+   ACHIEVEMENT = 4;
+}

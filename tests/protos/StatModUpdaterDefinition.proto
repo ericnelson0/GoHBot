@@ -1,0 +1,13 @@
+package Protos;
+
+message StatModUpdaterDefinition {
+   optional string id = 1 [default = ""];
+   optional StatModUpdaterType type = 2 [default = UPDATETYPESTATTABLE];
+   optional string table_id = 3 [default = ""];
+   optional int64 min_increment_value_decimal = 4 [default = 0];
+   optional int64 max_increment_value_decimal = 5 [default = 0];
+}
+enum StatModUpdaterType {
+   UPDATE_TYPE_STAT_TABLE = 1;
+   UPDATE_TYPE_STAT_ROLL = 2;
+}

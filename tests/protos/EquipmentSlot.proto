@@ -1,0 +1,6 @@
+package Protos;
+
+message EquipmentSlot {
+   optional string equipment_id = 1 [default = ""];
+   optional int32 slot = 2 [default = 0];
+}

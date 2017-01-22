@@ -1,0 +1,7 @@
+
+enum HelpType {
+   INVALID = 0;
+   BATTLE = 1;
+   SQUAD = 2;
+   PROGRESS = 3;
+}

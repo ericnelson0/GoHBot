@@ -1,0 +1,10 @@
+package Protos;
+
+message XpTable {
+   optional string id = 1 [default = ""];
+   repeated XpTableRow row = 2;
+}
+message XpTableRow {
+   optional int32 index = 1 [default = 0];
+   optional int32 xp = 2 [default = 0];
+}

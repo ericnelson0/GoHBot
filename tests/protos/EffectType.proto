@@ -1,0 +1,20 @@
+package Protos;
+
+enum EffectType {
+   DAMAGE = 1;
+   RECOVER = 2;
+   PARALYSIS = 3;
+   CURSE = 4;
+   DISPELL = 5;
+   IMMUNITY = 6;
+   BONUS_MOVE = 7;
+   MODIFY_STAT = 8;
+   APPLY_EFFECT = 9;
+   DISTRIBUTE_RECOVERY = 10;
+   QUERY_COUNT = 11;
+   QUERY_STAT = 12;
+   REVIVE_UNIT = 13;
+   SCRIPT_COMPONENT = 14;
+   FLEE = 15;
+   DESTROY = 16;
+}

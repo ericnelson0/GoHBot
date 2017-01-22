@@ -1,0 +1,6 @@
+package Protos;
+
+message MatchedPlayerScoreConfig {
+   optional int32 points_per_enemy_defeated = 1 [default = 0];
+   optional int32 points_per_ally_survivor = 2 [default = 0];
+}

@@ -1,0 +1,6 @@
+
+enum NewsletterMessageType {
+   TEXT = 0;
+   TEXT_WITH_TEXTURE = 1;
+   UNDEFINED = 2;
+}

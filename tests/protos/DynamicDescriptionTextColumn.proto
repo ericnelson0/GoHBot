@@ -1,0 +1,12 @@
+package Protos;
+
+enum DynamicDescriptionTextAlignmentType {
+   TEXT_ALIGNMENT_LEFT = 1;
+   TEXT_ALIGNMENT_RIGHT = 2;
+   TEXT_ALIGNMENT_CENTER = 3;
+}
+message DynamicDescriptionTextColumn {
+   optional string header_key = 1 [default = ""];
+   optional string body_key = 2 [default = ""];
+   optional DynamicDescriptionTextAlignmentType body_alignment = 3 [default = TEXTALIGNMENTLEFT];
+}

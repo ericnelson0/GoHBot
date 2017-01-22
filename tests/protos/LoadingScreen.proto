@@ -1,0 +1,8 @@
+package Protos;
+
+message LoadingScreen {
+   optional string id = 1 [default = ""];
+   optional string texture_key = 2 [default = ""];
+   optional string tip_key = 3 [default = ""];
+   optional bool force_display_first = 4 [default = false];
+}

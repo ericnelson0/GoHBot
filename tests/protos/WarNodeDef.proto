@@ -1,0 +1,23 @@
+package Protos;
+
+enum CombatType {
+   CHARACTER = 1;
+   SHIP = 2;
+}
+message Position {
+   optional string x = 1 [default = ""];
+   optional string y = 2 [default = ""];
+   optional string z = 3 [default = ""];
+}
+message WarNodeDef {
+   optional string id = 1 [default = ""];
+   optional WarNodeType type = 2 [default = NODETYPEOPPONENT];
+   optional CombatType combat_type = 3 [default = SHIP];
+   optional Position position = 4;
+}
+enum WarNodeType {
+   NODETYPE_OPPONENT = 1;
+   NODETYPE_CHEST_COMMON = 2;
+   NODETYPE_CHEST_RARE = 3;
+   NODETYPE_CHEST_EPIC = 4;
+}

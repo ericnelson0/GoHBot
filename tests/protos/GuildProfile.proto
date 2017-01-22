@@ -1,0 +1,26 @@
+package Protos;
+
+enum EnrollmentStatus {
+   ENROLLMENT_OPEN = 1;
+   ENROLLMENT_INVITE = 2;
+   ENROLLMENT_CLOSED = 3;
+}
+message GuildProfile {
+   optional string id = 1 [default = ""];
+   optional string name = 2 [default = ""];
+   optional string external_message_key = 3 [default = ""];
+   repeated string message_criteria_key = 4;
+   optional string logo = 5 [default = ""];
+   optional string logo_background = 6 [default = ""];
+   optional EnrollmentStatus enrollment_status = 7 [default = ENROLLMENTINVITE];
+   optional int32 trophy = 8 [default = 0];
+   optional int32 member_count = 9 [default = 0];
+   optional int32 member_max = 10 [default = 0];
+   optional int32 level = 11 [default = 0];
+   optional int32 rank = 12 [default = 0];
+   optional int32 level_requirement = 13 [default = 0];
+   optional int32 raid_win = 14 [default = 0];
+   optional int64 leaderboard_score = 15 [default = 0];
+   optional string banner_color_id = 16 [default = ""];
+   optional string banner_logo_id = 17 [default = ""];
+}

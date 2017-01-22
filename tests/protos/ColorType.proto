@@ -1,0 +1,9 @@
+package Protos;
+
+enum ColorType {
+   WHITE = 1;
+   RED = 2;
+   ORANGE = 3;
+   YELLOW = 4;
+   GREEN = 5;
+}

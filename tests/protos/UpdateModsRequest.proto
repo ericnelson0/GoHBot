@@ -1,0 +1,8 @@
+package Protos;
+
+message UpdateModsRequest {
+   optional string unit_id = 1 [default = ""];
+   repeated string mod_equipped_id = 2;
+   repeated string mod_unequipped_id = 3;
+   repeated string mod_destroyed_id = 4;
+}

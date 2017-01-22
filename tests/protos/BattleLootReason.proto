@@ -1,0 +1,7 @@
+package Protos;
+
+enum BattleLootReason {
+   ON_HIT = 1;
+   ON_DEATH = 2;
+   COMPLETE_REWARD = 3;
+}

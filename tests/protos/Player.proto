@@ -1,0 +1,52 @@
+package Protos;
+
+message Energy {
+   optional EnergyType type = 1 [default = PVE];
+   optional int64 timestamp = 2 [default = 0];
+   optional int32 max_energy = 3 [default = 0];
+   optional int32 regen_rate = 4 [default = 0];
+   optional int32 regen_cost = 5 [default = 0];
+   optional int32 overflow = 6 [default = 0];
+}
+message EnergyBonusTime {
+   optional EnergyType energy_type = 1 [default = PVE];
+   optional int64 last_bonus_energy_time = 2 [default = 0];
+}
+enum EnergyType {
+   PVE = 1;
+   PVP = 2;
+   SHIP_PVE = 3;
+   SHIP_PVP = 4;
+   CANTINA_PVE = 5;
+}
+message Player {
+   optional bool character_onboarding_complete = 1 [default = false];
+   optional int32 xp = 2 [default = 0];
+   optional int32 level = 3 [default = 0];
+   repeated Energy energy = 4;
+   optional string name = 7 [default = ""];
+   optional int32 amount_spent = 8 [default = 0];
+   optional bool ship_onboarding_complete = 9 [default = false];
+   optional int32 name_change_count = 10 [default = 0];
+   optional int32 free_name_change_count = 11 [default = 0];
+   optional int64 last_guild_join_time = 12 [default = 0];
+   optional string synergy_id = 16 [default = ""];
+   optional string synergy_sell_id = 17 [default = ""];
+   optional string facebook_id = 18 [default = ""];
+   optional int64 ally_code = 19 [default = 0];
+   optional bool eula_accepted = 20 [default = false];
+   optional bool can_submit_ticket = 21 [default = false];
+   optional YearMonth age = 22;
+   optional sint32 local_time_zone_offset_minutes = 23 [default = 0];
+   optional sint64 debug_time_offset = 24 [default = 0];
+   optional int64 last_login_time = 27 [default = 0];
+   optional int64 last_spent_time = 28 [default = 0];
+   optional bool push_notes_enabled = 29 [default = false];
+   optional bool facebook_connect_incentive = 33 [default = false];
+   repeated EnergyBonusTime last_energy_bonus_time = 34;
+   optional string country_code = 35 [default = ""];
+}
+message YearMonth {
+   optional uint32 year = 1 [default = 0];
+   optional uint32 month = 2 [default = 0];
+}

@@ -1,0 +1,8 @@
+package Protos;
+
+enum SessionStartContext {
+   PUSHNOTE = 0;
+   NORMAL_APP_START = 1;
+   RESUME = 2;
+   RESTART = 3;
+}

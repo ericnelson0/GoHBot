@@ -1,0 +1,5 @@
+package Protos;
+
+message CinematicTrigger {
+   optional string trigger_condition = 1 [default = ""];
+}

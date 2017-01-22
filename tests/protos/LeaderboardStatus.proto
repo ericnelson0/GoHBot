@@ -1,0 +1,8 @@
+package Protos;
+
+message LeaderboardStatus {
+   optional int32 rank = 1 [default = 0];
+   optional int32 rank_delta = 2 [default = 0];
+   optional int32 score = 3 [default = 0];
+   optional int32 score_delta = 4 [default = 0];
+}

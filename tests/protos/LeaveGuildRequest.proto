@@ -1,0 +1,5 @@
+package Protos;
+
+message LeaveGuildRequest {
+   optional string new_leader_id = 1 [default = ""];
+}

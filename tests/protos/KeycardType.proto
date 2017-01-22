@@ -1,0 +1,6 @@
+package Protos;
+
+enum KeycardType {
+   IGC_KEY = 1;
+   XP_KEY = 2;
+}

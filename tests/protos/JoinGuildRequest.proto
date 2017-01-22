@@ -1,0 +1,10 @@
+package Protos;
+
+enum GuildJoinType {
+   RECOMMENDED = 1;
+   ALLY = 2;
+}
+message JoinGuildRequest {
+   optional string guild_id = 1 [default = ""];
+   optional GuildJoinType join_type = 2 [default = RECOMMENDED];
+}

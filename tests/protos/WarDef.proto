@@ -1,0 +1,43 @@
+package Protos;
+
+enum CampaignNodeDifficulty {
+   NOT_SET = 0;
+   NORMAL_DIFF = 4;
+   HARD_DIFF = 5;
+   NIGHTMARE_DIFF = 6;
+   SPECIAL_DIFF = 7;
+   I_DIFF = 8;
+   II_DIFF = 9;
+   III_DIFF = 10;
+   IV_DIFF = 11;
+   V_DIFF = 12;
+   VI_DIFF = 13;
+}
+enum CombatType {
+   CHARACTER = 1;
+   SHIP = 2;
+}
+message Position {
+   optional string x = 1 [default = ""];
+   optional string y = 2 [default = ""];
+   optional string z = 3 [default = ""];
+}
+message WarDef {
+   optional string id = 1 [default = ""];
+   optional CombatType type = 2 [default = SHIP];
+   optional CampaignNodeDifficulty difficulty = 3 [default = NORMALDIFF];
+   optional string daily_reset_cap_key = 4 [default = ""];
+   repeated WarNodeDef node = 5;
+}
+message WarNodeDef {
+   optional string id = 1 [default = ""];
+   optional WarNodeType type = 2 [default = NODETYPEOPPONENT];
+   optional CombatType combat_type = 3 [default = SHIP];
+   optional Position position = 4;
+}
+enum WarNodeType {
+   NODETYPE_OPPONENT = 1;
+   NODETYPE_CHEST_COMMON = 2;
+   NODETYPE_CHEST_RARE = 3;
+   NODETYPE_CHEST_EPIC = 4;
+}

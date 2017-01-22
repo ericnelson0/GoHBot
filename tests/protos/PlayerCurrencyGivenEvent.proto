@@ -1,0 +1,8 @@
+package Protos;
+
+message PlayerCurrencyGivenEvent {
+   optional string player_id = 1 [default = ""];
+   optional string app_version = 2 [default = ""];
+   optional string given_currency = 3 [default = ""];
+   optional int32 given_amount = 4 [default = 0];
+}

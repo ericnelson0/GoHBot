@@ -1,0 +1,8 @@
+package Protos;
+
+message AttackRange {
+   optional int32 start_inclusive = 1 [default = 0];
+   optional int32 end_inclusive = 2 [default = 0];
+   optional int32 absolute_range = 3 [default = 0];
+   optional int32 relative_range = 4 [default = 0];
+}

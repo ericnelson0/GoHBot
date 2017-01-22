@@ -1,0 +1,252 @@
+package Protos;
+
+message BattleCondition {
+   optional ConditionType condition_type = 1 [default = ROUNDCOUNT];
+   optional string condition_value = 2 [default = ""];
+}
+enum BattleUnitStateStat {
+   BATTLE_UNIT_STAT_UNDEFINED = 1;
+   BATTLE_UNIT_STAT_HEALTH = 2;
+   BATTLE_UNIT_STAT_HEALTH_PERCENT = 3;
+   BATTLE_UNIT_STAT_SPEED_FILL = 4;
+   BATTLE_UNIT_STAT_SPEED_FILL_PERCENT = 5;
+}
+enum ConditionType {
+   ROUND_COUNT = 1;
+   END_OF_ROUND = 2;
+   START_OF_ROUND = 3;
+   START_OF_BATTLE = 4;
+   CHANCE = 5;
+   START_OF_ENCOUNTER = 7;
+   CRIT = 8;
+   RECEIVE_CRIT = 9;
+   PERFORM_MOVE = 10;
+   ATTACK = 11;
+   LIMIT_BREAK = 12;
+   RECEIVE_DAMAGE = 13;
+   RECEIVE_HEAL = 14;
+   COMBO = 15;
+   RECEIVE_COMBO = 16;
+   KILL = 17;
+   REVIVE = 18;
+   ENEMY_KILLED = 19;
+   ALLY_KILLED = 20;
+   DEATH = 21;
+   ALLY_REVIVED = 22;
+   ENEMY_REVIVED = 23;
+   END_OF_ENCOUNTER = 24;
+   START_OF_TURN = 25;
+   HEALTH_DECREASE = 26;
+   HEALTH_INCREASE = 27;
+   PERSISTENT_EFFECT_ADD = 28;
+   PERSISTENT_EFFECT_REMOVE = 29;
+   DODGED = 30;
+   WAS_DODGED = 31;
+   END_OF_TURN = 32;
+   RESISTED = 33;
+   WAS_RESISTED = 34;
+   START_MOVE = 35;
+   START_ATTACK = 36;
+   START_LIMIT_BREAK = 37;
+   PRE_EFFECT_EVAL = 38;
+   RECEIVE_PRE_EFFECT_EVAL = 39;
+   POST_EFFECT_EVAL = 40;
+   RECEIVE_POST_EFFECT_EVAL = 41;
+   PRE_EVASION_EVAL = 42;
+   RECEIVE_PRE_EVASION_EVAL = 43;
+   POST_EVASION_EVAL = 44;
+   RECEIVE_POST_EVASION_EVAL = 45;
+   START_OF_GUILD_RAID_FOR_PLAYER = 46;
+   START_OF_GUILD_RAID_ENCOUNTER_FOR_PLAYER = 47;
+   PRE_RECEIVE_DAMAGE = 48;
+   FULL_TURN_COMPLETE = 49;
+   PERSISTENT_EFFECT_ADD_INSTANCE = 50;
+   PERSISTENT_EFFECT_REMOVE_INSTANCE = 51;
+   FLED = 52;
+   ALLY_FLED = 53;
+   ENEMY_FLED = 54;
+}
+message Effect {
+   optional string id = 1 [default = ""];
+   optional EffectType type = 2 [default = DAMAGE];
+   repeated string param = 6;
+   optional int32 chance = 7 [default = 0];
+   repeated EffectTarget target = 8;
+   repeated EffectTag descriptive_tag = 9;
+   repeated EffectTag effected_tag = 10;
+   repeated BattleCondition trigger_condition = 12;
+   repeated Effect effect_definition = 13;
+   repeated int32 context_index = 14;
+   repeated BattleCondition expiration_condition = 15;
+   optional EffectApplyType apply_type = 16 [default = UNAVOIDABLE];
+   optional EffectDamageType damage_type = 17 [default = UNMITIGABLE];
+   optional string persistent_icon = 19 [default = ""];
+   optional string triggered_vfx = 20 [default = ""];
+   optional string triggered_loc_key = 21 [default = ""];
+   optional int32 max_bonus_moves = 23 [default = 0];
+   repeated EffectReference effect_reference = 24;
+   optional int32 multiplier_amount_decimal = 25 [default = 0];
+   optional int32 context_multiplier_decimal = 26 [default = 0];
+   optional int32 additive_amount_decimal = 27 [default = 0];
+   optional int32 result_variance_decimal = 28 [default = 0];
+   optional string persistent_loc_key = 29 [default = ""];
+   optional string stacking_line_override = 30 [default = ""];
+}
+enum EffectApplyType {
+   UNAVOIDABLE = 1;
+   PHYSICAL = 2;
+   MENTAL = 3;
+}
+enum EffectDamageType {
+   UNMITIGABLE = 1;
+   ATTACK_DAMAGE = 2;
+   ABILITY_POWER = 3;
+}
+message EffectReference {
+   optional string id = 1 [default = ""];
+   repeated int32 context_index = 2;
+   optional int32 max_bonus_move = 3 [default = 0];
+}
+message EffectTag {
+   optional string tag = 1 [default = ""];
+}
+message EffectTagCriteria {
+   optional string tag = 1 [default = ""];
+   optional bool exclude = 2 [default = false];
+}
+message EffectTarget {
+   optional EffectTargetUnitSelect unit_select = 1 [default = SELECTALL];
+   optional EffectTargetBattleSide battle_side = 2 [default = BOTHSIDES];
+   repeated UnitClass unit_class = 3;
+   repeated ForceAlignment force_alignment = 4;
+   optional EffectTargetCategoryCriteria category = 5;
+   optional UnitHealthState health_state = 6 [default = UNITHEALTHSTATEANY];
+   repeated StatValueRange stat_value = 8;
+   repeated EffectTagCriteria active_effect_tag_criteria = 9;
+}
+enum EffectTargetBattleSide {
+   BOTH_SIDES = 1;
+   ALLY_SIDE = 2;
+   ENEMY_SIDE = 3;
+   PLAYER_SIDE = 4;
+   OPPONENT_SIDE = 5;
+}
+message EffectTargetCategoryCriteria {
+   optional bool exclude = 1 [default = false];
+   repeated string category_id = 2;
+}
+enum EffectTargetUnitSelect {
+   SELECT_ALL = 1;
+   SELECTED_TARGET = 2;
+   SELECT_RANDOM = 3;
+   SELECT_SELF = 4;
+   SELECT_PREVIOUS = 5;
+}
+enum EffectType {
+   DAMAGE = 1;
+   RECOVER = 2;
+   PARALYSIS = 3;
+   CURSE = 4;
+   DISPELL = 5;
+   IMMUNITY = 6;
+   BONUS_MOVE = 7;
+   MODIFY_STAT = 8;
+   APPLY_EFFECT = 9;
+   DISTRIBUTE_RECOVERY = 10;
+   QUERY_COUNT = 11;
+   QUERY_STAT = 12;
+   REVIVE_UNIT = 13;
+   SCRIPT_COMPONENT = 14;
+   FLEE = 15;
+   DESTROY = 16;
+}
+enum ForceAlignment {
+   NEUTRAL = 1;
+   LIGHT = 2;
+   DARK = 3;
+}
+message StatValueRange {
+   optional UnitStat stat = 1 [default = UNITSTATMAXHEALTH];
+   optional BattleUnitStateStat battle_stat = 2 [default = BATTLEUNITSTATUNDEFINED];
+   optional StatValueRangeNumber min = 3;
+   optional StatValueRangeNumber max = 4;
+}
+message StatValueRangeNumber {
+   optional int32 value = 1 [default = 0];
+   optional bool inclusive = 2 [default = false];
+}
+enum UnitClass {
+   WARRIOR = 1;
+   TACTICIAN = 2;
+   SCOUNDREL = 3;
+   LIGHT_FORCE = 4;
+   DARK_FORCE = 5;
+   UNITCLASS_STANDARD = 6;
+   UNITCLASS_COMMANDER = 7;
+}
+enum UnitHealthState {
+   UNIT_HEALTH_STATE_ANY = 1;
+   UNIT_HEALTH_STATE_ALIVE = 2;
+   UNIT_HEALTH_STATE_DEAD = 3;
+}
+enum UnitStat {
+   UNIT_STAT_MAX_HEALTH = 1;
+   UNIT_STAT_STRENGTH = 2;
+   UNIT_STAT_AGILITY = 3;
+   UNIT_STAT_INTELLIGENCE = 4;
+   UNIT_STAT_SPEED = 5;
+   UNIT_STAT_ATTACK_DAMAGE = 6;
+   UNIT_STAT_ABILITY_POWER = 7;
+   UNIT_STAT_ARMOR = 8;
+   UNIT_STAT_SUPPRESSION = 9;
+   UNIT_STAT_ARMOR_PENETRATION = 10;
+   UNIT_STAT_SUPPRESSION_PENETRATION = 11;
+   UNIT_STAT_DODGE_RATING = 12;
+   UNIT_STAT_DEFLECTION_RATING = 13;
+   UNIT_STAT_ATTACK_CRITICAL_RATING = 14;
+   UNIT_STAT_ABILITY_CRITICAL_RATING = 15;
+   UNIT_STAT_CRITICAL_DAMAGE = 16;
+   UNIT_STAT_ACCURACY = 17;
+   UNIT_STAT_RESISTANCE = 18;
+   UNIT_STAT_DODGE_PERCENT_ADDITIVE = 19;
+   UNIT_STAT_DEFLECTION_PERCENT_ADDITIVE = 20;
+   UNIT_STAT_ATTACK_CRITICAL_PERCENT_ADDITIVE = 21;
+   UNIT_STAT_ABILITY_CRITICAL_PERCENT_ADDITIVE = 22;
+   UNIT_STAT_ARMOR_PERCENT_ADDITIVE = 23;
+   UNIT_STAT_SUPPRESSION_PERCENT_ADDITIVE = 24;
+   UNIT_STAT_ARMOR_PENETRATION_PERCENT_ADDITIVE = 25;
+   UNIT_STAT_SUPPRESSION_PENETRATION_PERCENT_ADDITIVE = 26;
+   UNIT_STAT_HEALTH_STEAL = 27;
+   UNIT_STAT_MAX_SHIELD = 28;
+   UNIT_STAT_SHIELD_PENETRATION = 29;
+   UNIT_STAT_HEALTH_REGEN = 30;
+   UNIT_STAT_ATTACK_DAMAGE_PERCENT_ADDITIVE = 31;
+   UNIT_STAT_ABILITY_POWER_PERCENT_ADDITIVE = 32;
+   UNIT_STAT_DODGE_NEGATE_PERCENT_ADDITIVE = 33;
+   UNIT_STAT_DEFLECTION_NEGATE_PERCENT_ADDITIVE = 34;
+   UNIT_STAT_ATTACK_CRITICAL_NEGATE_PERCENT_ADDITIVE = 35;
+   UNIT_STAT_ABILITY_CRITICAL_NEGATE_PERCENT_ADDITIVE = 36;
+   UNIT_STAT_DODGE_NEGATE_RATING = 37;
+   UNIT_STAT_DEFLECTION_NEGATE_RATING = 38;
+   UNIT_STAT_ATTACK_CRITICAL_NEGATE_RATING = 39;
+   UNIT_STAT_ABILITY_CRITICAL_NEGATE_RATING = 40;
+   UNIT_STAT_OFFENSE = 41;
+   UNIT_STAT_DEFENSE = 42;
+   UNIT_STAT_DEFENSE_PENETRATION = 43;
+   UNIT_STAT_EVASION_RATING = 44;
+   UNIT_STAT_CRITICAL_RATING = 45;
+   UNIT_STAT_EVASION_NEGATE_RATING = 46;
+   UNIT_STAT_CRITICAL_NEGATE_RATING = 47;
+   UNIT_STAT_OFFENSE_PERCENT_ADDITIVE = 48;
+   UNIT_STAT_DEFENSE_PERCENT_ADDITIVE = 49;
+   UNIT_STAT_DEFENSE_PENETRATION_PERCENT_ADDITIVE = 50;
+   UNIT_STAT_EVASION_PERCENT_ADDITIVE = 51;
+   UNIT_STAT_EVASION_NEGATE_PERCENT_ADDITIVE = 52;
+   UNIT_STAT_CRITICAL_CHANCE_PERCENT_ADDITIVE = 53;
+   UNIT_STAT_CRITICAL_NEGATE_CHANCE_PERCENT_ADDITIVE = 54;
+   UNIT_STAT_MAX_HEALTH_PERCENT_ADDITIVE = 55;
+   UNIT_STAT_MAX_SHIELD_PERCENT_ADDITIVE = 56;
+   UNIT_STAT_SPEED_PERCENT_ADDITIVE = 57;
+   UNIT_STAT_COUNTER_ATTACK_RATING = 58;
+   UNIT_STAT_TAUNT = 59;
+}

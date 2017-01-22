@@ -1,0 +1,5 @@
+package Protos;
+
+message DemoteMemberRequest {
+   optional string player_id = 1 [default = ""];
+}

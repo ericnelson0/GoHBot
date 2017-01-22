@@ -1,0 +1,8 @@
+package Protos;
+
+enum RaidState {
+   RAID_IN_PROGRESS = 1;
+   RAID_IN_TALLY = 2;
+   RAID_COMPLETE = 3;
+   RAID_EXPIRED = 4;
+}

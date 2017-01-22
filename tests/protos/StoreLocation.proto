@@ -1,0 +1,7 @@
+
+enum StoreLocation {
+   Packs = 0;
+   PackDetails = 1;
+   PremiumCurrency = 2;
+   ShipmentPvE = 3;
+}

@@ -1,0 +1,11 @@
+package Protos;
+
+enum MaterialType {
+   CRAFTING_MATERIAL = 1;
+   XP_MATERIAL = 2;
+   UNIT_SHARD_MATERIAL = 3;
+   PROMOTION_MATERIAL = 4;
+   SKILL_MATERIAL = 5;
+   SELL_MATERIAL = 6;
+   SHIP_XP_MATERIAL = 7;
+}

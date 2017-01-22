@@ -1,0 +1,12 @@
+package Protos;
+
+message Subscription {
+   optional SubscriptionType type = 1 [default = SUBSCRIPTIONDAILY];
+   optional int32 duration = 2 [default = 0];
+   optional string top_description_key = 3 [default = ""];
+   optional string success_message_key = 4 [default = ""];
+   optional string detail_description_key = 5 [default = ""];
+}
+enum SubscriptionType {
+   SUBSCRIPTION_DAILY = 1;
+}

@@ -1,0 +1,11 @@
+package Protos;
+
+enum CombatType {
+   CHARACTER = 1;
+   SHIP = 2;
+}
+message LeaderboardRequest {
+   optional CombatType combat_type = 1 [default = CHARACTER];
+   optional string event_id = 2 [default = ""];
+   optional string event_instance_id = 3 [default = ""];
+}

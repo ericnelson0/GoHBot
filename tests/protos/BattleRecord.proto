@@ -1,0 +1,32 @@
+package Protos;
+
+message BattleRecord {
+   optional BattleRecordType record_type = 1 [default = BATTLERECORDABILITY];
+   optional int64 timestamp = 2 [default = 0];
+   optional string source_unit_id = 3 [default = ""];
+   repeated string target_unit_ids = 4;
+   optional string ability_id = 5 [default = ""];
+   optional string effect_id = 6 [default = ""];
+   optional string damage_amount = 7 [default = ""];
+   optional string recovery_type = 8 [default = ""];
+   optional string recovery_amount = 9 [default = ""];
+   optional bool is_crit = 10 [default = false];
+   optional bool auto_battle_on = 11 [default = false];
+   optional int32 encounter_index = 12 [default = 0];
+   optional string excess_damage_amount = 13 [default = ""];
+   optional string excess_recovery_amount = 14 [default = ""];
+}
+enum BattleRecordType {
+   BATTLE_RECORD_ABILITY = 1;
+   BATTLE_RECORD_CONDITION = 2;
+   BATTLE_RECORD_DAMAGE = 3;
+   BATTLE_RECORD_EFFECT_APPLIED = 4;
+   BATTLE_RECORD_EFFECT_EXPIRED = 5;
+   BATTLE_RECORD_EFFECT = 6;
+   BATTLE_RECORD_PLAYER_AUTO_TOGGLE = 7;
+   BATTLE_RECORD_PLAYER_MANUAL_ABILITY = 8;
+   BATTLE_RECORD_PLAYER_MANUAL_SELECT = 9;
+   BATTLE_RECORD_RECOVERY = 10;
+   BATTLE_RECORD_ENCOUNTER_START = 11;
+   BATTLE_RECORD_ENCOUNTER_END = 12;
+}

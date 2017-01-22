@@ -1,0 +1,17 @@
+package Protos;
+
+message GuildBannerColorDef {
+   optional string id = 1 [default = ""];
+   optional string tint_color = 2 [default = ""];
+   optional string background_color = 3 [default = ""];
+}
+message GuildBannerDef {
+   repeated string logo = 1;
+   repeated GuildBannerColorDef color = 2;
+   repeated GuildBannerLogoDef logoDefinition = 3;
+}
+message GuildBannerLogoDef {
+   optional string id = 1 [default = ""];
+   optional string logo = 2 [default = ""];
+   optional string ui_logo = 3 [default = ""];
+}

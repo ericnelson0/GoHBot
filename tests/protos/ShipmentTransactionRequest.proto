@@ -1,0 +1,16 @@
+package Protos;
+
+message ShipmentTransactionRequest {
+   optional ShipmentType shipment_type = 1 [default = SHIPMENTPVE];
+   optional string item_id = 2 [default = ""];
+}
+enum ShipmentType {
+   SHIPMENT_PVP = 1;
+   SHIPMENT_PVE = 2;
+   SHIPMENT_SHIP_WAR = 3;
+   SHIPMENT_CANTINA = 4;
+   SHIPMENT_SHIP_PVP = 5;
+   SHIPMENT_SHARD = 6;
+   SHIPMENT_GUILD = 7;
+   SHIPMENT_MOD = 8;
+}

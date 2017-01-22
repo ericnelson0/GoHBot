@@ -1,0 +1,7 @@
+package Protos;
+
+message PlayerDetailChangedEvent {
+   optional string player_id = 1 [default = ""];
+   optional string app_version = 2 [default = ""];
+   optional bool user_initiated = 3 [default = false];
+}

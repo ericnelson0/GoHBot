@@ -1,0 +1,6 @@
+package Protos;
+
+message DecimalTableRow {
+   optional int32 index = 1 [default = 0];
+   optional int64 value_decimal = 2 [default = 0];
+}

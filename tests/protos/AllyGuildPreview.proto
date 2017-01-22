@@ -1,0 +1,6 @@
+package Protos;
+
+message AllyGuildPreview {
+   optional string guild_id = 1 [default = ""];
+   optional string guild_name = 2 [default = ""];
+}

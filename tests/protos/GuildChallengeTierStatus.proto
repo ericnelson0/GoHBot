@@ -1,0 +1,6 @@
+
+enum GuildChallengeTierStatus {
+   LOCKED = 0;
+   ACTIVE = 1;
+   COMPLETED = 2;
+}

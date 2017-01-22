@@ -1,0 +1,8 @@
+package Protos;
+
+message EventPlayer {
+   optional string id = 1 [default = ""];
+   optional string name = 2 [default = ""];
+   optional int32 level = 3 [default = 0];
+   optional float amount_spent = 4 [default = 0];
+}

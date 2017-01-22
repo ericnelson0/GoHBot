@@ -1,0 +1,13 @@
+package Protos;
+
+message InboxGuild {
+   optional string name = 1 [default = ""];
+   optional int32 level = 2 [default = 0];
+   optional string logo = 3 [default = ""];
+   optional string logo_background = 4 [default = ""];
+   optional int32 rank = 5 [default = 0];
+   optional int32 member_count = 6 [default = 0];
+   optional int32 member_max = 7 [default = 0];
+   optional string guild_banner_color = 8 [default = ""];
+   optional string guild_banner_logo = 9 [default = ""];
+}

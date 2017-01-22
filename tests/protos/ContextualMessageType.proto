@@ -1,0 +1,9 @@
+package Protos;
+
+enum ContextualMessageType {
+   POINT_AT_VIEW_ELEMENT = 1;
+   CHARACTER_DIALOG = 3;
+   MODAL_DIALOG_ONE_BUTTON = 4;
+   MODAL_DIALOG_TWO_BUTTON = 5;
+   CANTINA_CHARACTER_DIALOG = 6;
+}

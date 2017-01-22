@@ -1,0 +1,6 @@
+package Protos;
+
+message EffectTagCriteria {
+   optional string tag = 1 [default = ""];
+   optional bool exclude = 2 [default = false];
+}

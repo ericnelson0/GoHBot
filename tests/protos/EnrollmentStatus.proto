@@ -1,0 +1,7 @@
+package Protos;
+
+enum EnrollmentStatus {
+   ENROLLMENT_OPEN = 1;
+   ENROLLMENT_INVITE = 2;
+   ENROLLMENT_CLOSED = 3;
+}

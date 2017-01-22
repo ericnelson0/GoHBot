@@ -1,0 +1,21 @@
+package Protos;
+
+message EventPlayer {
+   optional string id = 1 [default = ""];
+   optional string name = 2 [default = ""];
+   optional int32 level = 3 [default = 0];
+   optional float amount_spent = 4 [default = 0];
+}
+enum RewardReason {
+   VIRAL = 0;
+   BATTLE_AWARD = 1;
+   BURSTLY = 2;
+   NONE = 3;
+   ACHIEVEMENT = 4;
+}
+message RewardTransactionEvent {
+   optional EventPlayer player = 1;
+   optional int32 quantity = 2 [default = 0];
+   optional string item_type_id = 3 [default = ""];
+   optional RewardReason reward_reason = 4 [default = NONE];
+}

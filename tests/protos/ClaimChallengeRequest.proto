@@ -1,0 +1,5 @@
+package Protos;
+
+message ClaimChallengeRequest {
+   optional string id = 1 [default = ""];
+}

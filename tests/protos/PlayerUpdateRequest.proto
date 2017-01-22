@@ -1,0 +1,12 @@
+package Protos;
+
+message PlayerUpdateRequest {
+   optional string name = 3 [default = ""];
+   optional bool eula_accepted = 4 [default = false];
+   optional YearMonth age = 5;
+   optional bool push_notes_enabled = 6 [default = false];
+}
+message YearMonth {
+   optional uint32 year = 1 [default = 0];
+   optional uint32 month = 2 [default = 0];
+}

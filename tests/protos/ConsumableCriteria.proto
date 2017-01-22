@@ -1,0 +1,26 @@
+package Protos;
+
+message ConsumableCriteria {
+   optional ConsumableCriteriaHealthState health_state = 1 [default = ALIVE];
+   repeated UnitClass unit_class = 2;
+   optional ConsumableCriteriaLimitBreakState limit_break_state = 3 [default = NOTFULL];
+}
+enum ConsumableCriteriaHealthState {
+   ALIVE = 1;
+   DEAD = 2;
+   DAMAGED = 3;
+}
+enum ConsumableCriteriaLimitBreakState {
+   FULL = 1;
+   NOT_FULL = 2;
+   CRITERIA_NONE = 3;
+}
+enum UnitClass {
+   WARRIOR = 1;
+   TACTICIAN = 2;
+   SCOUNDREL = 3;
+   LIGHT_FORCE = 4;
+   DARK_FORCE = 5;
+   UNITCLASS_STANDARD = 6;
+   UNITCLASS_COMMANDER = 7;
+}

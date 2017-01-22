@@ -1,0 +1,5 @@
+package Protos;
+
+message CancelRaidRequest {
+   optional string raid_def_id = 1 [default = ""];
+}

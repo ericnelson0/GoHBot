@@ -1,0 +1,12 @@
+package Protos;
+
+message Filter {
+   optional int32 min_player_level = 1 [default = 0];
+   optional int32 max_player_level = 2 [default = 0];
+   optional double min_player_spend = 3 [default = 0];
+   optional double max_player_spend = 4 [default = 0];
+   optional string min_pve_map_unlocked = 5 [default = ""];
+   optional int32 min_pve_map_node_unlocked = 6 [default = 0];
+   optional string max_pve_map_unlocked = 7 [default = ""];
+   optional int32 max_pve_map_node_unlocked = 8 [default = 0];
+}

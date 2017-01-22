@@ -1,0 +1,11 @@
+package Protos;
+
+message InterstitialTrigger {
+   optional string id = 1 [default = ""];
+   optional InterstitialTriggerType interstitial_trigger_type = 2 [default = EVENT];
+}
+enum InterstitialTriggerType {
+   EVENT = 1;
+   CHALLENGE = 2;
+   STORE = 3;
+}

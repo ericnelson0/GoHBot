@@ -1,0 +1,9 @@
+package Protos;
+
+enum WarNodeStatus {
+   NODE_HIDDEN = 1;
+   NODE_LOCKED = 2;
+   NODE_UNLOCKED = 3;
+   NODE_CLAIMABLE = 4;
+   NODE_COMPLETED = 5;
+}

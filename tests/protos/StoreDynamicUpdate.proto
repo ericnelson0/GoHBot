@@ -1,0 +1,346 @@
+package Protos;
+
+message BucketItem {
+   optional string id = 1 [default = ""];
+   optional ItemType type = 2 [default = EMPTY];
+   optional int32 weight = 3 [default = 0];
+   optional int32 minQuantity = 4 [default = 0];
+   optional int32 maxQuantity = 5 [default = 0];
+   optional Rarity rarity = 6 [default = ONESTAR];
+   optional StatMod stat_mod = 7;
+}
+message CurrencyItem {
+   optional CurrencyType currency = 1 [default = GRIND];
+   optional int32 quantity = 2 [default = 0];
+}
+enum CurrencyType {
+   GRIND = 1;
+   PREMIUM = 2;
+   REAL_MONEY = 3;
+   SOCIAL = 4;
+   IGC_EVENT_KEYCARD = 8;
+   XP_EVENT_KEYCARD = 9;
+   PVP_CURRENCY = 10;
+   FORCE_POINT = 11;
+   PVP_SHIP_CURRENCY = 12;
+   FREE = 13;
+   WAR_SHIP_CURRENCY = 14;
+   GRIND_TICKET = 15;
+   SHARD_CURRENCY = 16;
+   GUILD_CURRENCY = 17;
+   GUILD_BANK_CURRENCY = 18;
+   SHIP_GRIND = 19;
+   GUILD_RAID_CURRENCY_01 = 20;
+   GUILD_RAID_CURRENCY_02 = 21;
+   GUILD_RAID_CURRENCY_03 = 22;
+   GUILD_RAID_CURRENCY_04 = 23;
+   GUILD_RAID_CURRENCY_05 = 24;
+   GUILD_RAID_CURRENCY_06 = 25;
+   GUILD_RAID_CURRENCY_07 = 26;
+   GUILD_RAID_CURRENCY_08 = 27;
+   GUILD_RAID_CURRENCY_09 = 28;
+   GUILD_RAID_CURRENCY_10 = 29;
+   GUILD_RAID_CURRENCY_11 = 30;
+   GUILD_RAID_CURRENCY_12 = 31;
+}
+enum EvaluationType {
+   AND = 1;
+   OR = 2;
+}
+message Filter {
+   optional int32 min_player_level = 1 [default = 0];
+   optional int32 max_player_level = 2 [default = 0];
+   optional double min_player_spend = 3 [default = 0];
+   optional double max_player_spend = 4 [default = 0];
+   optional string min_pve_map_unlocked = 5 [default = ""];
+   optional int32 min_pve_map_node_unlocked = 6 [default = 0];
+   optional string max_pve_map_unlocked = 7 [default = ""];
+   optional int32 max_pve_map_node_unlocked = 8 [default = 0];
+}
+enum ItemType {
+   EMPTY = 1;
+   UNIT = 2;
+   CURRENCY = 3;
+   BUCKET = 4;
+   CONSUMABLE = 5;
+   XP = 6;
+   MATERIAL = 7;
+   ENERGY = 8;
+   UNIT_SHARD = 9;
+   RECIPE = 10;
+   EQUIPMENT = 11;
+   EVENT_KEYCARD = 12;
+   POWERUP_BUNDLE = 13;
+   MYSTERY_BOX = 14;
+   STAT_MOD = 15;
+   MYSTERY_STAT_MOD = 16;
+}
+message Offer {
+   optional CurrencyType payment_currency = 1 [default = GRIND];
+   optional int32 price = 2 [default = 0];
+   optional int32 in_app_product_id = 3 [default = 0];
+   optional string cost_key = 4 [default = ""];
+   optional string cooldown_key = 5 [default = ""];
+   optional string daily_purchase_cap_key = 6 [default = ""];
+}
+enum Rarity {
+   ONE_STAR = 1;
+   TWO_STAR = 2;
+   THREE_STAR = 3;
+   FOUR_STAR = 4;
+   FIVE_STAR = 5;
+   SIX_STAR = 6;
+   SEVEN_STAR = 7;
+   NO_STAR = 8;
+}
+message Requirement {
+   optional EvaluationType eval_type = 1 [default = AND];
+   repeated RequirementItem requirement_item = 2;
+   optional string id = 3 [default = ""];
+   optional string desc_key = 4 [default = ""];
+}
+message RequirementItem {
+   optional RequirementType type = 1 [default = REQUIREMENTINVALID];
+   optional string id = 2 [default = ""];
+   optional int32 value = 3 [default = 0];
+}
+enum RequirementType {
+   CURRENCY_REQUIREMENT = 3;
+   ROSTER_CHARACTER_NOT_CATEGORY_NOT_IN_SQUAD_REQUIREMENT = 10;
+   SQUAD_SIZE_MAXIMUM_REQUIREMENT = 11;
+   ROSTER_CHARACTER_CATEGORY_NOT_IN_USE_REQUIREMENT = 12;
+   ROSTER_CHARACTER_NOT_IN_USE_REQUIREMENT = 13;
+   SQUAD_SIZE_MINIMUM_REQUIREMENT = 14;
+   ENEMY_THREAT_LEVEL_REQUIREMENT = 15;
+   ANY_CHARACTER_READY_FOR_PROMOTION = 16;
+   UNIT_TRAINING_AVAILABLE = 19;
+   PLAYER_LEVEL_MIN_REQUIREMENT = 20;
+   ROSTER_UNIT_TYPE_REQUIREMENT = 22;
+   ROSTER_UNIT_TYPE_MAX_REQUIREMENT = 23;
+   UNIT_ABILITY_UPGRADE_AVAILABLE = 24;
+   UNIT_GEAR_EQUIP_AVAILABLE = 25;
+   CURRENT_UNIT_GEAR_EQUIP_AVAILABLE = 26;
+   PLAYER_UNIT_HEALTH_BELOW_PERCENT = 27;
+   REQUIREMENT_INVALID = 28;
+   CURRENT_CHARACTER_READY_FOR_PROMOTION = 29;
+   BATTLE_ANY_STATUS_EFFECT_ACTIVE = 30;
+   STORE_ITEM_AVAILABLE_FOR_PURCHASE = 31;
+   CURRENT_MISSION_HAS_GEAR_DROP = 32;
+   PLAYER_LEVEL_MAX_REQUIREMENT = 33;
+   CAMPAIGN_REQUIREMENT = 34;
+   ANY_DAILY_ACTIVITY_READY_FOR_CLAIM = 35;
+   FACEBOOK_LOGIN_AVAILABLE = 36;
+   ANY_UNIT_REACHED_MAX_RARITY = 37;
+   CURRENT_CHARACTER_READY_FOR_TIER_UP = 38;
+   EVENT_ACTIVE = 39;
+   BATTLE_ANY_UNIT_HAS_SHIELD = 40;
+   CURRENT_CHARACTER_MIN_TIER = 41;
+   UNIT_LEVEL_MAX_REQUIREMENT = 42;
+   UNIT_LEVEL_MIN_REQUIREMENT = 43;
+   ROSTER_UNIT_REQUIREMENT = 44;
+   UNIT_SHARD_REQUIREMENT = 45;
+   ROSTER_UNIT_COMBAT_TYPE_REQUIREMENT = 46;
+   BATTLE_TURN_COUNT = 47;
+   BATTLE_ENCOUNTER_STARTED = 48;
+   BATTLE_UNIT_TURN_SQUAD_CELL_INDEX = 49;
+   ROSTER_UNIT_CLASS_REQUIREMENT = 50;
+}
+message Shipment {
+   optional ShipmentType shipment_type = 1 [default = SHIPMENTPVE];
+   repeated ShipmentItem shipment_item = 2;
+   optional int64 next_refresh_time = 3 [default = 0];
+   optional string daily_refresh_cap_key = 4 [default = ""];
+}
+message ShipmentItem {
+   optional string item_id = 12 [default = ""];
+   optional BucketItem preview_item = 13;
+   optional BucketItem purchase_cost = 14;
+   optional int64 start_time = 15 [default = 0];
+   optional int64 end_time = 16 [default = 0];
+   optional bool purchased = 17 [default = false];
+}
+enum ShipmentType {
+   SHIPMENT_PVP = 1;
+   SHIPMENT_PVE = 2;
+   SHIPMENT_SHIP_WAR = 3;
+   SHIPMENT_CANTINA = 4;
+   SHIPMENT_SHIP_PVP = 5;
+   SHIPMENT_SHARD = 6;
+   SHIPMENT_GUILD = 7;
+   SHIPMENT_MOD = 8;
+}
+enum SpecialValue {
+   NONE = 1;
+   MOST_POPULAR = 2;
+   BEST_VALUE = 3;
+}
+message Stat {
+   optional string stat_id = 1 [default = ""];
+   optional UnitStat unit_stat_id = 3 [default = UNITSTATMAXHEALTH];
+   optional int32 stat_value_decimal_old = 4 [default = 0];
+   optional int64 stat_value_decimal = 5 [default = 0];
+}
+message StatMod {
+   optional string id = 1 [default = ""];
+   optional string definition_id = 2 [default = ""];
+   optional int32 level = 4 [default = 0];
+   optional StatModTier tier = 5 [default = STATMODTIER01];
+   optional CurrencyItem sell_value = 9;
+   optional CurrencyItem remove_cost = 10;
+   optional bool locked = 11 [default = false];
+   optional StatModStat primary_stat = 12;
+   repeated StatModStat secondary_stat = 13;
+   optional int32 xp = 14 [default = 0];
+   optional CurrencyItem level_cost = 15;
+}
+message StatModStat {
+   optional string updater_id = 1 [default = ""];
+   optional Stat stat = 2;
+   repeated string roll = 3;
+}
+enum StatModTier {
+   STATMOD_TIER_01 = 1;
+   STATMOD_TIER_02 = 2;
+   STATMOD_TIER_03 = 3;
+   STATMOD_TIER_04 = 4;
+   STATMOD_TIER_05 = 5;
+}
+message StoreDynamicUpdate {
+   repeated StoreItem updated_store_item = 1;
+   repeated string removed_store_item = 2;
+   repeated SubscriptionStatus subscription_status = 10;
+   repeated string removed_subscription = 11;
+   repeated Shipment shipment = 13;
+}
+message StoreItem {
+   required string id = 1;
+   repeated Offer offer = 2;
+   optional int32 order = 3 [default = 0];
+   optional StoreTab store_tab = 4 [default = PACK];
+   optional int32 quantity = 5 [default = 0];
+   optional int32 max_purchase_per_transaction = 6 [default = 0];
+   optional int32 purchase_limit = 7 [default = 0];
+   optional string ui_icon = 8 [default = ""];
+   optional Filter filter = 10;
+   optional int64 start_time = 11 [default = 0];
+   optional int64 end_time = 12 [default = 0];
+   optional SpecialValue special_value = 13 [default = NONE];
+   optional Rarity rarity_preview = 14 [default = NOSTAR];
+   optional string name_key = 15 [default = ""];
+   optional string description_key = 16 [default = ""];
+   optional string detailed_description_key = 17 [default = ""];
+   optional string promo_text1_key = 18 [default = ""];
+   optional string promo_text2_key = 19 [default = ""];
+   optional string promo_background = 20 [default = ""];
+   optional string carousel_text_key = 22 [default = ""];
+   optional Rarity rarity_max_preview = 24 [default = NOSTAR];
+   optional int32 bonus_quantity = 26 [default = 0];
+   optional bool show_buy_confirmation = 27 [default = false];
+   optional string chance_at_text_key = 28 [default = ""];
+   optional string pack_opening_crystal_prefab = 29 [default = ""];
+   optional bool allow_skip_pack_opening = 30 [default = false];
+   optional Requirement show_requirement = 31;
+   optional string guarantee_key = 32 [default = ""];
+   optional Subscription subscription = 33;
+   repeated BucketItem pack_item_preview = 34;
+   repeated StoreItemPreview item_preview = 35;
+   optional StoreItemType item_type = 36 [default = STOREITEMTYPEPACK];
+   repeated StoreLocation store_location = 37;
+}
+message StoreItemPreview {
+   optional int32 min_level = 1 [default = 0];
+   optional int32 max_level = 2 [default = 0];
+   repeated BucketItem item = 3;
+}
+enum StoreItemType {
+   STOREITEMTYPE_PACK = 1;
+   STOREITEMTYPE_PREMIUM_CURRENCY = 2;
+   STOREITEMTYPE_UPSIGHT = 3;
+   STOREITEMTYPE_POWERUP_BUNDLES = 4;
+}
+message StoreLocation {
+   optional StoreTab store_tab = 1 [default = PACK];
+   optional int32 order = 2 [default = 0];
+}
+enum StoreTab {
+   PACK = 1;
+   PREMIUM_CURRENCY = 2;
+   UPSIGHT = 5;
+   POWERUP_BUNDLES = 10;
+   SHIP_PACK = 11;
+}
+message Subscription {
+   optional SubscriptionType type = 1 [default = SUBSCRIPTIONDAILY];
+   optional int32 duration = 2 [default = 0];
+   optional string top_description_key = 3 [default = ""];
+   optional string success_message_key = 4 [default = ""];
+   optional string detail_description_key = 5 [default = ""];
+}
+message SubscriptionStatus {
+   optional string item_id = 1 [default = ""];
+   optional int32 remaining = 2 [default = 0];
+}
+enum SubscriptionType {
+   SUBSCRIPTION_DAILY = 1;
+}
+enum UnitStat {
+   UNIT_STAT_MAX_HEALTH = 1;
+   UNIT_STAT_STRENGTH = 2;
+   UNIT_STAT_AGILITY = 3;
+   UNIT_STAT_INTELLIGENCE = 4;
+   UNIT_STAT_SPEED = 5;
+   UNIT_STAT_ATTACK_DAMAGE = 6;
+   UNIT_STAT_ABILITY_POWER = 7;
+   UNIT_STAT_ARMOR = 8;
+   UNIT_STAT_SUPPRESSION = 9;
+   UNIT_STAT_ARMOR_PENETRATION = 10;
+   UNIT_STAT_SUPPRESSION_PENETRATION = 11;
+   UNIT_STAT_DODGE_RATING = 12;
+   UNIT_STAT_DEFLECTION_RATING = 13;
+   UNIT_STAT_ATTACK_CRITICAL_RATING = 14;
+   UNIT_STAT_ABILITY_CRITICAL_RATING = 15;
+   UNIT_STAT_CRITICAL_DAMAGE = 16;
+   UNIT_STAT_ACCURACY = 17;
+   UNIT_STAT_RESISTANCE = 18;
+   UNIT_STAT_DODGE_PERCENT_ADDITIVE = 19;
+   UNIT_STAT_DEFLECTION_PERCENT_ADDITIVE = 20;
+   UNIT_STAT_ATTACK_CRITICAL_PERCENT_ADDITIVE = 21;
+   UNIT_STAT_ABILITY_CRITICAL_PERCENT_ADDITIVE = 22;
+   UNIT_STAT_ARMOR_PERCENT_ADDITIVE = 23;
+   UNIT_STAT_SUPPRESSION_PERCENT_ADDITIVE = 24;
+   UNIT_STAT_ARMOR_PENETRATION_PERCENT_ADDITIVE = 25;
+   UNIT_STAT_SUPPRESSION_PENETRATION_PERCENT_ADDITIVE = 26;
+   UNIT_STAT_HEALTH_STEAL = 27;
+   UNIT_STAT_MAX_SHIELD = 28;
+   UNIT_STAT_SHIELD_PENETRATION = 29;
+   UNIT_STAT_HEALTH_REGEN = 30;
+   UNIT_STAT_ATTACK_DAMAGE_PERCENT_ADDITIVE = 31;
+   UNIT_STAT_ABILITY_POWER_PERCENT_ADDITIVE = 32;
+   UNIT_STAT_DODGE_NEGATE_PERCENT_ADDITIVE = 33;
+   UNIT_STAT_DEFLECTION_NEGATE_PERCENT_ADDITIVE = 34;
+   UNIT_STAT_ATTACK_CRITICAL_NEGATE_PERCENT_ADDITIVE = 35;
+   UNIT_STAT_ABILITY_CRITICAL_NEGATE_PERCENT_ADDITIVE = 36;
+   UNIT_STAT_DODGE_NEGATE_RATING = 37;
+   UNIT_STAT_DEFLECTION_NEGATE_RATING = 38;
+   UNIT_STAT_ATTACK_CRITICAL_NEGATE_RATING = 39;
+   UNIT_STAT_ABILITY_CRITICAL_NEGATE_RATING = 40;
+   UNIT_STAT_OFFENSE = 41;
+   UNIT_STAT_DEFENSE = 42;
+   UNIT_STAT_DEFENSE_PENETRATION = 43;
+   UNIT_STAT_EVASION_RATING = 44;
+   UNIT_STAT_CRITICAL_RATING = 45;
+   UNIT_STAT_EVASION_NEGATE_RATING = 46;
+   UNIT_STAT_CRITICAL_NEGATE_RATING = 47;
+   UNIT_STAT_OFFENSE_PERCENT_ADDITIVE = 48;
+   UNIT_STAT_DEFENSE_PERCENT_ADDITIVE = 49;
+   UNIT_STAT_DEFENSE_PENETRATION_PERCENT_ADDITIVE = 50;
+   UNIT_STAT_EVASION_PERCENT_ADDITIVE = 51;
+   UNIT_STAT_EVASION_NEGATE_PERCENT_ADDITIVE = 52;
+   UNIT_STAT_CRITICAL_CHANCE_PERCENT_ADDITIVE = 53;
+   UNIT_STAT_CRITICAL_NEGATE_CHANCE_PERCENT_ADDITIVE = 54;
+   UNIT_STAT_MAX_HEALTH_PERCENT_ADDITIVE = 55;
+   UNIT_STAT_MAX_SHIELD_PERCENT_ADDITIVE = 56;
+   UNIT_STAT_SPEED_PERCENT_ADDITIVE = 57;
+   UNIT_STAT_COUNTER_ATTACK_RATING = 58;
+   UNIT_STAT_TAUNT = 59;
+}

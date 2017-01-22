@@ -1,0 +1,20 @@
+package Protos;
+
+enum ItemType {
+   EMPTY = 1;
+   UNIT = 2;
+   CURRENCY = 3;
+   BUCKET = 4;
+   CONSUMABLE = 5;
+   XP = 6;
+   MATERIAL = 7;
+   ENERGY = 8;
+   UNIT_SHARD = 9;
+   RECIPE = 10;
+   EQUIPMENT = 11;
+   EVENT_KEYCARD = 12;
+   POWERUP_BUNDLE = 13;
+   MYSTERY_BOX = 14;
+   STAT_MOD = 15;
+   MYSTERY_STAT_MOD = 16;
+}

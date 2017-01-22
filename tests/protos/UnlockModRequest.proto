@@ -1,0 +1,5 @@
+package Protos;
+
+message UnlockModRequest {
+   optional string mod_id = 1 [default = ""];
+}

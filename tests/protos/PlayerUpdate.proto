@@ -1,0 +1,5 @@
+package Protos;
+
+message PlayerUpdate {
+   optional string guild_id = 1 [default = ""];
+}

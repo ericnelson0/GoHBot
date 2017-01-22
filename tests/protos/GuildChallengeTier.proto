@@ -1,0 +1,14 @@
+package Protos;
+
+message GuildChallengeTier {
+   optional int32 contribution_total = 1 [default = 0];
+   optional int32 contribution_goal = 2 [default = 0];
+   optional GuildChallengeTierStatus status = 3 [default = GUILDCHALLENGETIERLOCKED];
+   optional string name_key = 4 [default = ""];
+   optional string desc_key = 5 [default = ""];
+}
+enum GuildChallengeTierStatus {
+   GUILD_CHALLENGE_TIER_LOCKED = 1;
+   GUILD_CHALLENGE_TIER_ACTIVE = 2;
+   GUILD_CHALLENGE_TIER_COMPLETED = 3;
+}

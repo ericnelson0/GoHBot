@@ -1,0 +1,11 @@
+package Protos;
+
+message GetGuildsRequest {
+   optional GuildFilterType filter_type = 1 [default = ALLYGUILDS];
+   optional int32 start_index = 2 [default = 0];
+   optional int32 count = 3 [default = 0];
+}
+enum GuildFilterType {
+   ALLY_GUILDS = 2;
+   RECOMMENDED_GUILDS = 3;
+}

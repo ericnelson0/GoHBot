@@ -1,0 +1,10 @@
+package Protos;
+
+message Table {
+   optional string id = 1 [default = ""];
+   repeated TableRow row = 2;
+}
+message TableRow {
+   optional string key = 1 [default = ""];
+   optional string value = 2 [default = ""];
+}

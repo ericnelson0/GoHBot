@@ -1,0 +1,5 @@
+package Protos;
+
+message RefreshCooldownRequest {
+   optional string id = 1 [default = ""];
+}

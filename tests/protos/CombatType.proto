@@ -1,0 +1,6 @@
+package Protos;
+
+enum CombatType {
+   CHARACTER = 1;
+   SHIP = 2;
+}

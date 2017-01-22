@@ -1,0 +1,24 @@
+package Protos;
+
+enum Rarity {
+   ONE_STAR = 1;
+   TWO_STAR = 2;
+   THREE_STAR = 3;
+   FOUR_STAR = 4;
+   FIVE_STAR = 5;
+   SIX_STAR = 6;
+   SEVEN_STAR = 7;
+   NO_STAR = 8;
+}
+message SkillDefinition {
+   optional string id = 1 [default = ""];
+   optional string name_key = 3 [default = ""];
+   optional string icon_key = 4 [default = ""];
+   repeated SkillTierDefinition tier = 5;
+   optional string ability_reference = 6 [default = ""];
+}
+message SkillTierDefinition {
+   optional string recipe_id = 1 [default = ""];
+   optional int32 required_unit_level = 2 [default = 0];
+   optional Rarity required_unit_rarity = 3 [default = NOSTAR];
+}

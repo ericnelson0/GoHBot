@@ -1,0 +1,7 @@
+
+enum AllyStatus {
+   ALLIED = 0;
+   REQUEST_SENT = 1;
+   EXPIRED = 2;
+   NOT_ALLIED = 3;
+}

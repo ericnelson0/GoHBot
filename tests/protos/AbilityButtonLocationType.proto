@@ -1,0 +1,7 @@
+package Protos;
+
+enum AbilityButtonLocationType {
+   ABILITY_STANDARD = 1;
+   ABILITY_ADDITIONAL = 2;
+   ABILITY_HIDDEN = 3;
+}

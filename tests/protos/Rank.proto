@@ -1,0 +1,6 @@
+package Protos;
+
+message Rank {
+   optional sint32 place = 1 [default = 0];
+   optional sint32 size = 2 [default = 0];
+}

@@ -1,0 +1,8 @@
+package Protos;
+
+enum GuildRaidRosterRefreshType {
+   RAID_ROSTER_REFRESH_NONE = 1;
+   RAID_ROSTER_REFRESH_SCHEDULED = 2;
+   RAID_ROSTER_REFRESH_PURCHASABLE = 3;
+   RAID_ROSTER_REFRESH_TIMED = 4;
+}

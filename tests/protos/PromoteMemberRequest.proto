@@ -1,0 +1,12 @@
+package Protos;
+
+enum GuildMemberLevel {
+   GUILD_PENDING = 1;
+   GUILD_MEMBER = 2;
+   GUILD_OFFICER = 3;
+   GUILD_LEADER = 4;
+}
+message PromoteMemberRequest {
+   optional string player_id = 1 [default = ""];
+   optional GuildMemberLevel level = 2 [default = GUILDMEMBER];
+}

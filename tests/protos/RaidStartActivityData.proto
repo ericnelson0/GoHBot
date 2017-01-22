@@ -1,0 +1,5 @@
+package Protos;
+
+message RaidStartActivityData {
+   optional string raid_id = 1 [default = ""];
+}

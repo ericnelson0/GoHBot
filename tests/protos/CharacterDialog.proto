@@ -1,0 +1,9 @@
+package Protos;
+
+message CharacterDialog {
+   optional string character_prefab = 1 [default = ""];
+   repeated string animations = 2;
+   optional string audio_key = 3 [default = ""];
+   optional string layout = 4 [default = ""];
+   optional bool use_hologram_effect = 5 [default = false];
+}

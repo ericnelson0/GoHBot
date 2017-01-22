@@ -1,0 +1,5 @@
+package Protos;
+
+message ClaimWarChestRequest {
+   optional string war_id = 1 [default = ""];
+}

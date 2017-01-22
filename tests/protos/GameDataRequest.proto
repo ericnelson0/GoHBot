@@ -1,0 +1,6 @@
+package Protos;
+
+message GameDataRequest {
+   optional string version = 1 [default = ""];
+   optional string device_platform = 2 [default = ""];
+}

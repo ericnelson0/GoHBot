@@ -1,0 +1,9 @@
+package Protos;
+
+message CooldownStatus {
+   optional string id = 1 [default = ""];
+   optional int64 cooldown_time = 2 [default = 0];
+}
+message CooldownStatusUpdate {
+   repeated CooldownStatus status = 1;
+}

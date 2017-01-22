@@ -1,0 +1,7 @@
+
+enum InterstitialTriggerType {
+   UNDEFINED = 0;
+   EVENT = 1;
+   CHALLENGE = 2;
+   STORE = 3;
+}

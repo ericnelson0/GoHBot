@@ -1,0 +1,38 @@
+package Protos;
+
+message MysteryStatModDefinition {
+   optional string id = 1 [default = ""];
+   optional StatModSlot slot_old = 2 [default = STATMODSLOT01];
+   optional string set_id = 3 [default = ""];
+   optional Rarity min_rarity = 4 [default = ONESTAR];
+   optional Rarity max_rarity = 5 [default = SEVENSTAR];
+   optional StatModTier min_tier = 6 [default = STATMODTIER01];
+   optional StatModTier max_tier = 7 [default = STATMODTIER05];
+   repeated StatModSlot slot = 8;
+   optional string desc_key = 9 [default = ""];
+}
+enum Rarity {
+   ONE_STAR = 1;
+   TWO_STAR = 2;
+   THREE_STAR = 3;
+   FOUR_STAR = 4;
+   FIVE_STAR = 5;
+   SIX_STAR = 6;
+   SEVEN_STAR = 7;
+   NO_STAR = 8;
+}
+enum StatModSlot {
+   STATMOD_SLOT_01 = 2;
+   STATMOD_SLOT_02 = 3;
+   STATMOD_SLOT_03 = 4;
+   STATMOD_SLOT_04 = 5;
+   STATMOD_SLOT_05 = 6;
+   STATMOD_SLOT_06 = 7;
+}
+enum StatModTier {
+   STATMOD_TIER_01 = 1;
+   STATMOD_TIER_02 = 2;
+   STATMOD_TIER_03 = 3;
+   STATMOD_TIER_04 = 4;
+   STATMOD_TIER_05 = 5;
+}

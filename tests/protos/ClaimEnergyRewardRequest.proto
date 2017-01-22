@@ -1,0 +1,12 @@
+package Protos;
+
+message ClaimEnergyRewardRequest {
+   optional EnergyType energy_type = 1 [default = PVE];
+}
+enum EnergyType {
+   PVE = 1;
+   PVP = 2;
+   SHIP_PVE = 3;
+   SHIP_PVP = 4;
+   CANTINA_PVE = 5;
+}

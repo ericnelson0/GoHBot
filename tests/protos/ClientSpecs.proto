@@ -1,0 +1,19 @@
+package Protos;
+
+message ClientSpecs {
+   optional string gl_extension_data = 1 [default = ""];
+   optional string platform = 2 [default = ""];
+   optional string device_model = 3 [default = ""];
+   optional string operating_system = 4 [default = ""];
+   optional int32 system_memory_size = 5 [default = 0];
+   optional int32 graphics_memory_size = 6 [default = 0];
+   optional string graphics_device_name = 7 [default = ""];
+   optional string graphics_device_vendor = 8 [default = ""];
+   optional string graphics_device_version = 9 [default = ""];
+   optional string processor_type = 10 [default = ""];
+   optional int32 processor_count = 11 [default = 0];
+   optional string bundle_id = 12 [default = ""];
+   optional string external_version = 13 [default = ""];
+   optional string internal_version = 14 [default = ""];
+   optional string region = 15 [default = ""];
+}

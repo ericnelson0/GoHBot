@@ -1,0 +1,6 @@
+package Protos;
+
+message PurchasedStat {
+   optional string id = 1 [default = ""];
+   optional int32 quantity = 2 [default = 0];
+}

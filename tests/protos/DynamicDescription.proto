@@ -1,0 +1,33 @@
+package Protos;
+
+message DynamicDescription {
+   optional DynamicDescriptionType description_type = 1 [default = LAYOUTTEXT];
+   optional string unit_texture = 2 [default = ""];
+   optional string unit_name_key = 3 [default = ""];
+   optional string ability_name_key = 4 [default = ""];
+   optional string ability_description_key = 5 [default = ""];
+   optional string ability_texture = 6 [default = ""];
+   optional string header_key = 7 [default = ""];
+   optional string text_key = 8 [default = ""];
+   optional int32 margin_left = 9 [default = 0];
+   repeated DynamicDescriptionTextColumn text_column = 10;
+   optional DynamicDescriptionTextAlignmentType text_alignment = 11 [default = TEXTALIGNMENTLEFT];
+}
+enum DynamicDescriptionTextAlignmentType {
+   TEXT_ALIGNMENT_LEFT = 1;
+   TEXT_ALIGNMENT_RIGHT = 2;
+   TEXT_ALIGNMENT_CENTER = 3;
+}
+message DynamicDescriptionTextColumn {
+   optional string header_key = 1 [default = ""];
+   optional string body_key = 2 [default = ""];
+   optional DynamicDescriptionTextAlignmentType body_alignment = 3 [default = TEXTALIGNMENTLEFT];
+}
+enum DynamicDescriptionType {
+   LAYOUT_TEXT = 1;
+   LAYOUT_UNIT = 2;
+   LAYOUT_ABILITY = 3;
+   LAYOUT_HEADER = 4;
+   LAYOUT_TEXT_COLUMN = 5;
+   LAYOUT_HORIZONTAL_BREAK = 6;
+}

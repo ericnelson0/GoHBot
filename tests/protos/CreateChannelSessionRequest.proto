@@ -1,0 +1,10 @@
+package Protos;
+
+message ChannelPermission {
+   optional string channel_id = 1 [default = ""];
+}
+message CreateChannelSessionRequest {
+   optional string auth_id = 1 [default = ""];
+   optional string display_name = 2 [default = ""];
+   repeated ChannelPermission permission = 3;
+}

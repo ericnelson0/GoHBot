@@ -1,0 +1,8 @@
+package Protos;
+
+message QueryChannelEventsRequest {
+   repeated string channel_id = 1;
+   optional int32 event_count = 2 [default = 0];
+   optional int64 min_timestamp = 3 [default = 0];
+   optional int64 max_timestamp = 4 [default = 0];
+}

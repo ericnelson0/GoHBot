@@ -1,0 +1,10 @@
+package Protos;
+
+message EquipmentSlot {
+   optional string equipment_id = 1 [default = ""];
+   optional int32 slot = 2 [default = 0];
+}
+message SlotEquipmentRequest {
+   optional string unit_id = 1 [default = ""];
+   repeated EquipmentSlot equipment = 2;
+}

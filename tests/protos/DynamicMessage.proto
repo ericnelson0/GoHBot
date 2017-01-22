@@ -1,0 +1,8 @@
+package Protos;
+
+message DynamicMessage {
+   optional string id = 1 [default = ""];
+   optional string type = 2 [default = ""];
+   optional bytes data = 3;
+   optional int32 message_id = 4 [default = 0];
+}

@@ -1,0 +1,31 @@
+package Protos;
+
+message InboxAlly {
+   optional string player_name = 1 [default = ""];
+   optional int32 player_level = 2 [default = 0];
+   optional string leader_unit_definition_id = 3 [default = ""];
+   optional int32 leader_unit_level = 4 [default = 0];
+   optional UnitTier leader_unit_tier = 5 [default = TIER01];
+}
+enum UnitTier {
+   TIER_01 = 1;
+   TIER_02 = 2;
+   TIER_03 = 3;
+   TIER_04 = 4;
+   TIER_05 = 5;
+   TIER_06 = 6;
+   TIER_07 = 7;
+   TIER_08 = 8;
+   TIER_09 = 9;
+   TIER_10 = 10;
+   TIER_11 = 11;
+   TIER_12 = 12;
+   TIER_13 = 13;
+   TIER_14 = 14;
+   TIER_15 = 15;
+   TIER_16 = 16;
+   TIER_17 = 17;
+   TIER_18 = 18;
+   TIER_19 = 19;
+   TIER_20 = 20;
+}

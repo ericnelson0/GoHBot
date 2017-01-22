@@ -1,0 +1,355 @@
+package Protos;
+
+message BattleUnitAbilityState {
+   optional string ability_id = 1 [default = ""];
+   optional int32 cooldown = 2 [default = 0];
+}
+message BattleUnitState {
+   optional string unit_id = 1 [default = ""];
+   optional string health_percent = 5 [default = ""];
+   repeated BattleUnitAbilityState ability_state = 6;
+   optional bool progress_item = 7 [default = false];
+   optional int64 current_health = 8 [default = 0];
+   optional string shield_percent = 9 [default = ""];
+   optional string turn_percent = 10 [default = ""];
+   optional int64 max_health = 11 [default = 0];
+   optional bool has_fled = 12 [default = false];
+   optional int64 max_shield = 13 [default = 0];
+}
+message CampaignElementIdentifier {
+   optional string campaign_id = 1 [default = ""];
+   optional string campaign_map_id = 2 [default = ""];
+   optional string campaign_node_id = 3 [default = ""];
+   optional CampaignNodeDifficulty campaign_node_difficulty = 4 [default = NOTSET];
+   optional string campaign_mission_id = 5 [default = ""];
+}
+enum CampaignElementProgress {
+   HIDDEN = 1;
+   LOCKED = 2;
+   UNLOCKED = 3;
+   COMPLETEONESTAR = 5;
+   COMPLETETWOSTAR = 6;
+   COMPLETETHREESTAR = 7;
+}
+enum CampaignNodeDifficulty {
+   NOTSET = 0;
+   NORMALDIFF = 4;
+   HARDDIFF = 5;
+   NIGHTMAREDIFF = 6;
+   SPECIALDIFF = 7;
+   IDIFF = 8;
+   IIDIFF = 9;
+   IIIDIFF = 10;
+   IVDIFF = 11;
+   VDIFF = 12;
+   VIDIFF = 13;
+}
+message CurrencyItem {
+   optional CurrencyType currency = 1 [default = GRIND];
+   optional int32 quantity = 2 [default = 0];
+}
+enum CurrencyType {
+   GRIND = 1;
+   PREMIUM = 2;
+   REALMONEY = 3;
+   SOCIAL = 4;
+   IGCEVENTKEYCARD = 8;
+   XPEVENTKEYCARD = 9;
+   PVPCURRENCY = 10;
+   FORCEPOINT = 11;
+   PVPSHIPCURRENCY = 12;
+   FREE = 13;
+   WARSHIPCURRENCY = 14;
+   GRINDTICKET = 15;
+   SHARDCURRENCY = 16;
+   GUILDCURRENCY = 17;
+   GUILDBANKCURRENCY = 18;
+   SHIPGRIND = 19;
+   GUILDRAIDCURRENCY01 = 20;
+   GUILDRAIDCURRENCY02 = 21;
+   GUILDRAIDCURRENCY03 = 22;
+   GUILDRAIDCURRENCY04 = 23;
+   GUILDRAIDCURRENCY05 = 24;
+   GUILDRAIDCURRENCY06 = 25;
+   GUILDRAIDCURRENCY07 = 26;
+   GUILDRAIDCURRENCY08 = 27;
+   GUILDRAIDCURRENCY09 = 28;
+   GUILDRAIDCURRENCY10 = 29;
+   GUILDRAIDCURRENCY11 = 30;
+   GUILDRAIDCURRENCY12 = 31;
+}
+enum EnrollmentStatus {
+   ENROLLMENTOPEN = 1;
+   ENROLLMENTINVITE = 2;
+   ENROLLMENTCLOSED = 3;
+}
+message EquipmentSlot {
+   optional string equipment_id = 1 [default = ""];
+   optional int32 slot = 2 [default = 0];
+}
+message GetGuildResponse {
+   optional Guild guild = 1;
+}
+message Guild {
+   optional GuildProfile profile = 1;
+   repeated GuildMember member = 2;
+   repeated GuildInviteStatus invite_status = 3;
+   repeated GuildRaidStatus raid_status = 4;
+   optional GuildInventory inventory = 5;
+   repeated GuildRaidResult raid_result = 6;
+   optional GuildProgress progress = 7;
+}
+message GuildInventory {
+   repeated CurrencyItem currency_item = 1;
+   repeated CurrencyItem current_daily_limit = 2;
+}
+message GuildInviteStatus {
+   optional string guild_id = 1 [default = ""];
+   optional int64 expire_time = 2 [default = 0];
+   optional string player_id = 3 [default = ""];
+   optional GuildInviteType type = 4 [default = GUILDJOINREQUEST];
+   optional Unit leader_unit = 5;
+   optional int64 sent_time = 6 [default = 0];
+   optional int32 player_level = 7 [default = 0];
+   optional string player_name = 8 [default = ""];
+}
+enum GuildInviteType {
+   GUILDJOINREQUEST = 1;
+   GUILDINVITATION = 2;
+}
+message GuildMember {
+   optional string player_id = 1 [default = ""];
+   optional string player_name = 2 [default = ""];
+   optional int32 player_level = 3 [default = 0];
+   optional GuildMemberLevel member_level = 4 [default = GUILDMEMBER];
+   optional Unit leader_unit = 5;
+   optional int64 contribution = 6 [default = 0];
+   optional int32 guild_xp = 7 [default = 0];
+   optional int64 last_activity_time = 8 [default = 0];
+   optional int32 squad_power = 9 [default = 0];
+   optional int64 lifetime_contribution = 10 [default = 0];
+   repeated GuildMemberContribution member_contribution = 11;
+}
+message GuildMemberContribution {
+   optional MemberContributionType type = 1 [default = CONTRIBUTIONTYPECOMMENDATION];
+   optional int64 current_value = 2 [default = 0];
+   optional int64 lifetime_value = 3 [default = 0];
+}
+enum GuildMemberLevel {
+   GUILDPENDING = 1;
+   GUILDMEMBER = 2;
+   GUILDOFFICER = 3;
+   GUILDLEADER = 4;
+}
+message GuildProfile {
+   optional string id = 1 [default = ""];
+   optional string name = 2 [default = ""];
+   optional string external_message_key = 3 [default = ""];
+   repeated string message_criteria_key = 4;
+   optional string logo = 5 [default = ""];
+   optional string logo_background = 6 [default = ""];
+   optional EnrollmentStatus enrollment_status = 7 [default = ENROLLMENTINVITE];
+   optional int32 trophy = 8 [default = 0];
+   optional int32 member_count = 9 [default = 0];
+   optional int32 member_max = 10 [default = 0];
+   optional int32 level = 11 [default = 0];
+   optional int32 rank = 12 [default = 0];
+   optional int32 level_requirement = 13 [default = 0];
+   optional int32 raid_win = 14 [default = 0];
+   optional int64 leaderboard_score = 15 [default = 0];
+   optional string banner_color_id = 16 [default = ""];
+   optional string banner_logo_id = 17 [default = ""];
+}
+message GuildProgress {
+   repeated GuildRaidProgress raid_progress = 1;
+}
+message GuildRaidMember {
+   optional string player_id = 1 [default = ""];
+   optional int32 member_progress = 2 [default = 0];
+   optional int32 member_rank = 3 [default = 0];
+}
+message GuildRaidProgress {
+   optional CampaignElementIdentifier identifier = 1;
+   optional CampaignElementProgress progress = 2 [default = HIDDEN];
+}
+message GuildRaidResult {
+   optional string raid_id = 1 [default = ""];
+   repeated GuildRaidMember raid_member = 2;
+   optional CampaignElementIdentifier identifier = 3;
+   optional int64 duration = 4 [default = 0];
+   optional int32 progress_deprecated = 5 [default = 0];
+   optional float progress = 6 [default = 0];
+}
+message GuildRaidStatus {
+   optional string raid_id = 1 [default = ""];
+   optional int64 expire_time = 2 [default = 0];
+   optional float raid_progress = 3 [default = 0];
+   repeated GuildRaidMember raid_member = 5;
+   optional int32 encounter_index = 6 [default = 0];
+   repeated BattleUnitState opponent_unit_state = 8;
+   repeated BattleUnitState player_unit_state = 9;
+   optional CampaignElementIdentifier identifier = 10;
+   optional string instance_id = 11 [default = ""];
+   optional int64 roster_refresh_time = 14 [default = 0];
+   optional bool has_player_participated = 15 [default = false];
+   optional int32 last_encounter_index_player_participated = 16 [default = 0];
+   optional RaidState raid_state = 17 [default = RAIDINPROGRESS];
+   optional int64 tally_end_time = 18 [default = 0];
+   optional bool eligible_for_rewards = 19 [default = false];
+}
+enum MemberContributionType {
+   CONTRIBUTIONTYPECOMMENDATION = 1;
+   CONTRIBUTIONTYPETRIBUTE = 2;
+   CONTRIBUTIONTYPEDONATION = 3;
+}
+enum RaidState {
+   RAIDINPROGRESS = 1;
+   RAIDINTALLY = 2;
+   RAIDCOMPLETE = 3;
+   RAIDEXPIRED = 4;
+}
+enum Rarity {
+   ONESTAR = 1;
+   TWOSTAR = 2;
+   THREESTAR = 3;
+   FOURSTAR = 4;
+   FIVESTAR = 5;
+   SIXSTAR = 6;
+   SEVENSTAR = 7;
+   NOSTAR = 8;
+}
+message Skill {
+   optional string id = 1 [default = ""];
+   optional int32 tier = 2 [default = 0];
+}
+message Stat {
+   optional string stat_id = 1 [default = ""];
+   optional UnitStat unit_stat_id = 3 [default = UNITSTATMAXHEALTH];
+   optional int32 stat_value_decimal_old = 4 [default = 0];
+   optional int64 stat_value_decimal = 5 [default = 0];
+}
+message StatDef {
+   repeated Stat stat = 19;
+}
+message StatMod {
+   optional string id = 1 [default = ""];
+   optional string definition_id = 2 [default = ""];
+   optional int32 level = 4 [default = 0];
+   optional StatModTier tier = 5 [default = STATMODTIER01];
+   optional CurrencyItem sell_value = 9;
+   optional CurrencyItem remove_cost = 10;
+   optional bool locked = 11 [default = false];
+   optional StatModStat primary_stat = 12;
+   repeated StatModStat secondary_stat = 13;
+   optional int32 xp = 14 [default = 0];
+   optional CurrencyItem level_cost = 15;
+}
+message StatModStat {
+   optional string updater_id = 1 [default = ""];
+   optional Stat stat = 2;
+   repeated string roll = 3;
+}
+enum StatModTier {
+   STATMODTIER01 = 1;
+   STATMODTIER02 = 2;
+   STATMODTIER03 = 3;
+   STATMODTIER04 = 4;
+   STATMODTIER05 = 5;
+}
+message Unit {
+   optional string id = 1 [default = ""];
+   optional string definition_id = 2 [default = ""];
+   optional Rarity current_rarity = 8 [default = NOSTAR];
+   optional int32 current_level = 9 [default = 0];
+   optional int32 current_xp = 10 [default = 0];
+   optional string promotion_recipe_reference = 12 [default = ""];
+   repeated Skill skill = 16;
+   optional StatDef unit_stat = 17;
+   repeated EquipmentSlot equipment = 18;
+   optional UnitTier current_tier = 19 [default = TIER01];
+   repeated string equipped_stat_mod_old = 20;
+   repeated StatMod equipped_stat_mod = 21;
+}
+enum UnitStat {
+   UNITSTATMAXHEALTH = 1;
+   UNITSTATSTRENGTH = 2;
+   UNITSTATAGILITY = 3;
+   UNITSTATINTELLIGENCE = 4;
+   UNITSTATSPEED = 5;
+   UNITSTATATTACKDAMAGE = 6;
+   UNITSTATABILITYPOWER = 7;
+   UNITSTATARMOR = 8;
+   UNITSTATSUPPRESSION = 9;
+   UNITSTATARMORPENETRATION = 10;
+   UNITSTATSUPPRESSIONPENETRATION = 11;
+   UNITSTATDODGERATING = 12;
+   UNITSTATDEFLECTIONRATING = 13;
+   UNITSTATATTACKCRITICALRATING = 14;
+   UNITSTATABILITYCRITICALRATING = 15;
+   UNITSTATCRITICALDAMAGE = 16;
+   UNITSTATACCURACY = 17;
+   UNITSTATRESISTANCE = 18;
+   UNITSTATDODGEPERCENTADDITIVE = 19;
+   UNITSTATDEFLECTIONPERCENTADDITIVE = 20;
+   UNITSTATATTACKCRITICALPERCENTADDITIVE = 21;
+   UNITSTATABILITYCRITICALPERCENTADDITIVE = 22;
+   UNITSTATARMORPERCENTADDITIVE = 23;
+   UNITSTATSUPPRESSIONPERCENTADDITIVE = 24;
+   UNITSTATARMORPENETRATIONPERCENTADDITIVE = 25;
+   UNITSTATSUPPRESSIONPENETRATIONPERCENTADDITIVE = 26;
+   UNITSTATHEALTHSTEAL = 27;
+   UNITSTATMAXSHIELD = 28;
+   UNITSTATSHIELDPENETRATION = 29;
+   UNITSTATHEALTHREGEN = 30;
+   UNITSTATATTACKDAMAGEPERCENTADDITIVE = 31;
+   UNITSTATABILITYPOWERPERCENTADDITIVE = 32;
+   UNITSTATDODGENEGATEPERCENTADDITIVE = 33;
+   UNITSTATDEFLECTIONNEGATEPERCENTADDITIVE = 34;
+   UNITSTATATTACKCRITICALNEGATEPERCENTADDITIVE = 35;
+   UNITSTATABILITYCRITICALNEGATEPERCENTADDITIVE = 36;
+   UNITSTATDODGENEGATERATING = 37;
+   UNITSTATDEFLECTIONNEGATERATING = 38;
+   UNITSTATATTACKCRITICALNEGATERATING = 39;
+   UNITSTATABILITYCRITICALNEGATERATING = 40;
+   UNITSTATOFFENSE = 41;
+   UNITSTATDEFENSE = 42;
+   UNITSTATDEFENSEPENETRATION = 43;
+   UNITSTATEVASIONRATING = 44;
+   UNITSTATCRITICALRATING = 45;
+   UNITSTATEVASIONNEGATERATING = 46;
+   UNITSTATCRITICALNEGATERATING = 47;
+   UNITSTATOFFENSEPERCENTADDITIVE = 48;
+   UNITSTATDEFENSEPERCENTADDITIVE = 49;
+   UNITSTATDEFENSEPENETRATIONPERCENTADDITIVE = 50;
+   UNITSTATEVASIONPERCENTADDITIVE = 51;
+   UNITSTATEVASIONNEGATEPERCENTADDITIVE = 52;
+   UNITSTATCRITICALCHANCEPERCENTADDITIVE = 53;
+   UNITSTATCRITICALNEGATECHANCEPERCENTADDITIVE = 54;
+   UNITSTATMAXHEALTHPERCENTADDITIVE = 55;
+   UNITSTATMAXSHIELDPERCENTADDITIVE = 56;
+   UNITSTATSPEEDPERCENTADDITIVE = 57;
+   UNITSTATCOUNTERATTACKRATING = 58;
+   UNITSTATTAUNT = 59;
+}
+enum UnitTier {
+   TIER01 = 1;
+   TIER02 = 2;
+   TIER03 = 3;
+   TIER04 = 4;
+   TIER05 = 5;
+   TIER06 = 6;
+   TIER07 = 7;
+   TIER08 = 8;
+   TIER09 = 9;
+   TIER10 = 10;
+   TIER11 = 11;
+   TIER12 = 12;
+   TIER13 = 13;
+   TIER14 = 14;
+   TIER15 = 15;
+   TIER16 = 16;
+   TIER17 = 17;
+   TIER18 = 18;
+   TIER19 = 19;
+   TIER20 = 20;
+}

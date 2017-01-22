@@ -1,0 +1,10 @@
+package Protos;
+
+message CraftingMaterial {
+   optional string id = 1 [default = ""];
+   optional int32 quantity = 2 [default = 0];
+}
+message TrainUnitRequest {
+   optional string parent_id = 1 [default = ""];
+   repeated CraftingMaterial material = 3;
+}

@@ -1,0 +1,9 @@
+
+enum DynamicDescriptionType {
+   UNIT = 0;
+   ABILITY = 1;
+   HEADER = 2;
+   TEXT = 3;
+   TEXT_COLUMN = 4;
+   HORIZONTAL_BREAK = 5;
+}

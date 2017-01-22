@@ -1,0 +1,6 @@
+package Protos;
+
+message BattleConsumableSlot {
+   optional int32 slot_index = 1 [default = 0];
+   optional string consumable_def_id = 2 [default = ""];
+}

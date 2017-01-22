@@ -1,0 +1,6 @@
+package Protos;
+
+message MessageDialog {
+   optional string title_key = 1 [default = ""];
+   optional string desc_key = 2 [default = ""];
+}

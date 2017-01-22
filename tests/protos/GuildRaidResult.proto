@@ -1,0 +1,35 @@
+package Protos;
+
+message CampaignElementIdentifier {
+   optional string campaign_id = 1 [default = ""];
+   optional string campaign_map_id = 2 [default = ""];
+   optional string campaign_node_id = 3 [default = ""];
+   optional CampaignNodeDifficulty campaign_node_difficulty = 4 [default = NOTSET];
+   optional string campaign_mission_id = 5 [default = ""];
+}
+enum CampaignNodeDifficulty {
+   NOT_SET = 0;
+   NORMAL_DIFF = 4;
+   HARD_DIFF = 5;
+   NIGHTMARE_DIFF = 6;
+   SPECIAL_DIFF = 7;
+   I_DIFF = 8;
+   II_DIFF = 9;
+   III_DIFF = 10;
+   IV_DIFF = 11;
+   V_DIFF = 12;
+   VI_DIFF = 13;
+}
+message GuildRaidMember {
+   optional string player_id = 1 [default = ""];
+   optional int32 member_progress = 2 [default = 0];
+   optional int32 member_rank = 3 [default = 0];
+}
+message GuildRaidResult {
+   optional string raid_id = 1 [default = ""];
+   repeated GuildRaidMember raid_member = 2;
+   optional CampaignElementIdentifier identifier = 3;
+   optional int64 duration = 4 [default = 0];
+   optional int32 progress_deprecated = 5 [default = 0];
+   optional float progress = 6 [default = 0];
+}

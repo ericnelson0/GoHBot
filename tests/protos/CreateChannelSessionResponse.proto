@@ -1,0 +1,5 @@
+package Protos;
+
+message CreateChannelSessionResponse {
+   optional string auth_token = 1 [default = ""];
+}

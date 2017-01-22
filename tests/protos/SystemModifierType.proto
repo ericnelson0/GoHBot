@@ -1,0 +1,6 @@
+
+enum SystemModifierType {
+   INVALID = 0;
+   TIME_LIMITED = 1;
+   VIP = 2;
+}

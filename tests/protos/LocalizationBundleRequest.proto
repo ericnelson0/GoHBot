@@ -1,0 +1,5 @@
+package Protos;
+
+message LocalizationBundleRequest {
+   optional string id = 1 [default = ""];
+}

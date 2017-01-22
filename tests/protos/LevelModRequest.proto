@@ -1,0 +1,8 @@
+package Protos;
+
+message LevelModRequest {
+   optional string mod_id = 1 [default = ""];
+   repeated string mod_consumed_id = 2;
+   optional string mod_session_id = 3 [default = ""];
+   optional int32 mod_level_count = 4 [default = 1];
+}

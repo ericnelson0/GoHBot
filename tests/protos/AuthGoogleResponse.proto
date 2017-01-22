@@ -1,0 +1,7 @@
+package Protos;
+
+message AuthGoogleResponse {
+   optional string auth_id = 1 [default = ""];
+   optional string auth_token = 2 [default = ""];
+   optional bool bindChallenge = 3 [default = false];
+}

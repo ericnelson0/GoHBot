@@ -1,0 +1,7 @@
+package Protos;
+
+message PlayerProfileStat {
+   optional string name_key = 1 [default = ""];
+   optional string version_key = 2 [default = ""];
+   optional int64 value = 3 [default = 0];
+}

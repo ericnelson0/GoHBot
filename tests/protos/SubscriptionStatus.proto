@@ -1,0 +1,6 @@
+package Protos;
+
+message SubscriptionStatus {
+   optional string item_id = 1 [default = ""];
+   optional int32 remaining = 2 [default = 0];
+}
