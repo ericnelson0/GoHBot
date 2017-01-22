@@ -12,18 +12,27 @@ var messageRespEnvelopes = require('./build/protos/ResponseEnvelope_pb.js');
 var messageGuildReqs = require('./build/protos/GetGuildRequest_pb.js');
 var messageGuildResps = require('./build/protos/GetGuildResponse_pb.js');
 
-var promise = new Promise(function(resolve, reject) {
-  doAuthGuest()
-
-  if (/* everything turned out fine */) {
-    resolve("Stuff worked!");
+function authReqFinished(error, response, body) {
+  if(error) console.log(error);
+  var respEnv = proto.Protos.ResponseEnvelope.deserializeBinary(new Uint8Array(body));
+  var respEnvObj = respEnv.toObject();
+  if (respEnvObj.getContentEncoding()) {
+    zlib.gunzip(new Buffer(respEnvObj.getPayload()), function(err, buffer) {
+      if (!err) {
+        var authResp = proto.Protos.AuthGuestResponse.deserializeBinary(new Uint8Array(buffer));
+        var authObj = authResp.toObject();
+        doGuildRequest(authObj);
+      }
+    }
   } else {
-    reject(Error("It broke"));
+    var authResp = proto.Protos.AuthGuestResponse.deserializeBinary(new Uint8Array(respEnvObj.getPayload()));
+    var authObj = authResp.toObject();
+    doGuildRequest(authObj);
   }
-});
+}
 
-function requestFinished(error, response, body) {
-  console.log(error);
+function guidReqFinished(error, response, body) {
+  if (error) console.log(error);
   console.log(body);
 }
 
@@ -36,15 +45,25 @@ function doAuthGuest() {
   authRequest.setBundleId("com.ea.game.starwarscapital_row");
   authRequest.setRegion("NA");
   authRequest.setLocalTimeZoneOffsetMinutes(480);
-  GOHServiceCall("AuthRpc", "DoAuthGuest", authRequest.serializeBinary());
+  GOHServiceCall("AuthRpc", "DoAuthGuest", authRequest.serializeBinary(), null, authReqFinished);
 }
 
-function buildRequestEnvelope(serviceName, methodName, payload) {
+function doGuildRequest(authObj) {
+  GOHServiceCall("GuildRpc", "GetGuild", null, authObj, guidReqFinished);
+}
+
+function buildRequestEnvelope(serviceName, methodName, payload, authObj) {
   var reqEnv = new proto.Protos.RequestEnvelope();
   reqEnv.setCorrelationId(0);
   reqEnv.setServiceName(serviceName);
   reqEnv.setMethodName(methodName);
-  reqEnv.setPayload(payload);
+  if (authObj!==null) {
+    reqEnv.setAuthId(authObj.authId);
+    reqEnv.setAuthToken(authObj.authToken);
+  }
+  if (payload!==null) {
+    reqEnv.setPayload(payload);
+  }
   reqEnv.setClientVersion(181815);
   var clientStartupTime = Math.floor((new Date).getTime() / 1000) - 10;
   reqEnv.setClientStartupTimestamp(clientStartupTime);
@@ -68,8 +87,8 @@ function buildRequestEnvelope(serviceName, methodName, payload) {
   return reqEnv.serializeBinary();
 }
 
-function GOHServiceCall(serviceName, methodName, payload, callback) {
-  var reqEnv = buildRequestEnvelope(serviceName, methodName, payload);
+function GOHServiceCall(serviceName, methodName, payload, authObj, callback) {
+  var reqEnv = buildRequestEnvelope(serviceName, methodName, payload, authObj);
   request({
     url: 'https://swprod.capitalgames.com/rpc',
     method: 'POST',
@@ -81,7 +100,7 @@ function GOHServiceCall(serviceName, methodName, payload, callback) {
       'Connection': 'Keep-Alive',
       'Accept-Encoding': 'gzip',
     },
-    body: binaryEnv,
+    body: reqEnv,
   }, callback);
 }
 
