@@ -30,7 +30,7 @@ var sheetsAppend = limit(sheets.spreadsheets.values.append).to(1).per(1000);
 var sheetsUpdate = limit(sheets.spreadsheets.values.update).to(1).per(1000);
 
 
-const client = new Discord.Client();
+const client = new Discord.Client({autoReconnect:true});
 
 const swChannelId = '218823335738343424';
 const testChannelId = '173524646690422784';
