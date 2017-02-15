@@ -395,7 +395,7 @@ function printHelp(message) {
   message.reply('Commands:\n !meta - show the current meta characters\n !char <char-name> - lookup a character\n !reset - print time to reset\n !activity - print the activity as of now\n !help - print this message\n !rancor - print rancor damage per phase\n !tank - print tank damage per phase\n !rules - print our raid rules');
 }
 
-function printRancorDMG(message) {j
+function printRancorDMG(message) {
   var dmgMsg =  'Rancor raid damage values per phase:\n\n' +
                 'Heroic:\n' +
                 'Phase I: 1,800,000\n' +
