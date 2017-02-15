@@ -398,10 +398,10 @@ function printHelp(message) {
 function printRancorDMG(message) {
   var dmgMsg =  'Rancor raid damage values per phase:\n\n' +
                 'Heroic:\n' +
-                'Phase I: 1,800,000\n' +
-                'Phase II: 3,000,000\n' +
-                'Phase III: 3,300,000\n' +
-                'Phase IV: 2,100,000';
+                'Phase I: 1,800,000 500K: 27.77%\n' +
+                'Phase II: 3,000,000 500K: 16.66%\n' +
+                'Phase III: 3,300,000 500K: 15.15%\n' +
+                'Phase IV: 2,100,000 500K: 23.80%';
   message.reply(dmgMsg);
 }
 
