@@ -39,7 +39,7 @@ const currentRancorCap = '500,000';
 
 const charLookupRE = /!char\s+([A-Za-z0-9_-]+)/;
 const tankDmgRE = /!tank\s+([0-9]+)/;
-const defaultChannelId = swChannelId;
+const defaultChannelId = testChannelId;
 
 const activities = ['Cantina battles', 'Light side battles', 'Galactic wars', 'Hard mode battles', 'Challenges', 'Dark-side battles', 'PVP battles'];
 
@@ -465,6 +465,11 @@ client.on('ready', () => {
   rule.minute = 30;
 
   reminderJob = schedule.scheduleJob(rule, postReminders);
+});
+
+client.on('disconnect', (errMsg, errCode) => {
+  console.log(errMsg);
+  console.log(errCode);
 });
 
 client.on('message', message => {
