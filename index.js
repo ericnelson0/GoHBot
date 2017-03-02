@@ -39,7 +39,7 @@ const currentRancorCap = '500,000';
 
 const charLookupRE = /!char\s+([A-Za-z0-9_-]+)/;
 const tankDmgRE = /!tank\s+([0-9]+)/;
-const defaultChannelId = testChannelId;
+const defaultChannelId = swChannelId;
 
 const activities = ['Cantina battles', 'Light side battles', 'Galactic wars', 'Hard mode battles', 'Challenges', 'Dark-side battles', 'PVP battles'];
 
