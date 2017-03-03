@@ -380,14 +380,18 @@ function getServerTime(message) {
   var d = new Date();
   message.reply(d.toString());
 }
+//['Cantina battles', 'Light side battles', 'Galactic wars', 'Hard mode battles', 'Challenges', 'Dark-side battles', 'PVP battles'];
+function mod(n, m) {
+  return ((n % m) + m) % m;
+}
 
 function getGuildActivity(message) {
   var now = moment().tz("America/Denver");
   var then = moment().tz("America/Denver").startOf('day').hour(19).minute(30);
   var day = now.day();
-  var isAfter = now.isAfter(then);
+  var isAfterReset = now >= then;
 
-  day = day - (isAfter) ? 0 : 1;
+  day = (isAfterReset) ? day : mod((day - 1), 7);
   message.reply(activities[(day % 7)] + ' are the guild activity as of now.');
 }
 
