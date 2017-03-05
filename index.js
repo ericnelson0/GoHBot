@@ -472,8 +472,7 @@ client.on('ready', () => {
 });
 
 client.on('disconnect', (errMsg, errCode) => {
-  console.log(errMsg);
-  console.log(errCode);
+  client.destroy().then(() => client.login());
 });
 
 client.on('message', message => {
