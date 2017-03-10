@@ -471,7 +471,8 @@ client.on('ready', () => {
   reminderJob = schedule.scheduleJob(rule, postReminders);
 });
 
-client.on('disconnect', (errMsg, errCode) => {
+client.on('disconnect', (event) => {
+  console.log(event);
   client.destroy().then(() => client.login());
 });
 
