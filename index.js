@@ -467,9 +467,9 @@ client.on('ready', () => {
   reminderJob = schedule.scheduleJob(rule, postReminders);
 });
 
-client.on('disconnect', (errMsg, errCode) => {
-  console.log(errMsg);
-  console.log(errCode);
+bot.on("disconnected", function (e) {
+	console.log(e);
+  client.destroy().then(client.login.bind(client))
 });
 
 client.on('message', message => {
