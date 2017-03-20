@@ -473,8 +473,8 @@ client.on('ready', () => {
 
 client.on('disconnected', function (e) {
 	console.log(e);
-  client.destroy().then(client.login.bind(client))
-}
+  client.destroy().then(client.login.bind(client));
+});
 
 client.on('message', message => {
   var command = message.content.split(' ')[0];
